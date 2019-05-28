@@ -15,6 +15,12 @@
 		5315BED3229D828B00AC33C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BED2229D828B00AC33C5 /* main.m */; };
 		5315BEDD229D828B00AC33C5 /* ChineseSayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEDC229D828B00AC33C5 /* ChineseSayTests.m */; };
 		5315BEE8229D828B00AC33C5 /* ChineseSayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEE7229D828B00AC33C5 /* ChineseSayUITests.m */; };
+		5315BF01229D840900AC33C5 /* LFTabBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEF9229D840900AC33C5 /* LFTabBarConfig.m */; };
+		5315BF02229D840900AC33C5 /* LFTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEFA229D840900AC33C5 /* LFTabBarItem.m */; };
+		5315BF03229D840900AC33C5 /* LFTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEFB229D840900AC33C5 /* LFTabBar.m */; };
+		5315BF05229D840900AC33C5 /* LFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BF00229D840900AC33C5 /* LFTabBarController.m */; };
+		5315BF09229D843C00AC33C5 /* LFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BF07229D843C00AC33C5 /* LFNavigationController.m */; };
+		5315BF0C229D848B00AC33C5 /* AppDelegate+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BF0B229D848B00AC33C5 /* AppDelegate+Config.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,18 @@
 		5315BEE3229D828B00AC33C5 /* ChineseSayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChineseSayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5315BEE7229D828B00AC33C5 /* ChineseSayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChineseSayUITests.m; sourceTree = "<group>"; };
 		5315BEE9229D828B00AC33C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5315BEF6229D840900AC33C5 /* LFTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFTabBarItem.h; sourceTree = "<group>"; };
+		5315BEF7229D840900AC33C5 /* LFTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFTabBar.h; sourceTree = "<group>"; };
+		5315BEF8229D840900AC33C5 /* LFTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFTabBarController.h; sourceTree = "<group>"; };
+		5315BEF9229D840900AC33C5 /* LFTabBarConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFTabBarConfig.m; sourceTree = "<group>"; };
+		5315BEFA229D840900AC33C5 /* LFTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFTabBarItem.m; sourceTree = "<group>"; };
+		5315BEFB229D840900AC33C5 /* LFTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFTabBar.m; sourceTree = "<group>"; };
+		5315BEFF229D840900AC33C5 /* LFTabBarConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFTabBarConfig.h; sourceTree = "<group>"; };
+		5315BF00229D840900AC33C5 /* LFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFTabBarController.m; sourceTree = "<group>"; };
+		5315BF07229D843C00AC33C5 /* LFNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFNavigationController.m; sourceTree = "<group>"; };
+		5315BF08229D843C00AC33C5 /* LFNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFNavigationController.h; sourceTree = "<group>"; };
+		5315BF0A229D848B00AC33C5 /* AppDelegate+Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Config.h"; sourceTree = "<group>"; };
+		5315BF0B229D848B00AC33C5 /* AppDelegate+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Config.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +119,12 @@
 		5315BEC2229D828A00AC33C5 /* ChineseSay */ = {
 			isa = PBXGroup;
 			children = (
+				5315BF06229D843C00AC33C5 /* LFNavigationController */,
+				5315BEF5229D840900AC33C5 /* LFTabBarController */,
 				5315BEC3229D828A00AC33C5 /* AppDelegate.h */,
 				5315BEC4229D828A00AC33C5 /* AppDelegate.m */,
+				5315BF0A229D848B00AC33C5 /* AppDelegate+Config.h */,
+				5315BF0B229D848B00AC33C5 /* AppDelegate+Config.m */,
 				5315BEC6229D828A00AC33C5 /* ViewController.h */,
 				5315BEC7229D828A00AC33C5 /* ViewController.m */,
 				5315BEC9229D828A00AC33C5 /* Main.storyboard */,
@@ -130,6 +152,30 @@
 				5315BEE9229D828B00AC33C5 /* Info.plist */,
 			);
 			path = ChineseSayUITests;
+			sourceTree = "<group>";
+		};
+		5315BEF5229D840900AC33C5 /* LFTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				5315BEF7229D840900AC33C5 /* LFTabBar.h */,
+				5315BEFB229D840900AC33C5 /* LFTabBar.m */,
+				5315BEFF229D840900AC33C5 /* LFTabBarConfig.h */,
+				5315BEF9229D840900AC33C5 /* LFTabBarConfig.m */,
+				5315BEF8229D840900AC33C5 /* LFTabBarController.h */,
+				5315BF00229D840900AC33C5 /* LFTabBarController.m */,
+				5315BEF6229D840900AC33C5 /* LFTabBarItem.h */,
+				5315BEFA229D840900AC33C5 /* LFTabBarItem.m */,
+			);
+			path = LFTabBarController;
+			sourceTree = "<group>";
+		};
+		5315BF06229D843C00AC33C5 /* LFNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				5315BF08229D843C00AC33C5 /* LFNavigationController.h */,
+				5315BF07229D843C00AC33C5 /* LFNavigationController.m */,
+			);
+			path = LFNavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +308,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5315BF02229D840900AC33C5 /* LFTabBarItem.m in Sources */,
+				5315BF09229D843C00AC33C5 /* LFNavigationController.m in Sources */,
+				5315BF05229D840900AC33C5 /* LFTabBarController.m in Sources */,
+				5315BF0C229D848B00AC33C5 /* AppDelegate+Config.m in Sources */,
+				5315BF03229D840900AC33C5 /* LFTabBar.m in Sources */,
 				5315BEC8229D828A00AC33C5 /* ViewController.m in Sources */,
 				5315BED3229D828B00AC33C5 /* main.m in Sources */,
 				5315BEC5229D828A00AC33C5 /* AppDelegate.m in Sources */,
+				5315BF01229D840900AC33C5 /* LFTabBarConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
