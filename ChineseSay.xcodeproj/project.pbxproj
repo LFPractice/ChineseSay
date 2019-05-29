@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		06F4DFE503BA9CF565F1A162 /* libPods-ChineseSayUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6235DB69A24076FD10D4E742 /* libPods-ChineseSayUITests.a */; };
-		5315BEC5229D828A00AC33C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEC4229D828A00AC33C5 /* AppDelegate.m */; };
-		5315BEC8229D828A00AC33C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEC7229D828A00AC33C5 /* ViewController.m */; };
-		5315BECB229D828A00AC33C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5315BEC9229D828A00AC33C5 /* Main.storyboard */; };
-		5315BECD229D828B00AC33C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5315BECC229D828B00AC33C5 /* Assets.xcassets */; };
-		5315BED0229D828B00AC33C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5315BECE229D828B00AC33C5 /* LaunchScreen.storyboard */; };
-		5315BED3229D828B00AC33C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BED2229D828B00AC33C5 /* main.m */; };
 		5315BEDD229D828B00AC33C5 /* ChineseSayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEDC229D828B00AC33C5 /* ChineseSayTests.m */; };
 		5315BEE8229D828B00AC33C5 /* ChineseSayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEE7229D828B00AC33C5 /* ChineseSayUITests.m */; };
-		5315BF01229D840900AC33C5 /* LFTabBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEF9229D840900AC33C5 /* LFTabBarConfig.m */; };
-		5315BF02229D840900AC33C5 /* LFTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEFA229D840900AC33C5 /* LFTabBarItem.m */; };
-		5315BF03229D840900AC33C5 /* LFTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEFB229D840900AC33C5 /* LFTabBar.m */; };
-		5315BF05229D840900AC33C5 /* LFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BF00229D840900AC33C5 /* LFTabBarController.m */; };
-		5315BF09229D843C00AC33C5 /* LFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BF07229D843C00AC33C5 /* LFNavigationController.m */; };
-		5315BF0C229D848B00AC33C5 /* AppDelegate+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BF0B229D848B00AC33C5 /* AppDelegate+Config.m */; };
+		53F0F0FB229ED9FB000F93ED /* AppDelegate+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F0F0F8229ED9FB000F93ED /* AppDelegate+Config.m */; };
+		53F0F0FC229ED9FB000F93ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F0F0FA229ED9FB000F93ED /* AppDelegate.m */; };
+		53F0F10F229EE06D000F93ED /* LFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F0F104229EE06D000F93ED /* LFNavigationController.m */; };
+		53F0F110229EE06D000F93ED /* LFTabBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F0F10A229EE06D000F93ED /* LFTabBarConfig.m */; };
+		53F0F111229EE06D000F93ED /* LFTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F0F10B229EE06D000F93ED /* LFTabBarItem.m */; };
+		53F0F112229EE06D000F93ED /* LFTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F0F10C229EE06D000F93ED /* LFTabBar.m */; };
+		53F0F113229EE06D000F93ED /* LFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F0F10E229EE06D000F93ED /* LFTabBarController.m */; };
+		53F0F11C229EE129000F93ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F0F115229EE129000F93ED /* ViewController.m */; };
+		53F0F11D229EE129000F93ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F0F116229EE129000F93ED /* LaunchScreen.storyboard */; };
+		53F0F11E229EE129000F93ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F0F118229EE129000F93ED /* Main.storyboard */; };
+		53F0F11F229EE129000F93ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F0F11A229EE129000F93ED /* main.m */; };
+		53F0F121229EE18D000F93ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F0F120229EE18D000F93ED /* Assets.xcassets */; };
 		AD8310061EEF97FC934178B0 /* libPods-ChineseSayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 722711BC22AA731455504621 /* libPods-ChineseSayTests.a */; };
 		D12726E9A71B500ECDC8A0DD /* libPods-ChineseSay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6E5D34A3B080210B24D97C /* libPods-ChineseSay.a */; };
 /* End PBXBuildFile section */
@@ -47,33 +47,33 @@
 		193ECF55F9ED2C3E48A5982F /* Pods-ChineseSayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChineseSayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChineseSayTests/Pods-ChineseSayTests.release.xcconfig"; sourceTree = "<group>"; };
 		2B6E5D34A3B080210B24D97C /* libPods-ChineseSay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChineseSay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5315BEC0229D828A00AC33C5 /* ChineseSay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChineseSay.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5315BEC3229D828A00AC33C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5315BEC4229D828A00AC33C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5315BEC6229D828A00AC33C5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5315BEC7229D828A00AC33C5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5315BECA229D828A00AC33C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5315BECC229D828B00AC33C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5315BECF229D828B00AC33C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5315BED1229D828B00AC33C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5315BED2229D828B00AC33C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5315BED8229D828B00AC33C5 /* ChineseSayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChineseSayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5315BEDC229D828B00AC33C5 /* ChineseSayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChineseSayTests.m; sourceTree = "<group>"; };
 		5315BEDE229D828B00AC33C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5315BEE3229D828B00AC33C5 /* ChineseSayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChineseSayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5315BEE7229D828B00AC33C5 /* ChineseSayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChineseSayUITests.m; sourceTree = "<group>"; };
 		5315BEE9229D828B00AC33C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5315BEF6229D840900AC33C5 /* LFTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFTabBarItem.h; sourceTree = "<group>"; };
-		5315BEF7229D840900AC33C5 /* LFTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFTabBar.h; sourceTree = "<group>"; };
-		5315BEF8229D840900AC33C5 /* LFTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFTabBarController.h; sourceTree = "<group>"; };
-		5315BEF9229D840900AC33C5 /* LFTabBarConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFTabBarConfig.m; sourceTree = "<group>"; };
-		5315BEFA229D840900AC33C5 /* LFTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFTabBarItem.m; sourceTree = "<group>"; };
-		5315BEFB229D840900AC33C5 /* LFTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFTabBar.m; sourceTree = "<group>"; };
-		5315BEFF229D840900AC33C5 /* LFTabBarConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFTabBarConfig.h; sourceTree = "<group>"; };
-		5315BF00229D840900AC33C5 /* LFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFTabBarController.m; sourceTree = "<group>"; };
-		5315BF07229D843C00AC33C5 /* LFNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFNavigationController.m; sourceTree = "<group>"; };
-		5315BF08229D843C00AC33C5 /* LFNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFNavigationController.h; sourceTree = "<group>"; };
-		5315BF0A229D848B00AC33C5 /* AppDelegate+Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Config.h"; sourceTree = "<group>"; };
-		5315BF0B229D848B00AC33C5 /* AppDelegate+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Config.m"; sourceTree = "<group>"; };
+		53F0F0F7229ED9FB000F93ED /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		53F0F0F8229ED9FB000F93ED /* AppDelegate+Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Config.m"; sourceTree = "<group>"; };
+		53F0F0F9229ED9FB000F93ED /* AppDelegate+Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Config.h"; sourceTree = "<group>"; };
+		53F0F0FA229ED9FB000F93ED /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		53F0F104229EE06D000F93ED /* LFNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFNavigationController.m; sourceTree = "<group>"; };
+		53F0F105229EE06D000F93ED /* LFNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFNavigationController.h; sourceTree = "<group>"; };
+		53F0F107229EE06D000F93ED /* LFTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFTabBarItem.h; sourceTree = "<group>"; };
+		53F0F108229EE06D000F93ED /* LFTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFTabBar.h; sourceTree = "<group>"; };
+		53F0F109229EE06D000F93ED /* LFTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFTabBarController.h; sourceTree = "<group>"; };
+		53F0F10A229EE06D000F93ED /* LFTabBarConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFTabBarConfig.m; sourceTree = "<group>"; };
+		53F0F10B229EE06D000F93ED /* LFTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFTabBarItem.m; sourceTree = "<group>"; };
+		53F0F10C229EE06D000F93ED /* LFTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFTabBar.m; sourceTree = "<group>"; };
+		53F0F10D229EE06D000F93ED /* LFTabBarConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFTabBarConfig.h; sourceTree = "<group>"; };
+		53F0F10E229EE06D000F93ED /* LFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFTabBarController.m; sourceTree = "<group>"; };
+		53F0F115229EE129000F93ED /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		53F0F117229EE129000F93ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		53F0F119229EE129000F93ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		53F0F11A229EE129000F93ED /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53F0F11B229EE129000F93ED /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		53F0F120229EE18D000F93ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6235DB69A24076FD10D4E742 /* libPods-ChineseSayUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChineseSayUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66770EFC23CCC974BFC9FB6B /* Pods-ChineseSay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChineseSay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChineseSay/Pods-ChineseSay.debug.xcconfig"; sourceTree = "<group>"; };
 		722711BC22AA731455504621 /* libPods-ChineseSayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChineseSayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,19 +136,15 @@
 		5315BEC2229D828A00AC33C5 /* ChineseSay */ = {
 			isa = PBXGroup;
 			children = (
-				5315BF06229D843C00AC33C5 /* LFNavigationController */,
-				5315BEF5229D840900AC33C5 /* LFTabBarController */,
-				5315BEC3229D828A00AC33C5 /* AppDelegate.h */,
-				5315BEC4229D828A00AC33C5 /* AppDelegate.m */,
-				5315BF0A229D848B00AC33C5 /* AppDelegate+Config.h */,
-				5315BF0B229D848B00AC33C5 /* AppDelegate+Config.m */,
-				5315BEC6229D828A00AC33C5 /* ViewController.h */,
-				5315BEC7229D828A00AC33C5 /* ViewController.m */,
-				5315BEC9229D828A00AC33C5 /* Main.storyboard */,
-				5315BECC229D828B00AC33C5 /* Assets.xcassets */,
-				5315BECE229D828B00AC33C5 /* LaunchScreen.storyboard */,
+				53F0F0F6229ED9FB000F93ED /* Appdelegate */,
+				53F0F0FD229EDDFC000F93ED /* Modules */,
+				53F0F0FE229EDE79000F93ED /* Manager */,
+				53F0F0FF229EDE89000F93ED /* Defines */,
+				53F0F100229EDF52000F93ED /* Utils */,
+				53F0F101229EDF63000F93ED /* Common */,
+				53F0F102229EDFB2000F93ED /* Resources */,
+				53F0F114229EE129000F93ED /* Others */,
 				5315BED1229D828B00AC33C5 /* Info.plist */,
-				5315BED2229D828B00AC33C5 /* main.m */,
 			);
 			path = ChineseSay;
 			sourceTree = "<group>";
@@ -171,28 +167,97 @@
 			path = ChineseSayUITests;
 			sourceTree = "<group>";
 		};
-		5315BEF5229D840900AC33C5 /* LFTabBarController */ = {
+		53F0F0F6229ED9FB000F93ED /* Appdelegate */ = {
 			isa = PBXGroup;
 			children = (
-				5315BEF7229D840900AC33C5 /* LFTabBar.h */,
-				5315BEFB229D840900AC33C5 /* LFTabBar.m */,
-				5315BEFF229D840900AC33C5 /* LFTabBarConfig.h */,
-				5315BEF9229D840900AC33C5 /* LFTabBarConfig.m */,
-				5315BEF8229D840900AC33C5 /* LFTabBarController.h */,
-				5315BF00229D840900AC33C5 /* LFTabBarController.m */,
-				5315BEF6229D840900AC33C5 /* LFTabBarItem.h */,
-				5315BEFA229D840900AC33C5 /* LFTabBarItem.m */,
+				53F0F0F7229ED9FB000F93ED /* AppDelegate.h */,
+				53F0F0FA229ED9FB000F93ED /* AppDelegate.m */,
+				53F0F0F9229ED9FB000F93ED /* AppDelegate+Config.h */,
+				53F0F0F8229ED9FB000F93ED /* AppDelegate+Config.m */,
+			);
+			path = Appdelegate;
+			sourceTree = "<group>";
+		};
+		53F0F0FD229EDDFC000F93ED /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		53F0F0FE229EDE79000F93ED /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		53F0F0FF229EDE89000F93ED /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Defines;
+			sourceTree = "<group>";
+		};
+		53F0F100229EDF52000F93ED /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		53F0F101229EDF63000F93ED /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				53F0F103229EE06D000F93ED /* LFNavigationController */,
+				53F0F106229EE06D000F93ED /* LFTabBarController */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		53F0F102229EDFB2000F93ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53F0F120229EE18D000F93ED /* Assets.xcassets */,
+			);
+			name = Resources;
+			path = ChineseSay/Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		53F0F103229EE06D000F93ED /* LFNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				53F0F105229EE06D000F93ED /* LFNavigationController.h */,
+				53F0F104229EE06D000F93ED /* LFNavigationController.m */,
+			);
+			path = LFNavigationController;
+			sourceTree = "<group>";
+		};
+		53F0F106229EE06D000F93ED /* LFTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				53F0F108229EE06D000F93ED /* LFTabBar.h */,
+				53F0F10C229EE06D000F93ED /* LFTabBar.m */,
+				53F0F10D229EE06D000F93ED /* LFTabBarConfig.h */,
+				53F0F10A229EE06D000F93ED /* LFTabBarConfig.m */,
+				53F0F109229EE06D000F93ED /* LFTabBarController.h */,
+				53F0F10E229EE06D000F93ED /* LFTabBarController.m */,
+				53F0F107229EE06D000F93ED /* LFTabBarItem.h */,
+				53F0F10B229EE06D000F93ED /* LFTabBarItem.m */,
 			);
 			path = LFTabBarController;
 			sourceTree = "<group>";
 		};
-		5315BF06229D843C00AC33C5 /* LFNavigationController */ = {
+		53F0F114229EE129000F93ED /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				5315BF08229D843C00AC33C5 /* LFNavigationController.h */,
-				5315BF07229D843C00AC33C5 /* LFNavigationController.m */,
+				53F0F116229EE129000F93ED /* LaunchScreen.storyboard */,
+				53F0F11A229EE129000F93ED /* main.m */,
+				53F0F118229EE129000F93ED /* Main.storyboard */,
+				53F0F11B229EE129000F93ED /* ViewController.h */,
+				53F0F115229EE129000F93ED /* ViewController.m */,
 			);
-			path = LFNavigationController;
+			path = Others;
 			sourceTree = "<group>";
 		};
 		97DCEBDC8887D66D949C8541 /* Frameworks */ = {
@@ -324,9 +389,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5315BED0229D828B00AC33C5 /* LaunchScreen.storyboard in Resources */,
-				5315BECD229D828B00AC33C5 /* Assets.xcassets in Resources */,
-				5315BECB229D828A00AC33C5 /* Main.storyboard in Resources */,
+				53F0F11E229EE129000F93ED /* Main.storyboard in Resources */,
+				53F0F121229EE18D000F93ED /* Assets.xcassets in Resources */,
+				53F0F11D229EE129000F93ED /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,15 +485,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5315BF02229D840900AC33C5 /* LFTabBarItem.m in Sources */,
-				5315BF09229D843C00AC33C5 /* LFNavigationController.m in Sources */,
-				5315BF05229D840900AC33C5 /* LFTabBarController.m in Sources */,
-				5315BF0C229D848B00AC33C5 /* AppDelegate+Config.m in Sources */,
-				5315BF03229D840900AC33C5 /* LFTabBar.m in Sources */,
-				5315BEC8229D828A00AC33C5 /* ViewController.m in Sources */,
-				5315BED3229D828B00AC33C5 /* main.m in Sources */,
-				5315BEC5229D828A00AC33C5 /* AppDelegate.m in Sources */,
-				5315BF01229D840900AC33C5 /* LFTabBarConfig.m in Sources */,
+				53F0F0FC229ED9FB000F93ED /* AppDelegate.m in Sources */,
+				53F0F0FB229ED9FB000F93ED /* AppDelegate+Config.m in Sources */,
+				53F0F11C229EE129000F93ED /* ViewController.m in Sources */,
+				53F0F112229EE06D000F93ED /* LFTabBar.m in Sources */,
+				53F0F110229EE06D000F93ED /* LFTabBarConfig.m in Sources */,
+				53F0F10F229EE06D000F93ED /* LFNavigationController.m in Sources */,
+				53F0F111229EE06D000F93ED /* LFTabBarItem.m in Sources */,
+				53F0F11F229EE129000F93ED /* main.m in Sources */,
+				53F0F113229EE06D000F93ED /* LFTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,20 +529,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5315BEC9229D828A00AC33C5 /* Main.storyboard */ = {
+		53F0F116229EE129000F93ED /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5315BECA229D828A00AC33C5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5315BECE229D828B00AC33C5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5315BECF229D828B00AC33C5 /* Base */,
+				53F0F117229EE129000F93ED /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		53F0F118229EE129000F93ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53F0F119229EE129000F93ED /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
