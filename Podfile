@@ -6,7 +6,9 @@ target 'ChineseSay' do
   # use_frameworks!
 
   # Pods for ChineseSay
-
+  pod 'AFNetworking', '~> 3.0'
+  pod 'Masonry'
+  pod 'SDWebImage'
   target 'ChineseSayTests' do
     inherit! :search_paths
     # Pods for testing

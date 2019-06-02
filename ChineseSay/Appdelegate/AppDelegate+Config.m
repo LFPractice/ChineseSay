@@ -8,6 +8,7 @@
 
 #import "AppDelegate+Config.h"
 #import "LFTabBarController.h"
+#import "CSHomeCOntroller.h"
 @implementation AppDelegate (Config)
 - (BOOL)CSApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     self.window.rootViewController = [self setUpRootController];
@@ -15,7 +16,7 @@
 }
 - (id)setUpRootController{
     LFTabBarController *tab = [LFTabBarController createTabBarController:^LFTabBarConfig *(LFTabBarConfig *config) {
-        UIViewController *vc1 = [[UIViewController alloc]init];
+        CSHomeController *vc1 = [[CSHomeController alloc]init];
         UIViewController *vc2 = [[UIViewController alloc]init];
         UIViewController *vc3 = [[UIViewController alloc]init];
         
