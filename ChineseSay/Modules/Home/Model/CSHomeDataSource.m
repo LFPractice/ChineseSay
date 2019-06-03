@@ -33,6 +33,8 @@ static CSHomeDataSource *homeSigle = nil;
     [self initDataForEssay];
     [self initDataForLesson];
 }
+
+#pragma mark -- 常用中文速成
 - (void)initDataForChineseSpeedUp{
     if(self.arr_chineseSpeedUp.count){
         [self.arr_chineseSpeedUp removeAllObjects];
@@ -40,9 +42,13 @@ static CSHomeDataSource *homeSigle = nil;
     CSHomeItemSingleCellModel *model = [[CSHomeItemSingleCellModel alloc]init];
     model.cellName = @"CSItemSigleCell";
     model.title = @"常用中文速成";
+    model.imgName = @"home_cell_mark_chineseSpeedUp";
+    model.bgColor = 0x6C80A8;
     model.cellHeight = 120;
     [self.arr_chineseSpeedUp addObject:model];
 }
+
+#pragma mark -- 文化、旅行、APP
 - (void)initDataForCultureTravelApp{
     if(self.arr_cultureTravelApp.count){
         [self.arr_cultureTravelApp removeAllObjects];
@@ -51,7 +57,28 @@ static CSHomeDataSource *homeSigle = nil;
     model.cellName = @"CSHomeItemsCell";
     model.cellHeight = 160;
     [self.arr_cultureTravelApp addObject:model];
+    
+    CSHomeItemSingleCellModel *model1 = [[CSHomeItemSingleCellModel alloc]init];
+    model1.title = @"筷子文化";
+    model1.imgName = @"home_cell_mark_chineseSpeedUp";
+    model1.bgColor = 0xFAB416;
+    
+    CSHomeItemSingleCellModel *model2 = [[CSHomeItemSingleCellModel alloc]init];
+    model2.title = @"中国旅行";
+    model2.imgName = @"home_cell_mark_travel";
+    model2.bgColor = 0xF57F7F;
+    
+    CSHomeItemSingleCellModel *model3 = [[CSHomeItemSingleCellModel alloc]init];
+    model3.title = @"常用中文APP";
+    model3.imgName = @"home_cell_mark_app";
+    model3.bgColor = 0x6F6FD6;
+    
+    NSArray * itemsArr = @[model1,model2,model3];
+    model.extparam = itemsArr;
+
 }
+
+#pragma mark -- 必读文章
 - (void)initDataForEssay{
     if(self.arr_essay.count){
         [self.arr_essay removeAllObjects];
@@ -69,6 +96,8 @@ static CSHomeDataSource *homeSigle = nil;
     model.cellHeight = 120;
     [self.arr_essay addObject:model];
 }
+
+#pragma mark -- 更多课程
 - (void)initDataForLesson{
     if(self.arr_lesson.count){
         [self.arr_lesson removeAllObjects];
@@ -80,10 +109,36 @@ static CSHomeDataSource *homeSigle = nil;
     titleModel.cellHeight = 35;
     [self.arr_lesson addObject:titleModel];
     
+    CSHomeItemSingleCellModel *singleModel = [[CSHomeItemSingleCellModel alloc]init];
+    singleModel.cellName = @"CSItemSigleCell";
+    singleModel.title = @"30天商业中文速成";
+    singleModel.imgName = @"home_cell_mark_lesson";
+    singleModel.bgColor = 0xFAB416;
+    singleModel.cellHeight = 120;
+    [self.arr_lesson addObject:singleModel];
+    
+    
     CSHomeItemsCellModel *itemsModel = [[CSHomeItemsCellModel alloc]init];
     itemsModel.cellName = @"CSHomeItemsCell";
     itemsModel.cellHeight = 160;
     [self.arr_lesson addObject:itemsModel];
+    CSHomeItemSingleCellModel *model1 = [[CSHomeItemSingleCellModel alloc]init];
+    model1.title = @"茶文化";
+    model1.imgName = @"home_cell_mark_teaCulture";
+    model1.bgColor = 0x559F3A;
+    
+    CSHomeItemSingleCellModel *model2 = [[CSHomeItemSingleCellModel alloc]init];
+    model2.title = @"诗词";
+    model2.imgName = @"home_cell_mark_poetry";
+    model2.bgColor = 0x6C80A8;
+    
+    CSHomeItemSingleCellModel *model3 = [[CSHomeItemSingleCellModel alloc]init];
+    model3.title = @"成语";
+    model3.imgName = @"home_cell_mark_proverb";
+    model3.bgColor = 0x3BB2BC;
+    
+    NSArray * itemsArr = @[model1,model2,model3];
+    itemsModel.extparam = itemsArr;
 }
 #pragma mark -- lazy
 - (NSMutableArray *)dataSource{

@@ -58,8 +58,8 @@
         return nil;
     }
     UIView *sectionHeader = [[UIView alloc]init];
-    sectionHeader.backgroundColor = [UIColor lightGrayColor];
-    return nil;
+    sectionHeader.backgroundColor = [UIColor colorWithHex:0xF4F5F9];
+    return sectionHeader;
 }
 #pragma mark -- lazy
 - (CSBaseTableView *)tableView{
@@ -67,9 +67,10 @@
         _tableView = [[CSBaseTableView alloc]initWithFrame:CGRectMake(0, 0,kScreenWidth, kScreenHeight - kSystemNavigationBarHeight - kSystemStatusHeight) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource  = self;
-        _tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
+        _tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 20)];
         _tableView.separatorColor = [UIColor clearColor];
-        _tableView.backgroundColor = [UIColor lightGrayColor];
+        _tableView.backgroundColor = [UIColor colorWithHex:0xF4F5F9];
+        _tableView.showsVerticalScrollIndicator = NO;
         [_tableView registerClass:[CSHomeTitleCell class] forCellReuseIdentifier:@"CSHomeTitleCell"];
         [_tableView registerClass:[CSHomeItemsCell class] forCellReuseIdentifier:@"CSHomeItemsCell"];
         [_tableView registerClass:[CSItemSigleCell class] forCellReuseIdentifier:@"CSItemSigleCell"];

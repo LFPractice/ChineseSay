@@ -21,13 +21,13 @@
         UIViewController *vc3 = [[UIViewController alloc]init];
         
         config.viewControllers = @[vc1,vc2,vc3];
-        config.normalColor = [UIColor grayColor];
-        config.selectedColor = [UIColor orangeColor];
+        config.normalColor = [UIColor colorWithHex:0xCBCBC0];
+        config.selectedColor = [UIColor colorWithHex:0x6C80A8];
         config.selectedImages = @[@"",@"",@""];
         config.normalImages = @[@"",@"",@""];
         config.titles = @[@"首页",@"导航",@"我的"];
         config.isNavigation = YES;
-        config.tabBarBackgroundColor = [UIColor blackColor];
+        config.tabBarBackgroundColor = [UIColor whiteColor];
         
         return config;
     }];
