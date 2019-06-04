@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSBaseController : UIViewController
-
+@property (nonatomic, strong) CSPageTypeModel *pageModel;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "CSPageTypeModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSBaseModel : NSObject
+@property (nonatomic, strong) CSPageTypeModel *pageModel;
 @property (nonatomic, strong) id extparam;//扩展参数
 @end
 

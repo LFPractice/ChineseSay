@@ -11,6 +11,8 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "LFNavigationController.h"
+#import "LFTabBarController.h"
 #import "CSBaseTableView.h"
 #import "CSBaseView.h"
 #import "CSBaseModel.h"
@@ -20,4 +22,6 @@
 #import "AFNetWorking.h"
 #import "UIImageView+WebCache.h"
 #import "UIColor+Add.h"
+#import "CSPageTransferDefine.h"
+#import "CSPageTransfer.h"
 #endif /* PrefixHeader_pch */

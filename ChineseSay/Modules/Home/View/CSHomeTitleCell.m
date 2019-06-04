@@ -12,6 +12,7 @@
 @property (nonatomic, strong) UILabel *label_leftTitle;
 @property (nonatomic, strong) UIButton *btn_rightTitle;
 @property (nonatomic, strong) UIImageView *img_rightMark;
+@property (nonatomic, strong) CSHomeTitleCellModel *model;
 @end
 @implementation CSHomeTitleCell
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -23,6 +24,7 @@
 }
 - (void)loadCellWithData:(id)model cellPath:(NSIndexPath *)path{
     CSHomeTitleCellModel *cellModel = (CSHomeTitleCellModel *)model;
+    self.model = cellModel;
     self.label_leftTitle.text = cellModel.leftTitle;
     if(cellModel.rightTitle.length){
         [self.btn_rightTitle setTitle:cellModel.rightTitle forState:UIControlStateNormal];
@@ -57,6 +59,9 @@
         make.centerY.mas_equalTo(self.btn_rightTitle.mas_centerY).offset(0);
     }];
 }
+- (void)btnClick{
+    [[CSPageTransfer shareInstance]dispatchTransFerActionWithPageModel:self.model.pageModel];
+}
 #pragma mark--lazy
 - (UILabel *)label_leftTitle{
     if(!_label_leftTitle){
@@ -71,6 +76,7 @@
         _btn_rightTitle = [UIButton buttonWithType:UIButtonTypeCustom];
         _btn_rightTitle.titleLabel.font = [UIFont systemFontOfSize:12];
         _btn_rightTitle.titleLabel.textAlignment = NSTextAlignmentRight;
+        [_btn_rightTitle addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
         [_btn_rightTitle setTitleColor:[UIColor colorWithHex:0x555555] forState:UIControlStateNormal];
     }
     return _btn_rightTitle;

@@ -107,6 +107,11 @@ static CSHomeDataSource *homeSigle = nil;
     titleModel.cellName = @"CSHomeTitleCell";
     titleModel.rightTitle = @"查看全部";
     titleModel.cellHeight = 35;
+    CSPageTypeModel *pageModel_moreLesson = [[CSPageTypeModel alloc]init];
+    pageModel_moreLesson.action = CS_Page_Type_Action;
+    pageModel_moreLesson.pageType = CS_Page_Type_Home_moreClassList;
+    pageModel_moreLesson.title = @"更多课程";
+    titleModel.pageModel = pageModel_moreLesson;
     [self.arr_lesson addObject:titleModel];
     
     CSHomeItemSingleCellModel *singleModel = [[CSHomeItemSingleCellModel alloc]init];

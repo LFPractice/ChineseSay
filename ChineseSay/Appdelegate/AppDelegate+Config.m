@@ -8,6 +8,7 @@
 
 #import "AppDelegate+Config.h"
 #import "LFTabBarController.h"
+#import "LFNavigationController.h"
 #import "CSHomeCOntroller.h"
 @implementation AppDelegate (Config)
 - (BOOL)CSApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
@@ -26,7 +27,7 @@
         config.selectedImages = @[@"",@"",@""];
         config.normalImages = @[@"",@"",@""];
         config.titles = @[@"首页",@"导航",@"我的"];
-        config.isNavigation = YES;
+        config.isNavigation = YES;;
         config.tabBarBackgroundColor = [UIColor whiteColor];
         
         return config;

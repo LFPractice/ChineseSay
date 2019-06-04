@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		06F4DFE503BA9CF565F1A162 /* libPods-ChineseSayUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6235DB69A24076FD10D4E742 /* libPods-ChineseSayUITests.a */; };
+		530D020F22A6C0660044CCB7 /* CSPageTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 530D020E22A6C0660044CCB7 /* CSPageTypeModel.m */; };
+		530D021322A6C3330044CCB7 /* CSPageTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 530D021222A6C3330044CCB7 /* CSPageTransfer.m */; };
+		530D021622A6D0650044CCB7 /* CSHomeMoreLessonListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530D021522A6D0650044CCB7 /* CSHomeMoreLessonListController.m */; };
 		5315BEDD229D828B00AC33C5 /* ChineseSayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEDC229D828B00AC33C5 /* ChineseSayTests.m */; };
 		5315BEE8229D828B00AC33C5 /* ChineseSayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEE7229D828B00AC33C5 /* ChineseSayUITests.m */; };
 		535B853D22A57AAA000510C4 /* CSHomeItemsCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 535B853C22A57AAA000510C4 /* CSHomeItemsCellItem.m */; };
@@ -62,6 +65,13 @@
 /* Begin PBXFileReference section */
 		193ECF55F9ED2C3E48A5982F /* Pods-ChineseSayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChineseSayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChineseSayTests/Pods-ChineseSayTests.release.xcconfig"; sourceTree = "<group>"; };
 		2B6E5D34A3B080210B24D97C /* libPods-ChineseSay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChineseSay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		530D020D22A6C0660044CCB7 /* CSPageTypeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSPageTypeModel.h; sourceTree = "<group>"; };
+		530D020E22A6C0660044CCB7 /* CSPageTypeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSPageTypeModel.m; sourceTree = "<group>"; };
+		530D021022A6C17C0044CCB7 /* CSPageTransferDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSPageTransferDefine.h; sourceTree = "<group>"; };
+		530D021122A6C3330044CCB7 /* CSPageTransfer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSPageTransfer.h; sourceTree = "<group>"; };
+		530D021222A6C3330044CCB7 /* CSPageTransfer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSPageTransfer.m; sourceTree = "<group>"; };
+		530D021422A6D0650044CCB7 /* CSHomeMoreLessonListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeMoreLessonListController.h; sourceTree = "<group>"; };
+		530D021522A6D0650044CCB7 /* CSHomeMoreLessonListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeMoreLessonListController.m; sourceTree = "<group>"; };
 		5315BEC0229D828A00AC33C5 /* ChineseSay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChineseSay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5315BED1229D828B00AC33C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5315BED8229D828B00AC33C5 /* ChineseSayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChineseSayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +171,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		530D020322A6BDBC0044CCB7 /* MoreLesson */ = {
+			isa = PBXGroup;
+			children = (
+				530D020422A6BDBC0044CCB7 /* Controller */,
+				530D020522A6BDBC0044CCB7 /* Model */,
+				530D020622A6BDBD0044CCB7 /* View */,
+			);
+			path = MoreLesson;
+			sourceTree = "<group>";
+		};
+		530D020422A6BDBC0044CCB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				530D021422A6D0650044CCB7 /* CSHomeMoreLessonListController.h */,
+				530D021522A6D0650044CCB7 /* CSHomeMoreLessonListController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		530D020522A6BDBC0044CCB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		530D020622A6BDBD0044CCB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		530D020722A6BE590044CCB7 /* CSPageTransfer */ = {
+			isa = PBXGroup;
+			children = (
+				530D021022A6C17C0044CCB7 /* CSPageTransferDefine.h */,
+				530D021122A6C3330044CCB7 /* CSPageTransfer.h */,
+				530D021222A6C3330044CCB7 /* CSPageTransfer.m */,
+				530D020D22A6C0660044CCB7 /* CSPageTypeModel.h */,
+				530D020E22A6C0660044CCB7 /* CSPageTypeModel.m */,
+			);
+			path = CSPageTransfer;
+			sourceTree = "<group>";
+		};
 		5315BEB7229D828A00AC33C5 = {
 			isa = PBXGroup;
 			children = (
@@ -221,8 +276,9 @@
 			isa = PBXGroup;
 			children = (
 				53AC319F22A3CB4F00CA2D12 /* Controller */,
-				53AC31A022A3CB4F00CA2D12 /* Model */,
 				53AC31A122A3CB4F00CA2D12 /* View */,
+				53AC31A022A3CB4F00CA2D12 /* Model */,
+				530D020322A6BDBC0044CCB7 /* MoreLesson */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -363,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				53AC31B822A3CE3D00CA2D12 /* PrefixHeader.pch */,
+				530D020722A6BE590044CCB7 /* CSPageTransfer */,
 				53AC31D722A42C4200CA2D12 /* Catergory */,
 				53AC31A222A3CC8200CA2D12 /* Base */,
 				53F0F103229EE06D000F93ED /* LFNavigationController */,
@@ -649,7 +706,9 @@
 				53F0F11C229EE129000F93ED /* ViewController.m in Sources */,
 				53AC31AE22A3CCDF00CA2D12 /* CSBaseView.m in Sources */,
 				53AC31CA22A3EFF200CA2D12 /* CSHomeItemsCell.m in Sources */,
+				530D021322A6C3330044CCB7 /* CSPageTransfer.m in Sources */,
 				53AC31B422A3CD1000CA2D12 /* CSBaseTableView.m in Sources */,
+				530D021622A6D0650044CCB7 /* CSHomeMoreLessonListController.m in Sources */,
 				53AC31D022A41CC100CA2D12 /* CSHomeTitleCellModel.m in Sources */,
 				53F0F112229EE06D000F93ED /* LFTabBar.m in Sources */,
 				53AC31D322A41DAC00CA2D12 /* CSHomeItemsCellModel.m in Sources */,
@@ -661,6 +720,7 @@
 				53AC31CD22A3F04600CA2D12 /* CSItemSigleCell.m in Sources */,
 				53F0F111229EE06D000F93ED /* LFTabBarItem.m in Sources */,
 				53AC31C722A3EF9800CA2D12 /* CSHomeTitleCell.m in Sources */,
+				530D020F22A6C0660044CCB7 /* CSPageTypeModel.m in Sources */,
 				53AC31C322A3D51D00CA2D12 /* CSHomeCellModel.m in Sources */,
 				53F0F11F229EE129000F93ED /* main.m in Sources */,
 				53AC31B122A3CCFD00CA2D12 /* CSBaseCell.m in Sources */,
