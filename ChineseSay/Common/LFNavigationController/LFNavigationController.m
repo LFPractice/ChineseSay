@@ -14,9 +14,9 @@
 
 @implementation LFNavigationController
 + (void)initialize{
-    [[UINavigationBar appearance]setBarTintColor:[UIColor orangeColor]];
-    [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [[UINavigationBar appearance]setBarTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance]setTintColor:[UIColor colorWithHex:0x333333]];
+    [[UINavigationBar appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHex:0x333333]}];
     [[UINavigationBar appearance]setTranslucent:NO];
 }
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
