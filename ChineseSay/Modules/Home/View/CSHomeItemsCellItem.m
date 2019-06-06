@@ -14,6 +14,7 @@
 @end
 @implementation CSHomeItemsCellItem
 
+#pragma mark - assist method
 - (instancetype)init
 {
     self = [super init];
@@ -21,11 +22,6 @@
         [self createUI];
     }
     return self;
-}
-- (void)createUI{
-    [self addSubview:self.img_bg];
-    [self addSubview:self.img_mark];
-    [self addSubview:self.label_title];
 }
 - (void)setModel:(CSHomeItemSingleCellModel *)model{
     _model = model;
@@ -47,7 +43,22 @@
         make.bottom.mas_equalTo(-20);
     }];
 }
-#pragma mark -- lazy
+
+#pragma mark - target-action
+- (void)goToDetailClick{
+    [[CSPageTransfer shareInstance]dispatchTransFerActionWithPageModel:self.model.pageModel];
+}
+
+#pragma mark - private
+- (void)createUI{
+    [self addSubview:self.img_bg];
+    [self addSubview:self.img_mark];
+    [self addSubview:self.label_title];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(goToDetailClick)];
+    [self addGestureRecognizer:tap];
+}
+
+#pragma mark -- lazy load
 - (UIImageView *)img_bg{
     if(!_img_bg){
         _img_bg =[[UIImageView alloc]init];

@@ -12,8 +12,11 @@
 @property (nonatomic, strong) UIImageView *img_bg;
 @property (nonatomic, strong) UIImageView *img_mark;
 @property (nonatomic, strong) UILabel *label_title;
+@property (nonatomic, strong) CSHomeItemSingleCellModel *model;
 @end
 @implementation CSItemSigleCell
+
+#pragma mark - assist method
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if(self){
@@ -21,18 +24,13 @@
     }
     return self;
 }
-- (void)createUI{
-    [self.contentView addSubview:self.img_bg];
-    [self.contentView addSubview:self.img_mark];
-    [self.contentView addSubview:self.label_title];
-}
 - (void)loadCellWithData:(id)model cellPath:(NSIndexPath *)path{
+    self.model = (CSHomeItemSingleCellModel *)model;
     CSHomeItemSingleCellModel *itemModel = (CSHomeItemSingleCellModel *)model;
     [self.img_bg setBackgroundColor:[UIColor colorWithHex:itemModel.bgColor]];
     self.img_mark.image = [UIImage imageNamed:itemModel.imgName];
     self.label_title.text = itemModel.title;
 }
-
 - (void)layoutSubviews{
     [self.img_bg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.mas_equalTo(10);
@@ -50,7 +48,22 @@
         make.centerY.mas_equalTo(0);
     }];
 }
-#pragma mark -- lazy
+
+#pragma mark - target-action
+- (void)goToDetailClick{
+    [[CSPageTransfer shareInstance]dispatchTransFerActionWithPageModel:self.model.pageModel];
+}
+
+#pragma mark - private
+- (void)createUI{
+    [self.contentView addSubview:self.img_bg];
+    [self.contentView addSubview:self.img_mark];
+    [self.contentView addSubview:self.label_title];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(goToDetailClick)];
+    [self.contentView addGestureRecognizer:tap];
+}
+
+#pragma mark -- lazy load
 - (UIImageView *)img_bg{
     if(!_img_bg){
         _img_bg =[[UIImageView alloc]init];

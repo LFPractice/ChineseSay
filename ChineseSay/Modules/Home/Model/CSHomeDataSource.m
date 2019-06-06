@@ -120,6 +120,11 @@ static CSHomeDataSource *homeSigle = nil;
     singleModel.imgName = @"home_cell_mark_lesson";
     singleModel.bgColor = 0xFAB416;
     singleModel.cellHeight = 120;
+    CSPageTypeModel *pageModel1 = [[CSPageTypeModel alloc]init];
+    pageModel1.title = @"30天商业中文速成";
+    pageModel1.action = CS_Page_Type_Action;
+    pageModel1.pageType = CS_Page_Type_Home_moreClassListDetail;
+    singleModel.pageModel = pageModel1;
     [self.arr_lesson addObject:singleModel];
     
     
@@ -131,16 +136,32 @@ static CSHomeDataSource *homeSigle = nil;
     model1.title = @"茶文化";
     model1.imgName = @"home_cell_mark_teaCulture";
     model1.bgColor = 0x559F3A;
+    CSPageTypeModel *pageModel2 = [[CSPageTypeModel alloc]init];
+    pageModel2.title = @"茶文化";
+    pageModel2.action = CS_Page_Type_Action;
+    pageModel2.pageType = CS_Page_Type_Home_moreClassListDetail;
+    model1.pageModel = pageModel2;
+    
     
     CSHomeItemSingleCellModel *model2 = [[CSHomeItemSingleCellModel alloc]init];
     model2.title = @"诗词";
     model2.imgName = @"home_cell_mark_poetry";
     model2.bgColor = 0x6C80A8;
+    CSPageTypeModel *pageModel3 = [[CSPageTypeModel alloc]init];
+    pageModel3.title = @"诗词";
+    pageModel3.action = CS_Page_Type_Action;
+    pageModel3.pageType = CS_Page_Type_Home_moreClassListDetail;
+    model2.pageModel = pageModel3;
     
     CSHomeItemSingleCellModel *model3 = [[CSHomeItemSingleCellModel alloc]init];
     model3.title = @"成语";
     model3.imgName = @"home_cell_mark_proverb";
     model3.bgColor = 0x3BB2BC;
+    CSPageTypeModel *pageModel4 = [[CSPageTypeModel alloc]init];
+    pageModel4.title = @"成语";
+    pageModel4.action = CS_Page_Type_Action;
+    pageModel4.pageType = CS_Page_Type_Home_moreClassListDetail;
+    model3.pageModel = pageModel4;
     
     NSArray * itemsArr = @[model1,model2,model3];
     itemsModel.extparam = itemsArr;
