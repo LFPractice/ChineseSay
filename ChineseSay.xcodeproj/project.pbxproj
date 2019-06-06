@@ -13,6 +13,9 @@
 		530D021622A6D0650044CCB7 /* CSHomeMoreLessonListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530D021522A6D0650044CCB7 /* CSHomeMoreLessonListController.m */; };
 		5315BEDD229D828B00AC33C5 /* ChineseSayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEDC229D828B00AC33C5 /* ChineseSayTests.m */; };
 		5315BEE8229D828B00AC33C5 /* ChineseSayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEE7229D828B00AC33C5 /* ChineseSayUITests.m */; };
+		53352EA122A95A7800F42147 /* CSHomeMoreLessonListDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352EA022A95A7800F42147 /* CSHomeMoreLessonListDetailController.m */; };
+		53352EA422A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352EA322A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m */; };
+		53352EA722A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352EA622A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m */; };
 		5336A8AE22A8148E00C661DE /* CSHomeMoreLessonListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5336A8AD22A8148E00C661DE /* CSHomeMoreLessonListCell.m */; };
 		535B853D22A57AAA000510C4 /* CSHomeItemsCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 535B853C22A57AAA000510C4 /* CSHomeItemsCellItem.m */; };
 		53AC31A822A3CCAC00CA2D12 /* CSBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AC31A722A3CCAC00CA2D12 /* CSBaseController.m */; };
@@ -81,6 +84,12 @@
 		5315BEE3229D828B00AC33C5 /* ChineseSayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChineseSayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5315BEE7229D828B00AC33C5 /* ChineseSayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChineseSayUITests.m; sourceTree = "<group>"; };
 		5315BEE9229D828B00AC33C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53352E9F22A95A7800F42147 /* CSHomeMoreLessonListDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeMoreLessonListDetailController.h; sourceTree = "<group>"; };
+		53352EA022A95A7800F42147 /* CSHomeMoreLessonListDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeMoreLessonListDetailController.m; sourceTree = "<group>"; };
+		53352EA222A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeMoreLessonDetailFlowLayout.h; sourceTree = "<group>"; };
+		53352EA322A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeMoreLessonDetailFlowLayout.m; sourceTree = "<group>"; };
+		53352EA522A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeMoreLessonDetailCollectionViewCell.h; sourceTree = "<group>"; };
+		53352EA622A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeMoreLessonDetailCollectionViewCell.m; sourceTree = "<group>"; };
 		5336A8AC22A8148E00C661DE /* CSHomeMoreLessonListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeMoreLessonListCell.h; sourceTree = "<group>"; };
 		5336A8AD22A8148E00C661DE /* CSHomeMoreLessonListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeMoreLessonListCell.m; sourceTree = "<group>"; };
 		535B853B22A57AAA000510C4 /* CSHomeItemsCellItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeItemsCellItem.h; sourceTree = "<group>"; };
@@ -189,6 +198,8 @@
 			children = (
 				530D021422A6D0650044CCB7 /* CSHomeMoreLessonListController.h */,
 				530D021522A6D0650044CCB7 /* CSHomeMoreLessonListController.m */,
+				53352E9F22A95A7800F42147 /* CSHomeMoreLessonListDetailController.h */,
+				53352EA022A95A7800F42147 /* CSHomeMoreLessonListDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -205,6 +216,10 @@
 			children = (
 				5336A8AC22A8148E00C661DE /* CSHomeMoreLessonListCell.h */,
 				5336A8AD22A8148E00C661DE /* CSHomeMoreLessonListCell.m */,
+				53352EA222A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.h */,
+				53352EA322A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m */,
+				53352EA522A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.h */,
+				53352EA622A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -706,7 +721,9 @@
 				53AC31B722A3CD3900CA2D12 /* CSHomeController.m in Sources */,
 				53AC31DD22A42C9200CA2D12 /* UIColor+Add.m in Sources */,
 				53F0F0FC229ED9FB000F93ED /* AppDelegate.m in Sources */,
+				53352EA422A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m in Sources */,
 				53AC31D622A41DD100CA2D12 /* CSHomeItemSingleCellModel.m in Sources */,
+				53352EA722A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m in Sources */,
 				53F0F0FB229ED9FB000F93ED /* AppDelegate+Config.m in Sources */,
 				53F0F11C229EE129000F93ED /* ViewController.m in Sources */,
 				53AC31AE22A3CCDF00CA2D12 /* CSBaseView.m in Sources */,
@@ -717,6 +734,7 @@
 				5336A8AE22A8148E00C661DE /* CSHomeMoreLessonListCell.m in Sources */,
 				53AC31D022A41CC100CA2D12 /* CSHomeTitleCellModel.m in Sources */,
 				53F0F112229EE06D000F93ED /* LFTabBar.m in Sources */,
+				53352EA122A95A7800F42147 /* CSHomeMoreLessonListDetailController.m in Sources */,
 				53AC31D322A41DAC00CA2D12 /* CSHomeItemsCellModel.m in Sources */,
 				53AC31BB22A3D1BD00CA2D12 /* CSHomeDataSource.m in Sources */,
 				53F0F110229EE06D000F93ED /* LFTabBarConfig.m in Sources */,
