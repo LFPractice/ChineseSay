@@ -9,6 +9,7 @@
 #import "CSPageTransfer.h"
 #import "CSHomeMoreLessonListController.h"
 #import "CSHomeMoreLessonListDetailController.h"
+#import "CSHomeAppsController.h"
 
 static CSPageTransfer *sharePageTransfer = nil;
 @implementation CSPageTransfer
@@ -37,13 +38,18 @@ static CSPageTransfer *sharePageTransfer = nil;
 - (void)pageViewControllerSkipByModel:(CSPageTypeModel *)model {
     BOOL animated = model.animated;
     if([model.pageType isEqualToString:CS_Page_Type_Home_moreClassList]){
-        //更多课程
+        // 更多课程
         CSHomeMoreLessonListController *vc = [[CSHomeMoreLessonListController alloc]init];
         vc.pageModel = model;
         [[self currentNavigatroller]pushViewController:vc animated:animated];
     }else if ([model.pageType isEqualToString:CS_Page_Type_Home_moreClassListDetail]){
-        //课程详情
+        // 课程详情
         CSHomeMoreLessonListDetailController *vc = [[CSHomeMoreLessonListDetailController alloc]init];
+        vc.pageModel = model;
+        [[self currentNavigatroller]pushViewController:vc animated:animated];
+    }else if ([model.pageType isEqualToString:CS_Page_Type_Home_Apps]){
+        // 常用APP
+        CSHomeAppsController *vc = [[CSHomeAppsController alloc]init];
         vc.pageModel = model;
         [[self currentNavigatroller]pushViewController:vc animated:animated];
     }

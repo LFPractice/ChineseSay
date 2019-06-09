@@ -22,6 +22,7 @@
 #import "AFNetWorking.h"
 #import "UIImageView+WebCache.h"
 #import "UIColor+Add.h"
+#import "UIImage+Add.h"
 #import "CSPageTransferDefine.h"
 #import "CSPageTransfer.h"
 #endif /* PrefixHeader_pch */

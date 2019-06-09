@@ -12,21 +12,29 @@
 #import "CSHomeItemsCell.h"
 #import "CSItemSigleCell.h"
 #import "CSHomeCellModel.h"
+#import "CSHomeHeaderView.h"
 @interface CSHomeController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) CSBaseTableView *tableView;
+@property (nonatomic, strong) CSHomeHeaderView *headerView;
 @end
 
 @implementation CSHomeController
 
+#pragma mark - life circle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self createUI];
 }
-- (void)createUI{
-    [self.view addSubview:self.tableView];
+- (void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
-#pragma mark -- UITableViewDataSource
+- (void)viewWillDisappear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
+
+#pragma mark - delegate
+#pragma mark ------ UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return [[CSHomeDataSource shareInstance]dataSource].count;
 }
@@ -45,7 +53,6 @@
     }
     return 10;
 }
-#pragma mark -- UITableViewDelegate
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CSHomeCellModel *model = [CSHomeDataSource shareInstance].dataSource[indexPath.section][indexPath.row];
     CSBaseCell *cell = [tableView dequeueReusableCellWithIdentifier:model.cellName];
@@ -61,12 +68,19 @@
     sectionHeader.backgroundColor = [UIColor colorWithHex:0xF4F5F9];
     return sectionHeader;
 }
-#pragma mark -- lazy
+
+#pragma mark - private
+- (void)createUI{
+    [self.view addSubview:self.tableView];
+}
+
+#pragma mark -- lazy load
 - (CSBaseTableView *)tableView{
     if(!_tableView){
         _tableView = [[CSBaseTableView alloc]initWithFrame:CGRectMake(0, 0,kScreenWidth, kScreenHeight - kSystemNavigationBarHeight - kSystemStatusHeight) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource  = self;
+        _tableView.tableHeaderView = self.headerView;
         _tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 20)];
         _tableView.separatorColor = [UIColor clearColor];
         _tableView.backgroundColor = [UIColor colorWithHex:0xF4F5F9];
@@ -77,11 +91,19 @@
     }
     return _tableView;
 }
+- (CSHomeHeaderView *)headerView{
+    if(!_headerView){
+        _headerView = [[CSHomeHeaderView alloc]init];
+        _headerView.frame = CGRectMake(0, 0, kScreenWidth, 214);
+    }
+    return _headerView;
+}
+
 //去掉UItableview headerview黏性(sticky)
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView == self.tableView)
     {
-        CGFloat sectionHeaderHeight = 10;  //sectionHeaderHeight
+        CGFloat sectionHeaderHeight = 20;  //sectionHeaderHeight
         if (scrollView.contentOffset.y<=sectionHeaderHeight&&scrollView.contentOffset.y>=0) {
             scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
         } else if (scrollView.contentOffset.y>=sectionHeaderHeight) {

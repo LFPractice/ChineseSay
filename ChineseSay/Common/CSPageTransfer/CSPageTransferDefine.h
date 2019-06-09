@@ -15,5 +15,6 @@
 //页面
 //#define CS_Page_Type_Home_
 #define CS_Page_Type_Home_moreClassList    @"CS_Page_Type_Home_moreClassList"//更多课程列表
-#define CS_Page_Type_Home_moreClassListDetail @""//课程详情
+#define CS_Page_Type_Home_moreClassListDetail @"CS_Page_Type_Home_moreClassListDetail"//课程详情
+#define CS_Page_Type_Home_Apps             @"CS_Page_Type_Home_Apps"//首页->常用APP
 #endif /* CSPageTransferDefine_h */

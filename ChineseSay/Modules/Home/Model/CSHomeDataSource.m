@@ -60,8 +60,13 @@ static CSHomeDataSource *homeSigle = nil;
     
     CSHomeItemSingleCellModel *model1 = [[CSHomeItemSingleCellModel alloc]init];
     model1.title = @"筷子文化";
-    model1.imgName = @"home_cell_mark_chineseSpeedUp";
+    model1.imgName = @"home_cell_mark_culture";
     model1.bgColor = 0xFAB416;
+    CSPageTypeModel *pageModel_moreLesson = [[CSPageTypeModel alloc]init];
+    pageModel_moreLesson.action = CS_Page_Type_Action;
+    pageModel_moreLesson.pageType = CS_Page_Type_Home_moreClassListDetail;
+    pageModel_moreLesson.title = @"筷子文化";
+    model1.pageModel = pageModel_moreLesson;
     
     CSHomeItemSingleCellModel *model2 = [[CSHomeItemSingleCellModel alloc]init];
     model2.title = @"中国旅行";
@@ -72,6 +77,11 @@ static CSHomeDataSource *homeSigle = nil;
     model3.title = @"常用中文APP";
     model3.imgName = @"home_cell_mark_app";
     model3.bgColor = 0x6F6FD6;
+    CSPageTypeModel *pageModel3 = [[CSPageTypeModel alloc]init];
+    pageModel3.action = CS_Page_Type_Action;
+    pageModel3.pageType = CS_Page_Type_Home_Apps;
+    pageModel3.title = @"常用中文APP";
+    model3.pageModel = pageModel3;
     
     NSArray * itemsArr = @[model1,model2,model3];
     model.extparam = itemsArr;
