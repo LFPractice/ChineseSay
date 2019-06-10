@@ -24,44 +24,62 @@
     [self createUI];
 }
 - (void)viewWillAppear:(BOOL)animated{
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageWithColor:[UIColor colorWithHex:0x000000 alpha:0.4]]]];
 //    [self.navigationController.navigationBar setBarTintColor:[UIColor clearColor]];
 //    self.navigationController.navigationBar.translucent = YES;
+//    [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 - (void)viewWillDisappear:(BOOL)animated{
-//    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
 }
-
+- (void)viewDidDisappear:(BOOL)animated{
+//    self.navi
+//    [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
 #pragma mark - private
 - (void)createUI{
-    self.view.backgroundColor = [UIColor lightGrayColor];
-    [self.view addSubview:self.view_select];
-    [self.view addSubview:self.listVC_buy.view];
+    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageWithColor:[UIColor colorWithHex:0x000000 alpha:0.4]]]];
+//    self.navigationController.navigationBar.
+    self.view.backgroundColor = [UIColor colorWithHex:0x000000 alpha:0.8];
+    NSArray *titles = @[@"购物类",@"实用类",@"娱乐类"];
+    CGFloat y = 0;//kSystemNavigationBarHeight + kSystemStatusHeight;
+    NinaPagerView *pageView = [[NinaPagerView alloc]initWithFrame:CGRectMake(0,y, kScreenWidth, kScreenHeight - y) WithTitles:titles WithVCs:@[self.listVC_buy,self.listVC_function,self.listVC_amusement]];
+    pageView.unSelectTitleColor = [UIColor colorWithHex:0xffffff];
+    pageView.selectTitleColor = [UIColor colorWithHex:0xFAB416];
+    pageView.underlineColor = [UIColor colorWithHex:0x24c27d];
+//    pageView.selectBottomLinePer = 0.1;
+    pageView.ninaPagerStyles = NinaPagerStyleSlideBlock;
+    pageView.underLineHidden = YES;
+    pageView.sliderBlockColor = [UIColor whiteColor];
+    pageView.topTabBackGroundColor = [UIColor colorWithHex:0xFAB416];
+    [self.view addSubview:pageView];
 }
 #pragma mark - lazy load
 - (CSHomeAppListSelectToolView *)view_select{
     if(!_view_select){
-        _view_select = [[CSHomeAppListSelectToolView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 50)];
+        _view_select = [[CSHomeAppListSelectToolView alloc]initWithFrame:CGRectMake(0, kSystemStatusHeight + kSystemNavigationBarHeight, kScreenWidth, 50)];
     }
     return _view_select;
 }
 - (CSHomeAppListController *)listVC_buy{
     if(!_listVC_buy){
         _listVC_buy = [[CSHomeAppListController alloc]init];
-        _listVC_buy.view.frame = CGRectMake(0, 50, kScreenWidth, kScreenHeight - 50);
+//        _listVC_buy.view.frame = CGRectMake(0, kSystemStatusHeight + kSystemNavigationBarHeight + 50, kScreenWidth, kScreenHeight - 50 - kSystemStatusHeight + kSystemNavigationBarHeight);
     }
     return _listVC_buy;
 }
 - (CSHomeAppListController *)listVC_function{
     if(!_listVC_function){
         _listVC_function = [[CSHomeAppListController alloc]init];
-        _listVC_function.view.frame = CGRectMake(0, 134, kScreenWidth, kScreenHeight - 134);
+//        _listVC_function.view.frame = CGRectMake(0, 134, kScreenWidth, kScreenHeight - 134);
     }
     return _listVC_function;
 }
 - (CSHomeAppListController *)listVC_amusement{
     if(!_listVC_amusement){
         _listVC_amusement = [[CSHomeAppListController alloc]init];
-        _listVC_amusement.view.frame = CGRectMake(0, 134, kScreenWidth, kScreenHeight - 134);
+//        _listVC_amusement.view.frame = CGRectMake(0, 134, kScreenWidth, kScreenHeight - 134);
     }
     return _listVC_amusement;
 }

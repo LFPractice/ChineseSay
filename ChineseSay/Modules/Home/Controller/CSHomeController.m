@@ -32,7 +32,9 @@
 - (void)viewWillDisappear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
-
+- (void)viewDidDisappear:(BOOL)animated{
+//    [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
 #pragma mark - delegate
 #pragma mark ------ UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

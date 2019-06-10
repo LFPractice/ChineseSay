@@ -25,4 +25,5 @@
 #import "UIImage+Add.h"
 #import "CSPageTransferDefine.h"
 #import "CSPageTransfer.h"
+#import "NinaPagerView.h"
 #endif /* PrefixHeader_pch */

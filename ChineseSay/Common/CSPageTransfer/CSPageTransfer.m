@@ -10,6 +10,9 @@
 #import "CSHomeMoreLessonListController.h"
 #import "CSHomeMoreLessonListDetailController.h"
 #import "CSHomeAppsController.h"
+#import "CSHomeTravelController.h"
+#import "CSHomeChineseMapController.h"
+#import "CSHomeTravelSentencesController.h"
 
 static CSPageTransfer *sharePageTransfer = nil;
 @implementation CSPageTransfer
@@ -45,6 +48,21 @@ static CSPageTransfer *sharePageTransfer = nil;
     }else if ([model.pageType isEqualToString:CS_Page_Type_Home_moreClassListDetail]){
         // 课程详情
         CSHomeMoreLessonListDetailController *vc = [[CSHomeMoreLessonListDetailController alloc]init];
+        vc.pageModel = model;
+        [[self currentNavigatroller]pushViewController:vc animated:animated];
+    }else if ([model.pageType isEqualToString:CS_Page_Type_Home_Travel]){
+        //中国旅行
+        CSHomeTravelController *vc = [[CSHomeTravelController alloc]init];
+        vc.pageModel = model;
+        [[self currentNavigatroller]pushViewController:vc animated:animated];
+    }else if ([model.pageType isEqualToString:CS_Page_Type_Home_TravelSentences]){
+        // 旅行常用句子
+        CSHomeTravelSentencesController *vc = [[CSHomeTravelSentencesController alloc]init];
+        vc.pageModel = model;
+        [[self currentNavigatroller]pushViewController:vc animated:animated];
+    }else if ([model.pageType isEqualToString:CS_Page_Type_Home_ChineseMap]){
+        // 中国地图
+        CSHomeChineseMapController *vc = [[CSHomeChineseMapController alloc]init];
         vc.pageModel = model;
         [[self currentNavigatroller]pushViewController:vc animated:animated];
     }else if ([model.pageType isEqualToString:CS_Page_Type_Home_Apps]){

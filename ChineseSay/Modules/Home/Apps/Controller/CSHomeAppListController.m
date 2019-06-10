@@ -33,14 +33,14 @@
         make.left.mas_equalTo(10);
         make.right.mas_equalTo(-10);
         make.top.mas_equalTo(0);
-        make.bottom.mas_equalTo(-20);
+        make.bottom.mas_equalTo(-(kSystemNavigationBarHeight + kSystemStatusHeight + 50));
     }];
 }
 
 #pragma mark - delegate
 #pragma mark ------ UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return 30;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 130;
@@ -62,6 +62,7 @@
         _tableView.dataSource = self;
         [_tableView registerClass:[CSHomeAppListCell class] forCellReuseIdentifier:@"CSHomeAppListCell"];
         _tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
+        _tableView.separatorColor = [UIColor clearColor];
     }
     return _tableView;
 }

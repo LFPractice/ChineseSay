@@ -72,6 +72,11 @@ static CSHomeDataSource *homeSigle = nil;
     model2.title = @"中国旅行";
     model2.imgName = @"home_cell_mark_travel";
     model2.bgColor = 0xF57F7F;
+    CSPageTypeModel *pageModel2 = [[CSPageTypeModel alloc]init];
+    pageModel2.action = CS_Page_Type_Action;
+    pageModel2.pageType = CS_Page_Type_Home_Travel;
+    pageModel2.title = @"中国旅行";
+    model2.pageModel = pageModel2;
     
     CSHomeItemSingleCellModel *model3 = [[CSHomeItemSingleCellModel alloc]init];
     model3.title = @"常用中文APP";

@@ -43,6 +43,12 @@
 		53AC31D322A41DAC00CA2D12 /* CSHomeItemsCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AC31D222A41DAC00CA2D12 /* CSHomeItemsCellModel.m */; };
 		53AC31D622A41DD100CA2D12 /* CSHomeItemSingleCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AC31D522A41DD100CA2D12 /* CSHomeItemSingleCellModel.m */; };
 		53AC31DD22A42C9200CA2D12 /* UIColor+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AC31DC22A42C9200CA2D12 /* UIColor+Add.m */; };
+		53EB07E422AEAA33003E626A /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB07DD22AEAA33003E626A /* UIView+ViewController.m */; };
+		53EB07E522AEAA33003E626A /* NinaPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB07DE22AEAA33003E626A /* NinaPagerView.m */; };
+		53EB07E622AEAA33003E626A /* NinaBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB07DF22AEAA33003E626A /* NinaBaseView.m */; };
+		53EB07F222AEB7BE003E626A /* CSHomeTravelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB07F122AEB7BE003E626A /* CSHomeTravelController.m */; };
+		53EB07F522AEBB5B003E626A /* CSHomeTravelSentencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB07F422AEBB5B003E626A /* CSHomeTravelSentencesController.m */; };
+		53EB07F822AEBEA0003E626A /* CSHomeChineseMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB07F722AEBEA0003E626A /* CSHomeChineseMapController.m */; };
 		53F0F0FB229ED9FB000F93ED /* AppDelegate+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F0F0F8229ED9FB000F93ED /* AppDelegate+Config.m */; };
 		53F0F0FC229ED9FB000F93ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F0F0FA229ED9FB000F93ED /* AppDelegate.m */; };
 		53F0F10F229EE06D000F93ED /* LFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F0F104229EE06D000F93ED /* LFNavigationController.m */; };
@@ -156,6 +162,19 @@
 		53AC31D522A41DD100CA2D12 /* CSHomeItemSingleCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeItemSingleCellModel.m; sourceTree = "<group>"; };
 		53AC31DB22A42C9200CA2D12 /* UIColor+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Add.h"; sourceTree = "<group>"; };
 		53AC31DC22A42C9200CA2D12 /* UIColor+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Add.m"; sourceTree = "<group>"; };
+		53EB07DD22AEAA33003E626A /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
+		53EB07DE22AEAA33003E626A /* NinaPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinaPagerView.m; sourceTree = "<group>"; };
+		53EB07DF22AEAA33003E626A /* NinaBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinaBaseView.m; sourceTree = "<group>"; };
+		53EB07E022AEAA33003E626A /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
+		53EB07E122AEAA33003E626A /* NinaPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NinaPagerView.h; sourceTree = "<group>"; };
+		53EB07E222AEAA33003E626A /* UIParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIParameter.h; sourceTree = "<group>"; };
+		53EB07E322AEAA33003E626A /* NinaBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NinaBaseView.h; sourceTree = "<group>"; };
+		53EB07F022AEB7BE003E626A /* CSHomeTravelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeTravelController.h; sourceTree = "<group>"; };
+		53EB07F122AEB7BE003E626A /* CSHomeTravelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeTravelController.m; sourceTree = "<group>"; };
+		53EB07F322AEBB5B003E626A /* CSHomeTravelSentencesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeTravelSentencesController.h; sourceTree = "<group>"; };
+		53EB07F422AEBB5B003E626A /* CSHomeTravelSentencesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeTravelSentencesController.m; sourceTree = "<group>"; };
+		53EB07F622AEBEA0003E626A /* CSHomeChineseMapController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeChineseMapController.h; sourceTree = "<group>"; };
+		53EB07F722AEBEA0003E626A /* CSHomeChineseMapController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeChineseMapController.m; sourceTree = "<group>"; };
 		53F0F0F7229ED9FB000F93ED /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		53F0F0F8229ED9FB000F93ED /* AppDelegate+Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Config.m"; sourceTree = "<group>"; };
 		53F0F0F9229ED9FB000F93ED /* AppDelegate+Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Config.h"; sourceTree = "<group>"; };
@@ -438,6 +457,7 @@
 				53AC31A122A3CB4F00CA2D12 /* View */,
 				53AC31A022A3CB4F00CA2D12 /* Model */,
 				530D020322A6BDBC0044CCB7 /* MoreLesson */,
+				53EB07EC22AEB791003E626A /* Travel */,
 				53352EA822ACB50900F42147 /* Apps */,
 			);
 			path = Home;
@@ -538,6 +558,57 @@
 			path = Catergory;
 			sourceTree = "<group>";
 		};
+		53EB07DC22AEAA33003E626A /* NinaPagerView */ = {
+			isa = PBXGroup;
+			children = (
+				53EB07E322AEAA33003E626A /* NinaBaseView.h */,
+				53EB07DF22AEAA33003E626A /* NinaBaseView.m */,
+				53EB07E122AEAA33003E626A /* NinaPagerView.h */,
+				53EB07DE22AEAA33003E626A /* NinaPagerView.m */,
+				53EB07E222AEAA33003E626A /* UIParameter.h */,
+				53EB07E022AEAA33003E626A /* UIView+ViewController.h */,
+				53EB07DD22AEAA33003E626A /* UIView+ViewController.m */,
+			);
+			path = NinaPagerView;
+			sourceTree = "<group>";
+		};
+		53EB07EC22AEB791003E626A /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				53EB07ED22AEB791003E626A /* Controller */,
+				53EB07EE22AEB791003E626A /* Model */,
+				53EB07EF22AEB791003E626A /* View */,
+			);
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		53EB07ED22AEB791003E626A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				53EB07F022AEB7BE003E626A /* CSHomeTravelController.h */,
+				53EB07F122AEB7BE003E626A /* CSHomeTravelController.m */,
+				53EB07F322AEBB5B003E626A /* CSHomeTravelSentencesController.h */,
+				53EB07F422AEBB5B003E626A /* CSHomeTravelSentencesController.m */,
+				53EB07F622AEBEA0003E626A /* CSHomeChineseMapController.h */,
+				53EB07F722AEBEA0003E626A /* CSHomeChineseMapController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		53EB07EE22AEB791003E626A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		53EB07EF22AEB791003E626A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		53F0F0F6229ED9FB000F93ED /* Appdelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -585,6 +656,7 @@
 			isa = PBXGroup;
 			children = (
 				53AC31B822A3CE3D00CA2D12 /* PrefixHeader.pch */,
+				53EB07DC22AEAA33003E626A /* NinaPagerView */,
 				530D020722A6BE590044CCB7 /* CSPageTransfer */,
 				53AC31D722A42C4200CA2D12 /* Catergory */,
 				53AC31A222A3CC8200CA2D12 /* Base */,
@@ -867,6 +939,7 @@
 				53AC31B722A3CD3900CA2D12 /* CSHomeController.m in Sources */,
 				53AC31DD22A42C9200CA2D12 /* UIColor+Add.m in Sources */,
 				53F0F0FC229ED9FB000F93ED /* AppDelegate.m in Sources */,
+				53EB07F522AEBB5B003E626A /* CSHomeTravelSentencesController.m in Sources */,
 				53352ED622AD5AFC00F42147 /* UIImage+Add.m in Sources */,
 				53352EC522ACC88900F42147 /* CSGameModel.m in Sources */,
 				53352EA422A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m in Sources */,
@@ -876,6 +949,7 @@
 				53F0F0FB229ED9FB000F93ED /* AppDelegate+Config.m in Sources */,
 				53F0F11C229EE129000F93ED /* ViewController.m in Sources */,
 				53352EC222ACC86D00F42147 /* CSGameCell.m in Sources */,
+				53EB07E422AEAA33003E626A /* UIView+ViewController.m in Sources */,
 				53AC31AE22A3CCDF00CA2D12 /* CSBaseView.m in Sources */,
 				53352ED322AD2BCA00F42147 /* CSHomeAppListSelectToolView.m in Sources */,
 				53AC31CA22A3EFF200CA2D12 /* CSHomeItemsCell.m in Sources */,
@@ -885,6 +959,8 @@
 				5336A8AE22A8148E00C661DE /* CSHomeMoreLessonListCell.m in Sources */,
 				53AC31D022A41CC100CA2D12 /* CSHomeTitleCellModel.m in Sources */,
 				53F0F112229EE06D000F93ED /* LFTabBar.m in Sources */,
+				53EB07E622AEAA33003E626A /* NinaBaseView.m in Sources */,
+				53EB07E522AEAA33003E626A /* NinaPagerView.m in Sources */,
 				53352EA122A95A7800F42147 /* CSHomeMoreLessonListDetailController.m in Sources */,
 				53AC31D322A41DAC00CA2D12 /* CSHomeItemsCellModel.m in Sources */,
 				53AC31BB22A3D1BD00CA2D12 /* CSHomeDataSource.m in Sources */,
@@ -895,9 +971,11 @@
 				53352ED022AD243C00F42147 /* CSHomeAppListCell.m in Sources */,
 				53AC31A822A3CCAC00CA2D12 /* CSBaseController.m in Sources */,
 				53AC31CD22A3F04600CA2D12 /* CSItemSigleCell.m in Sources */,
+				53EB07F222AEB7BE003E626A /* CSHomeTravelController.m in Sources */,
 				53F0F111229EE06D000F93ED /* LFTabBarItem.m in Sources */,
 				53AC31C722A3EF9800CA2D12 /* CSHomeTitleCell.m in Sources */,
 				530D020F22A6C0660044CCB7 /* CSPageTypeModel.m in Sources */,
+				53EB07F822AEBEA0003E626A /* CSHomeChineseMapController.m in Sources */,
 				53352EBF22ACBEB100F42147 /* CSHomeHeaderView.m in Sources */,
 				53AC31C322A3D51D00CA2D12 /* CSHomeCellModel.m in Sources */,
 				53352EB922ACB93700F42147 /* CSGameController.m in Sources */,

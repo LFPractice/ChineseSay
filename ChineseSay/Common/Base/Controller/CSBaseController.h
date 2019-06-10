@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSBaseController : UIViewController
+@property (nonatomic, strong) UIView *view_navigationBar;
 @property (nonatomic, strong) CSPageTypeModel *pageModel;
+@property (nonatomic, strong) UIImageView *img_bg;
 @end
 
 NS_ASSUME_NONNULL_END

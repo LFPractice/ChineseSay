@@ -30,6 +30,8 @@
 
     [self.label_title mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.centerY.mas_equalTo(0);
+        make.left.mas_equalTo(20);
+        make.right.mas_equalTo(-20);
     }];
 }
 
@@ -56,6 +58,7 @@
         _label_title.textColor = [UIColor whiteColor];
         _label_title.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:20];
         _label_title.textAlignment = NSTextAlignmentCenter;
+        _label_title.numberOfLines = 0;
     }
     return _label_title;
 }
