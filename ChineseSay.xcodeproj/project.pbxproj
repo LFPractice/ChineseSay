@@ -27,6 +27,13 @@
 		53352ED322AD2BCA00F42147 /* CSHomeAppListSelectToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352ED222AD2BCA00F42147 /* CSHomeAppListSelectToolView.m */; };
 		53352ED622AD5AFC00F42147 /* UIImage+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352ED522AD5AFC00F42147 /* UIImage+Add.m */; };
 		5336A8AE22A8148E00C661DE /* CSHomeMoreLessonListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5336A8AD22A8148E00C661DE /* CSHomeMoreLessonListCell.m */; };
+		53390FB922AF686F0033A3CE /* CSHomeChineseMapDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53390FB822AF686F0033A3CE /* CSHomeChineseMapDetailController.m */; };
+		53390FBC22AF6CF60033A3CE /* CSHomeChineseMapDetailFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 53390FBB22AF6CF60033A3CE /* CSHomeChineseMapDetailFlowLayout.m */; };
+		53390FBF22AF6D4B0033A3CE /* CSHomeChineseMapDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53390FBE22AF6D4B0033A3CE /* CSHomeChineseMapDetailCell.m */; };
+		53390FC222AF73430033A3CE /* CSHomeMapDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53390FC122AF73430033A3CE /* CSHomeMapDetailModel.m */; };
+		53390FC522AF78F60033A3CE /* CSHomeChinesePlaceDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53390FC422AF78F60033A3CE /* CSHomeChinesePlaceDetailController.m */; };
+		53390FC822AF7E300033A3CE /* CSHomeChinesePlaceDetailFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 53390FC722AF7E300033A3CE /* CSHomeChinesePlaceDetailFlowLayout.m */; };
+		53390FCB22AF7E500033A3CE /* CSHomeChinesePlaceDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53390FCA22AF7E500033A3CE /* CSHomeChinesePlaceDetailCell.m */; };
 		535B853D22A57AAA000510C4 /* CSHomeItemsCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 535B853C22A57AAA000510C4 /* CSHomeItemsCellItem.m */; };
 		53AC31A822A3CCAC00CA2D12 /* CSBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AC31A722A3CCAC00CA2D12 /* CSBaseController.m */; };
 		53AC31AB22A3CCC400CA2D12 /* CSBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AC31AA22A3CCC400CA2D12 /* CSBaseModel.m */; };
@@ -128,6 +135,20 @@
 		53352ED522AD5AFC00F42147 /* UIImage+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Add.m"; sourceTree = "<group>"; };
 		5336A8AC22A8148E00C661DE /* CSHomeMoreLessonListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeMoreLessonListCell.h; sourceTree = "<group>"; };
 		5336A8AD22A8148E00C661DE /* CSHomeMoreLessonListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeMoreLessonListCell.m; sourceTree = "<group>"; };
+		53390FB722AF686F0033A3CE /* CSHomeChineseMapDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeChineseMapDetailController.h; sourceTree = "<group>"; };
+		53390FB822AF686F0033A3CE /* CSHomeChineseMapDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeChineseMapDetailController.m; sourceTree = "<group>"; };
+		53390FBA22AF6CF60033A3CE /* CSHomeChineseMapDetailFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeChineseMapDetailFlowLayout.h; sourceTree = "<group>"; };
+		53390FBB22AF6CF60033A3CE /* CSHomeChineseMapDetailFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeChineseMapDetailFlowLayout.m; sourceTree = "<group>"; };
+		53390FBD22AF6D4B0033A3CE /* CSHomeChineseMapDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeChineseMapDetailCell.h; sourceTree = "<group>"; };
+		53390FBE22AF6D4B0033A3CE /* CSHomeChineseMapDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeChineseMapDetailCell.m; sourceTree = "<group>"; };
+		53390FC022AF73430033A3CE /* CSHomeMapDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeMapDetailModel.h; sourceTree = "<group>"; };
+		53390FC122AF73430033A3CE /* CSHomeMapDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeMapDetailModel.m; sourceTree = "<group>"; };
+		53390FC322AF78F60033A3CE /* CSHomeChinesePlaceDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeChinesePlaceDetailController.h; sourceTree = "<group>"; };
+		53390FC422AF78F60033A3CE /* CSHomeChinesePlaceDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeChinesePlaceDetailController.m; sourceTree = "<group>"; };
+		53390FC622AF7E300033A3CE /* CSHomeChinesePlaceDetailFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeChinesePlaceDetailFlowLayout.h; sourceTree = "<group>"; };
+		53390FC722AF7E300033A3CE /* CSHomeChinesePlaceDetailFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeChinesePlaceDetailFlowLayout.m; sourceTree = "<group>"; };
+		53390FC922AF7E500033A3CE /* CSHomeChinesePlaceDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeChinesePlaceDetailCell.h; sourceTree = "<group>"; };
+		53390FCA22AF7E500033A3CE /* CSHomeChinesePlaceDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeChinesePlaceDetailCell.m; sourceTree = "<group>"; };
 		535B853B22A57AAA000510C4 /* CSHomeItemsCellItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeItemsCellItem.h; sourceTree = "<group>"; };
 		535B853C22A57AAA000510C4 /* CSHomeItemsCellItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeItemsCellItem.m; sourceTree = "<group>"; };
 		53AC31A622A3CCAC00CA2D12 /* CSBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSBaseController.h; sourceTree = "<group>"; };
@@ -591,6 +612,10 @@
 				53EB07F422AEBB5B003E626A /* CSHomeTravelSentencesController.m */,
 				53EB07F622AEBEA0003E626A /* CSHomeChineseMapController.h */,
 				53EB07F722AEBEA0003E626A /* CSHomeChineseMapController.m */,
+				53390FB722AF686F0033A3CE /* CSHomeChineseMapDetailController.h */,
+				53390FB822AF686F0033A3CE /* CSHomeChineseMapDetailController.m */,
+				53390FC322AF78F60033A3CE /* CSHomeChinesePlaceDetailController.h */,
+				53390FC422AF78F60033A3CE /* CSHomeChinesePlaceDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -598,6 +623,8 @@
 		53EB07EE22AEB791003E626A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				53390FC022AF73430033A3CE /* CSHomeMapDetailModel.h */,
+				53390FC122AF73430033A3CE /* CSHomeMapDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -605,6 +632,14 @@
 		53EB07EF22AEB791003E626A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				53390FBA22AF6CF60033A3CE /* CSHomeChineseMapDetailFlowLayout.h */,
+				53390FBB22AF6CF60033A3CE /* CSHomeChineseMapDetailFlowLayout.m */,
+				53390FBD22AF6D4B0033A3CE /* CSHomeChineseMapDetailCell.h */,
+				53390FBE22AF6D4B0033A3CE /* CSHomeChineseMapDetailCell.m */,
+				53390FC622AF7E300033A3CE /* CSHomeChinesePlaceDetailFlowLayout.h */,
+				53390FC722AF7E300033A3CE /* CSHomeChinesePlaceDetailFlowLayout.m */,
+				53390FC922AF7E500033A3CE /* CSHomeChinesePlaceDetailCell.h */,
+				53390FCA22AF7E500033A3CE /* CSHomeChinesePlaceDetailCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -940,6 +975,7 @@
 				53AC31DD22A42C9200CA2D12 /* UIColor+Add.m in Sources */,
 				53F0F0FC229ED9FB000F93ED /* AppDelegate.m in Sources */,
 				53EB07F522AEBB5B003E626A /* CSHomeTravelSentencesController.m in Sources */,
+				53390FBC22AF6CF60033A3CE /* CSHomeChineseMapDetailFlowLayout.m in Sources */,
 				53352ED622AD5AFC00F42147 /* UIImage+Add.m in Sources */,
 				53352EC522ACC88900F42147 /* CSGameModel.m in Sources */,
 				53352EA422A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m in Sources */,
@@ -947,6 +983,7 @@
 				53352EA722A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m in Sources */,
 				53352EC822AD14B500F42147 /* CSHomeAppListController.m in Sources */,
 				53F0F0FB229ED9FB000F93ED /* AppDelegate+Config.m in Sources */,
+				53390FCB22AF7E500033A3CE /* CSHomeChinesePlaceDetailCell.m in Sources */,
 				53F0F11C229EE129000F93ED /* ViewController.m in Sources */,
 				53352EC222ACC86D00F42147 /* CSGameCell.m in Sources */,
 				53EB07E422AEAA33003E626A /* UIView+ViewController.m in Sources */,
@@ -969,10 +1006,15 @@
 				53352EAE22ACB53900F42147 /* CSHomeAppsController.m in Sources */,
 				53AC31AB22A3CCC400CA2D12 /* CSBaseModel.m in Sources */,
 				53352ED022AD243C00F42147 /* CSHomeAppListCell.m in Sources */,
+				53390FC222AF73430033A3CE /* CSHomeMapDetailModel.m in Sources */,
+				53390FC822AF7E300033A3CE /* CSHomeChinesePlaceDetailFlowLayout.m in Sources */,
 				53AC31A822A3CCAC00CA2D12 /* CSBaseController.m in Sources */,
+				53390FB922AF686F0033A3CE /* CSHomeChineseMapDetailController.m in Sources */,
 				53AC31CD22A3F04600CA2D12 /* CSItemSigleCell.m in Sources */,
 				53EB07F222AEB7BE003E626A /* CSHomeTravelController.m in Sources */,
+				53390FBF22AF6D4B0033A3CE /* CSHomeChineseMapDetailCell.m in Sources */,
 				53F0F111229EE06D000F93ED /* LFTabBarItem.m in Sources */,
+				53390FC522AF78F60033A3CE /* CSHomeChinesePlaceDetailController.m in Sources */,
 				53AC31C722A3EF9800CA2D12 /* CSHomeTitleCell.m in Sources */,
 				530D020F22A6C0660044CCB7 /* CSPageTypeModel.m in Sources */,
 				53EB07F822AEBEA0003E626A /* CSHomeChineseMapController.m in Sources */,

@@ -12,7 +12,10 @@
 #import "CSHomeAppsController.h"
 #import "CSHomeTravelController.h"
 #import "CSHomeChineseMapController.h"
+#import "CSHomeChineseMapDetailController.h"
+#import "CSHomeChinesePlaceDetailController.h"
 #import "CSHomeTravelSentencesController.h"
+
 
 static CSPageTransfer *sharePageTransfer = nil;
 @implementation CSPageTransfer
@@ -64,6 +67,15 @@ static CSPageTransfer *sharePageTransfer = nil;
         // 中国地图
         CSHomeChineseMapController *vc = [[CSHomeChineseMapController alloc]init];
         vc.pageModel = model;
+        [[self currentNavigatroller]pushViewController:vc animated:animated];
+    }else if([model.pageType isEqualToString:CS_Page_type_Home_ChineseMapDetail]){
+        // 地图详情列表
+        CSHomeChineseMapDetailController *vc = [[CSHomeChineseMapDetailController alloc]init];
+        vc.pageModel = model;
+        [[self currentNavigatroller]pushViewController:vc animated:animated];
+    }else if ([model.pageType isEqualToString:CS_Page_Type_Home_PlaceDetail]){
+        // 地点详情
+        CSHomeChinesePlaceDetailController *vc = [[CSHomeChinesePlaceDetailController alloc]init];
         [[self currentNavigatroller]pushViewController:vc animated:animated];
     }else if ([model.pageType isEqualToString:CS_Page_Type_Home_Apps]){
         // 常用APP
