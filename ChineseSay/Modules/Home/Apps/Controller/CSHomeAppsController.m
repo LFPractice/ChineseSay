@@ -25,23 +25,13 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageWithColor:[UIColor colorWithHex:0x000000 alpha:0.4]]]];
-//    [self.navigationController.navigationBar setBarTintColor:[UIColor clearColor]];
-//    self.navigationController.navigationBar.translucent = YES;
-//    [self.navigationController setNavigationBarHidden:YES animated:animated];
-}
-- (void)viewWillDisappear:(BOOL)animated{
-    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
-}
-- (void)viewDidDisappear:(BOOL)animated{
-//    self.navi
-//    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [self.navigationController.navigationBar setColor:[UIColor clearColor]];
 }
 #pragma mark - private
 - (void)createUI{
     
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageWithColor:[UIColor colorWithHex:0x000000 alpha:0.4]]]];
-//    self.navigationController.navigationBar.
-    self.view.backgroundColor = [UIColor colorWithHex:0x000000 alpha:0.8];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_controllerBg"]];
+    [self.navigationController.navigationBar setColor:[UIColor clearColor]];
     NSArray *titles = @[@"购物类",@"实用类",@"娱乐类"];
     CGFloat y = 0;//kSystemNavigationBarHeight + kSystemStatusHeight;
     NinaPagerView *pageView = [[NinaPagerView alloc]initWithFrame:CGRectMake(0,y, kScreenWidth, kScreenHeight - y) WithTitles:titles WithVCs:@[self.listVC_buy,self.listVC_function,self.listVC_amusement]];
@@ -54,6 +44,8 @@
     pageView.sliderBlockColor = [UIColor whiteColor];
     pageView.topTabBackGroundColor = [UIColor colorWithHex:0xFAB416];
     [self.view addSubview:pageView];
+    
+    [self.navigationController.navigationBar setColor:[UIColor clearColor]];
 }
 #pragma mark - lazy load
 - (CSHomeAppListSelectToolView *)view_select{

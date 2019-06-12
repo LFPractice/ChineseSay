@@ -25,6 +25,8 @@
 #pragma private
 - (void)createUI{
     self.view.backgroundColor = [UIColor colorWithHex:0xF4F5F9];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_controllerBg"]];
+    [self.navigationController.navigationBar setColor:[UIColor clearColor]];
     [self.view addSubview:self.collectionView];
 }
 #pragma mark - delegate
@@ -49,6 +51,7 @@
         _collectionView.backgroundColor = [UIColor clearColor];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
+        _collectionView.backgroundColor = [UIColor clearColor];
         [_collectionView registerClass:[CSHomeChineseMapDetailCell class] forCellWithReuseIdentifier:@"CSHomeChineseMapDetailCell"];
         _collectionView.pagingEnabled = YES;
         _collectionView.showsHorizontalScrollIndicator = NO;

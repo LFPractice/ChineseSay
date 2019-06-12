@@ -13,11 +13,13 @@
 @end
 
 @implementation LFNavigationController
+
 + (void)initialize{
-    [[UINavigationBar appearance]setBarTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance]setTintColor:[UIColor colorWithHex:0x333333]];
-    [[UINavigationBar appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHex:0x333333]}];
-    [[UINavigationBar appearance]setTranslucent:NO];
+//    [[UINavigationBar appearance]setBarTintColor:[UIColor clearColor]];
+//    [[UINavigationBar appearance]setTintColor:[UIColor colorWithHex:0x333333]];
+//    [[UINavigationBar appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHex:0x333333]}];
+//    [[UINavigationBar appearance]setTranslucent:NO];
+//    [[UINavigationBar appearance]setColor:[UIColor clearColor]];
 }
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {

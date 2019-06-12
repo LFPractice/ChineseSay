@@ -41,6 +41,8 @@
     self.label_title.text = itemModel.title;
 }
 - (void)createUI{
+    self.contentView.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:self.view_bg];
 }
 #pragma mark - lazy load

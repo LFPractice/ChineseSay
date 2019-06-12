@@ -23,6 +23,7 @@
 #import "UIImageView+WebCache.h"
 #import "UIColor+Add.h"
 #import "UIImage+Add.h"
+#import "UINavigationBar+Add.h"
 #import "CSPageTransferDefine.h"
 #import "CSPageTransfer.h"
 #import "NinaPagerView.h"

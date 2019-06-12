@@ -13,15 +13,19 @@
 @end
 
 @implementation CSHomeChineseMapController
-
+- (void)viewWillAppear:(BOOL)animated{
+    [self.navigationController.navigationBar setColor:[UIColor clearColor]];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    self.view.backgroundColor =[UIColor lightGrayColor];
+    
     [self createUI];
 }
 - (void)createUI{
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_controllerBg"]];
+    [self.navigationController.navigationBar setColor:[UIColor clearColor]];
     [self.view addSubview:self.img_map];
 }
 #pragma mark - target action

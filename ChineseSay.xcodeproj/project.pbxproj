@@ -50,6 +50,7 @@
 		53AC31D322A41DAC00CA2D12 /* CSHomeItemsCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AC31D222A41DAC00CA2D12 /* CSHomeItemsCellModel.m */; };
 		53AC31D622A41DD100CA2D12 /* CSHomeItemSingleCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AC31D522A41DD100CA2D12 /* CSHomeItemSingleCellModel.m */; };
 		53AC31DD22A42C9200CA2D12 /* UIColor+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AC31DC22A42C9200CA2D12 /* UIColor+Add.m */; };
+		53E856DD22B149D30057E528 /* UINavigationBar+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E856DB22B149D30057E528 /* UINavigationBar+Add.m */; };
 		53EB07E422AEAA33003E626A /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB07DD22AEAA33003E626A /* UIView+ViewController.m */; };
 		53EB07E522AEAA33003E626A /* NinaPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB07DE22AEAA33003E626A /* NinaPagerView.m */; };
 		53EB07E622AEAA33003E626A /* NinaBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB07DF22AEAA33003E626A /* NinaBaseView.m */; };
@@ -183,6 +184,8 @@
 		53AC31D522A41DD100CA2D12 /* CSHomeItemSingleCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeItemSingleCellModel.m; sourceTree = "<group>"; };
 		53AC31DB22A42C9200CA2D12 /* UIColor+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Add.h"; sourceTree = "<group>"; };
 		53AC31DC22A42C9200CA2D12 /* UIColor+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Add.m"; sourceTree = "<group>"; };
+		53E856DB22B149D30057E528 /* UINavigationBar+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Add.m"; sourceTree = "<group>"; };
+		53E856DC22B149D30057E528 /* UINavigationBar+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Add.h"; sourceTree = "<group>"; };
 		53EB07DD22AEAA33003E626A /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
 		53EB07DE22AEAA33003E626A /* NinaPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinaPagerView.m; sourceTree = "<group>"; };
 		53EB07DF22AEAA33003E626A /* NinaBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinaBaseView.m; sourceTree = "<group>"; };
@@ -575,6 +578,8 @@
 				53AC31DC22A42C9200CA2D12 /* UIColor+Add.m */,
 				53352ED422AD5AFC00F42147 /* UIImage+Add.h */,
 				53352ED522AD5AFC00F42147 /* UIImage+Add.m */,
+				53E856DC22B149D30057E528 /* UINavigationBar+Add.h */,
+				53E856DB22B149D30057E528 /* UINavigationBar+Add.m */,
 			);
 			path = Catergory;
 			sourceTree = "<group>";
@@ -994,6 +999,7 @@
 				53AC31B422A3CD1000CA2D12 /* CSBaseTableView.m in Sources */,
 				530D021622A6D0650044CCB7 /* CSHomeMoreLessonListController.m in Sources */,
 				5336A8AE22A8148E00C661DE /* CSHomeMoreLessonListCell.m in Sources */,
+				53E856DD22B149D30057E528 /* UINavigationBar+Add.m in Sources */,
 				53AC31D022A41CC100CA2D12 /* CSHomeTitleCellModel.m in Sources */,
 				53F0F112229EE06D000F93ED /* LFTabBar.m in Sources */,
 				53EB07E622AEAA33003E626A /* NinaBaseView.m in Sources */,

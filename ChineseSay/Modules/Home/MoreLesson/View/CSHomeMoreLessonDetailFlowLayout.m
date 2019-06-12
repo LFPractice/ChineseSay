@@ -18,7 +18,7 @@
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     //设置cell的大小
     CGFloat itemW = self.collectionView.frame.size.width - 20;
-    CGFloat itemH = self.collectionView.frame.size.height *0.8;
+    CGFloat itemH = self.collectionView.frame.size.height - 20;
     self.itemSize = CGSizeMake(itemW, itemH);
     self.minimumLineSpacing = 20;
     //设置内边距

@@ -24,6 +24,8 @@
 #pragma private
 - (void)createUI{
     self.view.backgroundColor = [UIColor colorWithHex:0xF4F5F9];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_controllerBg"]];
+    [self.navigationController.navigationBar setColor:[UIColor clearColor]];
     [self.view addSubview:self.collectionView];
 }
 #pragma mark - delegate
@@ -43,7 +45,7 @@
 - (UICollectionView *)collectionView{
     if(!_collectionView){
         CSHomeChinesePlaceDetailFlowLayout *layout = [[CSHomeChinesePlaceDetailFlowLayout alloc]init];
-        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - kSystemStatusHeight - kSystemNavigationBarHeight) collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, kSystemStatusHeight + kSystemNavigationBarHeight, kScreenWidth, kScreenHeight - kSystemStatusHeight - kSystemNavigationBarHeight) collectionViewLayout:layout];
         _collectionView.backgroundColor = [UIColor clearColor];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;

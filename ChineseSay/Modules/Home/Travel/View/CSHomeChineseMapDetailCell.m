@@ -56,7 +56,7 @@
 
 #pragma mark - private
 - (void)createUI{
-    self.contentView.backgroundColor = [UIColor lightGrayColor];
+    self.contentView.backgroundColor = [UIColor clearColor];
     
     [self.contentView addSubview:self.img_big];
     [self.contentView addSubview:self.label_title];

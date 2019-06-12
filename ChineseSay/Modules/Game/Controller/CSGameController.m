@@ -24,6 +24,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [self.navigationController.navigationBar setColor:[UIColor clearColor]];
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:NO animated:YES];
@@ -44,6 +45,7 @@
 }
 #pragma mark - private
 - (void)createUI{
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_controllerBg"]];
     [self.view addSubview:self.label_title];
     [self.view addSubview:self.tableView];
 }
@@ -64,6 +66,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorColor = [UIColor clearColor];
+        _tableView.backgroundColor =[UIColor clearColor];
         [_tableView registerClass:[CSGameCell class] forCellReuseIdentifier:@"CSGameCell"];
         _tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     }
