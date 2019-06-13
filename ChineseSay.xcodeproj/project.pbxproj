@@ -13,6 +13,9 @@
 		530D021622A6D0650044CCB7 /* CSHomeMoreLessonListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530D021522A6D0650044CCB7 /* CSHomeMoreLessonListController.m */; };
 		5315BEDD229D828B00AC33C5 /* ChineseSayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEDC229D828B00AC33C5 /* ChineseSayTests.m */; };
 		5315BEE8229D828B00AC33C5 /* ChineseSayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5315BEE7229D828B00AC33C5 /* ChineseSayUITests.m */; };
+		531985A522B2A63E00351C66 /* CSHomeCommonChineseLevelListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531985A422B2A63E00351C66 /* CSHomeCommonChineseLevelListController.m */; };
+		531985AB22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531985AA22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m */; };
+		531985AE22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 531985AD22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m */; };
 		53352EA122A95A7800F42147 /* CSHomeMoreLessonListDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352EA022A95A7800F42147 /* CSHomeMoreLessonListDetailController.m */; };
 		53352EA422A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352EA322A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m */; };
 		53352EA722A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352EA622A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m */; };
@@ -108,6 +111,12 @@
 		5315BEE3229D828B00AC33C5 /* ChineseSayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChineseSayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5315BEE7229D828B00AC33C5 /* ChineseSayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChineseSayUITests.m; sourceTree = "<group>"; };
 		5315BEE9229D828B00AC33C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		531985A322B2A63E00351C66 /* CSHomeCommonChineseLevelListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeCommonChineseLevelListController.h; sourceTree = "<group>"; };
+		531985A422B2A63E00351C66 /* CSHomeCommonChineseLevelListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeCommonChineseLevelListController.m; sourceTree = "<group>"; };
+		531985A922B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeCommonChineseLessonListController.h; sourceTree = "<group>"; };
+		531985AA22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeCommonChineseLessonListController.m; sourceTree = "<group>"; };
+		531985AC22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeCommonChineseLevelCell.h; sourceTree = "<group>"; };
+		531985AD22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeCommonChineseLevelCell.m; sourceTree = "<group>"; };
 		53352E9F22A95A7800F42147 /* CSHomeMoreLessonListDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeMoreLessonListDetailController.h; sourceTree = "<group>"; };
 		53352EA022A95A7800F42147 /* CSHomeMoreLessonListDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeMoreLessonListDetailController.m; sourceTree = "<group>"; };
 		53352EA222A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeMoreLessonDetailFlowLayout.h; sourceTree = "<group>"; };
@@ -365,6 +374,43 @@
 			path = ChineseSayUITests;
 			sourceTree = "<group>";
 		};
+		5319859F22B2A60500351C66 /* CommonChinese */ = {
+			isa = PBXGroup;
+			children = (
+				531985A022B2A60500351C66 /* Controller */,
+				531985A122B2A60500351C66 /* Model */,
+				531985A222B2A60500351C66 /* View */,
+			);
+			path = CommonChinese;
+			sourceTree = "<group>";
+		};
+		531985A022B2A60500351C66 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				531985A322B2A63E00351C66 /* CSHomeCommonChineseLevelListController.h */,
+				531985A422B2A63E00351C66 /* CSHomeCommonChineseLevelListController.m */,
+				531985A922B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.h */,
+				531985AA22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		531985A122B2A60500351C66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		531985A222B2A60500351C66 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				531985AC22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.h */,
+				531985AD22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		53352EA822ACB50900F42147 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +529,7 @@
 				530D020322A6BDBC0044CCB7 /* MoreLesson */,
 				53EB07EC22AEB791003E626A /* Travel */,
 				53352EA822ACB50900F42147 /* Apps */,
+				5319859F22B2A60500351C66 /* CommonChinese */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -976,6 +1023,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				531985A522B2A63E00351C66 /* CSHomeCommonChineseLevelListController.m in Sources */,
 				53AC31B722A3CD3900CA2D12 /* CSHomeController.m in Sources */,
 				53AC31DD22A42C9200CA2D12 /* UIColor+Add.m in Sources */,
 				53F0F0FC229ED9FB000F93ED /* AppDelegate.m in Sources */,
@@ -988,6 +1036,7 @@
 				53352EA722A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m in Sources */,
 				53352EC822AD14B500F42147 /* CSHomeAppListController.m in Sources */,
 				53F0F0FB229ED9FB000F93ED /* AppDelegate+Config.m in Sources */,
+				531985AB22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m in Sources */,
 				53390FCB22AF7E500033A3CE /* CSHomeChinesePlaceDetailCell.m in Sources */,
 				53F0F11C229EE129000F93ED /* ViewController.m in Sources */,
 				53352EC222ACC86D00F42147 /* CSGameCell.m in Sources */,
@@ -1018,6 +1067,7 @@
 				53390FB922AF686F0033A3CE /* CSHomeChineseMapDetailController.m in Sources */,
 				53AC31CD22A3F04600CA2D12 /* CSItemSigleCell.m in Sources */,
 				53EB07F222AEB7BE003E626A /* CSHomeTravelController.m in Sources */,
+				531985AE22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m in Sources */,
 				53390FBF22AF6D4B0033A3CE /* CSHomeChineseMapDetailCell.m in Sources */,
 				53F0F111229EE06D000F93ED /* LFTabBarItem.m in Sources */,
 				53390FC522AF78F60033A3CE /* CSHomeChinesePlaceDetailController.m in Sources */,

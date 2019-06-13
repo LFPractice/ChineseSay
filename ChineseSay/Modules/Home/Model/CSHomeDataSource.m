@@ -45,6 +45,11 @@ static CSHomeDataSource *homeSigle = nil;
     model.imgName = @"home_cell_mark_chineseSpeedUp";
     model.bgColor = 0x6C80A8;
     model.cellHeight = 120;
+    CSPageTypeModel *pageModel = [[CSPageTypeModel alloc]init];
+    pageModel.action = CS_Page_Type_Action;
+    pageModel.pageType = CS_Page_Type_Home_CommonChineseLevelList;
+    pageModel.title = @"常用中文";
+    model.pageModel = pageModel;
     [self.arr_chineseSpeedUp addObject:model];
 }
 

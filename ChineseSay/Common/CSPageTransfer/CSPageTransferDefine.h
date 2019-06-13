@@ -22,4 +22,6 @@
 #define CS_Page_type_Home_ChineseMapDetail @"CS_Page_type_Home_ChineseMapDetail" // 中国地图各部分列表
 #define CS_Page_Type_Home_PlaceDetail      @"CS_Page_Type_Home_PlaceDetail" // 地点详情
 #define CS_Page_Type_Home_Apps             @"CS_Page_Type_Home_Apps"//首页->常用APP
+#define CS_Page_Type_Home_CommonChineseLevelList  @"CS_Page_Type_Home_CommonChineseLevelList" // 常用中文课程 （章）
+#define CS_Page_Type_Home_CommonChineseLessonList  @"CS_Page_Type_Home_CommonChineseLessonList" // 常用中文课程 (节)
 #endif /* CSPageTransferDefine_h */

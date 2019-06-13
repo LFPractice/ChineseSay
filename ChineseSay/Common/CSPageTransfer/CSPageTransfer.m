@@ -15,6 +15,8 @@
 #import "CSHomeChineseMapDetailController.h"
 #import "CSHomeChinesePlaceDetailController.h"
 #import "CSHomeTravelSentencesController.h"
+#import "CSHomeCommonChineseLevelListController.h"
+#import "CSHomeCommonChineseLessonListController.h"
 
 
 static CSPageTransfer *sharePageTransfer = nil;
@@ -80,6 +82,16 @@ static CSPageTransfer *sharePageTransfer = nil;
     }else if ([model.pageType isEqualToString:CS_Page_Type_Home_Apps]){
         // 常用APP
         CSHomeAppsController *vc = [[CSHomeAppsController alloc]init];
+        vc.pageModel = model;
+        [[self currentNavigatroller]pushViewController:vc animated:animated];
+    }else if ([model.pageType isEqualToString:CS_Page_Type_Home_CommonChineseLevelList]){
+        // 常用中文课程（章）
+        CSHomeCommonChineseLevelListController *vc = [[CSHomeCommonChineseLevelListController alloc]init];
+        vc.pageModel = model;
+        [[self currentNavigatroller]pushViewController:vc animated:animated];
+    }else if ([model.pageType isEqualToString:CS_Page_Type_Home_CommonChineseLessonList]){
+        // 常用中文课程 (节)
+        CSHomeCommonChineseLessonListController *vc = [[CSHomeCommonChineseLessonListController alloc]init];
         vc.pageModel = model;
         [[self currentNavigatroller]pushViewController:vc animated:animated];
     }
