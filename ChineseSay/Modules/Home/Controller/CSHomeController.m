@@ -79,7 +79,7 @@
 #pragma mark -- lazy load
 - (CSBaseTableView *)tableView{
     if(!_tableView){
-        _tableView = [[CSBaseTableView alloc]initWithFrame:CGRectMake(0, 0,kScreenWidth, kScreenHeight - kSystemNavigationBarHeight - kSystemStatusHeight) style:UITableViewStylePlain];
+        _tableView = [[CSBaseTableView alloc]initWithFrame:CGRectMake(0, 0,kScreenWidth, kScreenHeight - 49 - kSystemBottomHeight) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource  = self;
         _tableView.tableHeaderView = self.headerView;

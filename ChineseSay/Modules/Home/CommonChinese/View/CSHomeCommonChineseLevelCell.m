@@ -31,13 +31,13 @@
 - (void)layoutSubviews{
     if (self.indexPath.row % 2 == 0) {
         // 偶数行
-        [self.label_title mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self.label_title mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(30);
             make.right.mas_equalTo(self.mas_centerX).offset(-17);
             make.height.mas_equalTo(60);
             make.top.mas_equalTo(0);
         }];
-        [self.view_lineHorizontal mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self.view_lineHorizontal mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(30);
             make.right.mas_equalTo(self.mas_centerX).offset(0);
             make.height.mas_equalTo(1);
@@ -45,13 +45,13 @@
         }];
         self.view_lineHorizontal.image = [UIImage imageNamed:@"home_commonChineseLevel_left"];
     }else{
-        [self.label_title mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self.label_title mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.right.mas_equalTo(-30);
             make.left.mas_equalTo(self.mas_centerX).offset(17);
             make.height.mas_equalTo(60);
             make.top.mas_equalTo(0);
         }];
-        [self.view_lineHorizontal mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self.view_lineHorizontal mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.right.mas_equalTo(-30);
             make.left.mas_equalTo(self.mas_centerX).offset(0);
             make.height.mas_equalTo(1);

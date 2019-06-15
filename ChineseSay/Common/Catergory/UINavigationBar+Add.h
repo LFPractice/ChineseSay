@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UINavigationBar (Add)
 - (void)setColor:(UIColor *)color;
+- (void)setColor:(UIColor *)color showBottomLine:(BOOL)isShow;
 @end
 
 NS_ASSUME_NONNULL_END

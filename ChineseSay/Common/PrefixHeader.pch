@@ -27,4 +27,5 @@
 #import "CSPageTransferDefine.h"
 #import "CSPageTransfer.h"
 #import "NinaPagerView.h"
+#import "MJExtension.h"
 #endif /* PrefixHeader_pch */

@@ -53,6 +53,12 @@
 		53AC31D322A41DAC00CA2D12 /* CSHomeItemsCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AC31D222A41DAC00CA2D12 /* CSHomeItemsCellModel.m */; };
 		53AC31D622A41DD100CA2D12 /* CSHomeItemSingleCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AC31D522A41DD100CA2D12 /* CSHomeItemSingleCellModel.m */; };
 		53AC31DD22A42C9200CA2D12 /* UIColor+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AC31DC22A42C9200CA2D12 /* UIColor+Add.m */; };
+		53DF890B22B542790087CFD1 /* CSMineDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DF890A22B542790087CFD1 /* CSMineDetailController.m */; };
+		53DF890E22B545D90087CFD1 /* CSMineItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DF890D22B545D90087CFD1 /* CSMineItemCell.m */; };
+		53DF891122B545F80087CFD1 /* CSMineActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DF891022B545F80087CFD1 /* CSMineActivityCell.m */; };
+		53DF891422B548140087CFD1 /* CSMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DF891322B548140087CFD1 /* CSMineHeaderView.m */; };
+		53DF891722B55C4D0087CFD1 /* CSMineHeaderItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DF891622B55C4D0087CFD1 /* CSMineHeaderItemView.m */; };
+		53DF891A22B568FB0087CFD1 /* CSMineItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DF891922B568FB0087CFD1 /* CSMineItemModel.m */; };
 		53E856DD22B149D30057E528 /* UINavigationBar+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E856DB22B149D30057E528 /* UINavigationBar+Add.m */; };
 		53EB07E422AEAA33003E626A /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB07DD22AEAA33003E626A /* UIView+ViewController.m */; };
 		53EB07E522AEAA33003E626A /* NinaPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB07DE22AEAA33003E626A /* NinaPagerView.m */; };
@@ -193,6 +199,18 @@
 		53AC31D522A41DD100CA2D12 /* CSHomeItemSingleCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeItemSingleCellModel.m; sourceTree = "<group>"; };
 		53AC31DB22A42C9200CA2D12 /* UIColor+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Add.h"; sourceTree = "<group>"; };
 		53AC31DC22A42C9200CA2D12 /* UIColor+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Add.m"; sourceTree = "<group>"; };
+		53DF890922B542790087CFD1 /* CSMineDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineDetailController.h; sourceTree = "<group>"; };
+		53DF890A22B542790087CFD1 /* CSMineDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineDetailController.m; sourceTree = "<group>"; };
+		53DF890C22B545D90087CFD1 /* CSMineItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineItemCell.h; sourceTree = "<group>"; };
+		53DF890D22B545D90087CFD1 /* CSMineItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineItemCell.m; sourceTree = "<group>"; };
+		53DF890F22B545F80087CFD1 /* CSMineActivityCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineActivityCell.h; sourceTree = "<group>"; };
+		53DF891022B545F80087CFD1 /* CSMineActivityCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineActivityCell.m; sourceTree = "<group>"; };
+		53DF891222B548140087CFD1 /* CSMineHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineHeaderView.h; sourceTree = "<group>"; };
+		53DF891322B548140087CFD1 /* CSMineHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineHeaderView.m; sourceTree = "<group>"; };
+		53DF891522B55C4D0087CFD1 /* CSMineHeaderItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineHeaderItemView.h; sourceTree = "<group>"; };
+		53DF891622B55C4D0087CFD1 /* CSMineHeaderItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineHeaderItemView.m; sourceTree = "<group>"; };
+		53DF891822B568FB0087CFD1 /* CSMineItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineItemModel.h; sourceTree = "<group>"; };
+		53DF891922B568FB0087CFD1 /* CSMineItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineItemModel.m; sourceTree = "<group>"; };
 		53E856DB22B149D30057E528 /* UINavigationBar+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Add.m"; sourceTree = "<group>"; };
 		53E856DC22B149D30057E528 /* UINavigationBar+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Add.h"; sourceTree = "<group>"; };
 		53EB07DD22AEAA33003E626A /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
@@ -502,6 +520,8 @@
 			children = (
 				53352EBA22ACB95C00F42147 /* CSMineController.h */,
 				53352EBB22ACB95C00F42147 /* CSMineController.m */,
+				53DF890922B542790087CFD1 /* CSMineDetailController.h */,
+				53DF890A22B542790087CFD1 /* CSMineDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -509,6 +529,8 @@
 		53352EB522ACB91E00F42147 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				53DF891822B568FB0087CFD1 /* CSMineItemModel.h */,
+				53DF891922B568FB0087CFD1 /* CSMineItemModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -516,6 +538,14 @@
 		53352EB622ACB91E00F42147 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				53DF890C22B545D90087CFD1 /* CSMineItemCell.h */,
+				53DF890D22B545D90087CFD1 /* CSMineItemCell.m */,
+				53DF890F22B545F80087CFD1 /* CSMineActivityCell.h */,
+				53DF891022B545F80087CFD1 /* CSMineActivityCell.m */,
+				53DF891222B548140087CFD1 /* CSMineHeaderView.h */,
+				53DF891322B548140087CFD1 /* CSMineHeaderView.m */,
+				53DF891522B55C4D0087CFD1 /* CSMineHeaderItemView.h */,
+				53DF891622B55C4D0087CFD1 /* CSMineHeaderItemView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1026,8 +1056,10 @@
 				531985A522B2A63E00351C66 /* CSHomeCommonChineseLevelListController.m in Sources */,
 				53AC31B722A3CD3900CA2D12 /* CSHomeController.m in Sources */,
 				53AC31DD22A42C9200CA2D12 /* UIColor+Add.m in Sources */,
+				53DF891722B55C4D0087CFD1 /* CSMineHeaderItemView.m in Sources */,
 				53F0F0FC229ED9FB000F93ED /* AppDelegate.m in Sources */,
 				53EB07F522AEBB5B003E626A /* CSHomeTravelSentencesController.m in Sources */,
+				53DF891122B545F80087CFD1 /* CSMineActivityCell.m in Sources */,
 				53390FBC22AF6CF60033A3CE /* CSHomeChineseMapDetailFlowLayout.m in Sources */,
 				53352ED622AD5AFC00F42147 /* UIImage+Add.m in Sources */,
 				53352EC522ACC88900F42147 /* CSGameModel.m in Sources */,
@@ -1060,18 +1092,22 @@
 				53F0F10F229EE06D000F93ED /* LFNavigationController.m in Sources */,
 				53352EAE22ACB53900F42147 /* CSHomeAppsController.m in Sources */,
 				53AC31AB22A3CCC400CA2D12 /* CSBaseModel.m in Sources */,
+				53DF890E22B545D90087CFD1 /* CSMineItemCell.m in Sources */,
 				53352ED022AD243C00F42147 /* CSHomeAppListCell.m in Sources */,
 				53390FC222AF73430033A3CE /* CSHomeMapDetailModel.m in Sources */,
 				53390FC822AF7E300033A3CE /* CSHomeChinesePlaceDetailFlowLayout.m in Sources */,
 				53AC31A822A3CCAC00CA2D12 /* CSBaseController.m in Sources */,
+				53DF891422B548140087CFD1 /* CSMineHeaderView.m in Sources */,
 				53390FB922AF686F0033A3CE /* CSHomeChineseMapDetailController.m in Sources */,
 				53AC31CD22A3F04600CA2D12 /* CSItemSigleCell.m in Sources */,
 				53EB07F222AEB7BE003E626A /* CSHomeTravelController.m in Sources */,
 				531985AE22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m in Sources */,
+				53DF890B22B542790087CFD1 /* CSMineDetailController.m in Sources */,
 				53390FBF22AF6D4B0033A3CE /* CSHomeChineseMapDetailCell.m in Sources */,
 				53F0F111229EE06D000F93ED /* LFTabBarItem.m in Sources */,
 				53390FC522AF78F60033A3CE /* CSHomeChinesePlaceDetailController.m in Sources */,
 				53AC31C722A3EF9800CA2D12 /* CSHomeTitleCell.m in Sources */,
+				53DF891A22B568FB0087CFD1 /* CSMineItemModel.m in Sources */,
 				530D020F22A6C0660044CCB7 /* CSPageTypeModel.m in Sources */,
 				53EB07F822AEBEA0003E626A /* CSHomeChineseMapController.m in Sources */,
 				53352EBF22ACBEB100F42147 /* CSHomeHeaderView.m in Sources */,

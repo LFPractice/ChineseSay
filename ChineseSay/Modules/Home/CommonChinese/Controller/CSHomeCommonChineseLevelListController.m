@@ -22,7 +22,7 @@
 #pragma mark - delegate
 #pragma mark - UITableViewDataSource;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 6;
+    return 16;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 80;
@@ -35,14 +35,14 @@
 
 #pragma mark - private
 - (void)createUI{
-    [self.navigationController.navigationBar setColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setColor:[UIColor whiteColor] showBottomLine:YES];
     [self.view addSubview:self.tableView];
 }
 
 #pragma mark - lazy load
 - (UITableView *)tableView{
     if(!_tableView){
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, kSystemNavigationBarHeight + kSystemStatusHeight + 30, kScreenWidth, kScreenHeight - 30 - kSystemNavigationBarHeight - kSystemStatusHeight) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerClass:[CSHomeCommonChineseLevelCell class] forCellReuseIdentifier:@"CSHomeCommonChineseLevelCell"];

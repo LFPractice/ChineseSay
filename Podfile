@@ -9,6 +9,7 @@ target 'ChineseSay' do
   pod 'AFNetworking', '~> 3.0'
   pod 'Masonry'
   pod 'SDWebImage'
+  pod 'MJExtension'
   target 'ChineseSayTests' do
     inherit! :search_paths
     # Pods for testing
