@@ -37,15 +37,16 @@
         make.right.bottom.mas_equalTo(-10);
     }];
     
-    [self.img_mark mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(-80);
-        make.centerY.mas_equalTo(0);
-        make.width.height.mas_equalTo(34);
-    }];
+//    [self.img_mark mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.mas_equalTo(-80);
+//        make.centerY.mas_equalTo(0);
+//        make.width.height.mas_equalTo(34);
+//    }];
     [self.label_title mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.img_mark.mas_right).offset(20);
-        make.right.mas_equalTo(-15);
-        make.centerY.mas_equalTo(0);
+//        make.left.mas_equalTo(self.img_mark.mas_right).offset(20);
+//        make.right.mas_equalTo(-15);
+//        make.centerY.mas_equalTo(0);
+        make.centerX.centerY.mas_equalTo(0);
     }];
 }
 
@@ -57,7 +58,7 @@
 #pragma mark - private
 - (void)createUI{
     [self.contentView addSubview:self.img_bg];
-    [self.contentView addSubview:self.img_mark];
+//    [self.contentView addSubview:self.img_mark];
     [self.contentView addSubview:self.label_title];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(goToDetailClick)];
     [self.contentView addGestureRecognizer:tap];

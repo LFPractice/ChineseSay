@@ -33,14 +33,15 @@
     [self.img_bg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.bottom.mas_equalTo(0);
     }];
-    [self.img_mark mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(0);
-        make.centerY.mas_equalTo(-17);
-        make.width.height.mas_equalTo(34);
-    }];
+//    [self.img_mark mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.mas_equalTo(0);
+//        make.centerY.mas_equalTo(-17);
+//        make.width.height.mas_equalTo(34);
+//    }];
     [self.label_title mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(0);
-        make.bottom.mas_equalTo(-20);
+//        make.left.right.mas_equalTo(0);
+//        make.bottom.mas_equalTo(-20);
+        make.centerY.centerX.mas_equalTo(0);
     }];
 }
 
@@ -52,7 +53,7 @@
 #pragma mark - private
 - (void)createUI{
     [self addSubview:self.img_bg];
-    [self addSubview:self.img_mark];
+//    [self addSubview:self.img_mark];
     [self addSubview:self.label_title];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(goToDetailClick)];
     [self addGestureRecognizer:tap];
@@ -83,13 +84,13 @@
 }
 - (CGFloat)width{
     if(_width == 0){
-        _width = (kScreenWidth - 10 - 11 - 11 - 10)/3.0;
+        _width = (kScreenWidth - 10 - 10 - 10 )/2.0;
     }
     return _width;
 }
 - (CGFloat)height{
     if(!_height){
-        _height = 140;
+        _height = 50;
     }
     return _height;
 }

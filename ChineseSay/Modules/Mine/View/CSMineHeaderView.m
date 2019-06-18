@@ -51,7 +51,7 @@
     }];
     
     [self.img_infoNextMark mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(-20);
+        make.right.mas_equalTo(-15);
         make.width.height.mas_equalTo(12);
         make.centerY.mas_equalTo(self.label_userID.mas_centerY).offset(0);
     }];
@@ -134,6 +134,9 @@
     if(!_item_jiFen){
         _item_jiFen = [[CSMineHeaderItemView alloc]init];
         _item_jiFen.frame = CGRectMake(0, self.frame.size.height - _item_jiFen.height, _item_jiFen.width, _item_jiFen.height);
+        _item_jiFen.label_count.text = @"235";
+        _item_jiFen.label_title.text = @"积分商城";
+        _item_jiFen.label_des.text = @"立即签到领积分";
     }
     return _item_jiFen;
 }
@@ -141,6 +144,9 @@
     if(!_item_vipDays){
         _item_vipDays = [[CSMineHeaderItemView alloc]init];
         _item_vipDays.frame = CGRectMake(_item_vipDays.width, self.frame.size.height - _item_vipDays.height, _item_vipDays.width, _item_vipDays.height);
+        _item_vipDays.label_count.text = @"329";
+        _item_vipDays.label_title.text = @"会员剩余天数";
+        _item_vipDays.label_des.text = @"充值";
     }
     return _item_vipDays;
 }
@@ -148,6 +154,8 @@
     if(!_item_Coupons){
         _item_Coupons = [[CSMineHeaderItemView alloc]init];
         _item_Coupons.frame = CGRectMake(_item_Coupons.width * 2, self.frame.size.height - _item_Coupons.height, _item_Coupons.width, _item_Coupons.height);
+        _item_Coupons.label_count.text = @"8";
+        _item_Coupons.label_title.text = @"我的优惠券";
         _item_Coupons.label_des.hidden = YES;
         _item_Coupons.view_verticalLine.hidden = YES;
     }

@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CSMineHeaderItemView : CSBaseView
 @property (nonatomic, assign) NSInteger width;
 @property (nonatomic, assign) NSInteger height;
+@property (nonatomic, strong) UILabel *label_count;
+@property (nonatomic, strong) UILabel *label_title;
 @property (nonatomic, strong) UILabel *label_des;
 @property (nonatomic, strong) UIView *view_verticalLine;
 @end

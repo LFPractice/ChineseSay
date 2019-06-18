@@ -63,7 +63,7 @@
 - (CSHomeItemsCellItem *)item2{
     if(!_item2){
         _item2 = [[CSHomeItemsCellItem alloc]init];
-        _item2.frame = CGRectMake(10 + (_item2.width + 11 ), 10, _item2.width, _item2.height);
+        _item2.frame = CGRectMake(10 + (_item2.width + 10 ), 10, _item2.width, _item2.height);
     }
     return _item2;
 }

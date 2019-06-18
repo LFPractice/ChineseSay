@@ -53,7 +53,7 @@
     if(item.count == 0){
         return 0;
     }
-    return 10;
+    return 0;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CSHomeCellModel *model = [CSHomeDataSource shareInstance].dataSource[indexPath.section][indexPath.row];

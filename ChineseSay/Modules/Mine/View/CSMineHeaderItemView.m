@@ -8,8 +8,6 @@
 
 #import "CSMineHeaderItemView.h"
 @interface CSMineHeaderItemView()
-@property (nonatomic, strong) UILabel *label_count;
-@property (nonatomic, strong) UILabel *label_title;
 @property (nonatomic, strong) UIImageView *img_nextMark;
 
 @end
@@ -23,20 +21,20 @@
     return self;
 }
 - (void)layoutSubviews{
-    CGFloat scale = kScreenWidth / 375.0;
+//    CGFloat scale = kScreenWidth / 375.0;
     [self.label_count mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_equalTo(0);
     }];
     [self.label_title mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(0);
         make.top.mas_equalTo(self.label_count.mas_bottom).offset(3);
+        make.centerX.mas_equalTo(0);
     }];
     [self.label_des mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(0);
         make.top.mas_equalTo(self.label_title.mas_bottom).offset(0);
     }];
     [self.img_nextMark mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(- (23 * scale));
+        make.left.mas_equalTo(self.label_title.mas_right).offset(7);
         make.width.height.mas_equalTo(8);
         make.centerY.mas_equalTo(self.label_title.mas_centerY).offset(0);
     }];
