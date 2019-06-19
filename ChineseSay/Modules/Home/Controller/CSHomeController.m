@@ -74,6 +74,11 @@
 #pragma mark - private
 - (void)createUI{
     [self.view addSubview:self.tableView];
+    [[CSHomeDataSource shareInstance] loadDataForHome];
+    __weak typeof(self)weakSelf = self;
+    [[CSHomeDataSource shareInstance] setRefreshData:^{
+        [weakSelf.tableView reloadData];
+    }];
 }
 
 #pragma mark -- lazy load

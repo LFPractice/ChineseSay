@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CSHomeCellModel : CSBaseModel
 @property (nonatomic, assign) NSInteger cellHeight;
 @property (nonatomic, strong) NSString * cellName;
+@property (nonatomic, strong) NSString *key_backgroundModel;
 @end
 
 NS_ASSUME_NONNULL_END

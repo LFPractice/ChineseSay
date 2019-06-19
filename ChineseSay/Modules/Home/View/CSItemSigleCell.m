@@ -8,6 +8,7 @@
 
 #import "CSItemSigleCell.h"
 #import "CSHomeItemSingleCellModel.h"
+#import "CSHomeBackgroundModel.h"
 @interface CSItemSigleCell()
 @property (nonatomic, strong) UIImageView *img_bg;
 @property (nonatomic, strong) UIImageView *img_mark;
@@ -30,6 +31,10 @@
     [self.img_bg setBackgroundColor:[UIColor colorWithHex:itemModel.bgColor]];
     self.img_mark.image = [UIImage imageNamed:itemModel.imgName];
     self.label_title.text = itemModel.title;
+    
+    CSHomeBackgroundModel *backgroundModel = [CSHomeDataSource shareInstance].dic_background[itemModel.key_backgroundModel];
+    [self.img_bg sd_setImageWithURL:[NSURL URLWithString:backgroundModel.imageUrl]];
+    
 }
 - (void)layoutSubviews{
     [self.img_bg mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -69,6 +74,7 @@
     if(!_img_bg){
         _img_bg =[[UIImageView alloc]init];
         _img_bg.layer.cornerRadius = 10;
+        _img_bg.layer.masksToBounds = YES;
     }
     return _img_bg;
 }

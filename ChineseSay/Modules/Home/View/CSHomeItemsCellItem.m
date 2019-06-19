@@ -7,6 +7,7 @@
 //
 
 #import "CSHomeItemsCellItem.h"
+#import "CSHomeBackgroundModel.h"
 @interface CSHomeItemsCellItem()
 @property (nonatomic, strong) UIImageView *img_bg;
 @property (nonatomic, strong) UIImageView *img_mark;
@@ -28,6 +29,9 @@
     self.img_bg.backgroundColor = [UIColor colorWithHex:model.bgColor];
     self.img_mark.image = [UIImage imageNamed:model.imgName];
     self.label_title.text = model.title;
+    
+    CSHomeBackgroundModel *backgroundModel = [CSHomeDataSource shareInstance].dic_background[model.key_backgroundModel];
+    [self.img_bg sd_setImageWithURL:[NSURL URLWithString:backgroundModel.imageUrl]];
 }
 - (void)layoutSubviews{
     [self.img_bg mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -64,6 +68,7 @@
     if(!_img_bg){
         _img_bg =[[UIImageView alloc]init];
         _img_bg.layer.cornerRadius = 10;
+        _img_bg.layer.masksToBounds = YES;
     }
     return _img_bg;
 }

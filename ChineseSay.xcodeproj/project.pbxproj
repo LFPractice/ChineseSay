@@ -16,6 +16,7 @@
 		531985A522B2A63E00351C66 /* CSHomeCommonChineseLevelListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531985A422B2A63E00351C66 /* CSHomeCommonChineseLevelListController.m */; };
 		531985AB22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531985AA22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m */; };
 		531985AE22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 531985AD22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m */; };
+		53218EB322BA935200E6559E /* CSHomeBackgroundModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53218EB222BA935200E6559E /* CSHomeBackgroundModel.m */; };
 		53352EA122A95A7800F42147 /* CSHomeMoreLessonListDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352EA022A95A7800F42147 /* CSHomeMoreLessonListDetailController.m */; };
 		53352EA422A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352EA322A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m */; };
 		53352EA722A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352EA622A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m */; };
@@ -126,6 +127,8 @@
 		531985AA22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeCommonChineseLessonListController.m; sourceTree = "<group>"; };
 		531985AC22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeCommonChineseLevelCell.h; sourceTree = "<group>"; };
 		531985AD22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeCommonChineseLevelCell.m; sourceTree = "<group>"; };
+		53218EB122BA935200E6559E /* CSHomeBackgroundModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeBackgroundModel.h; sourceTree = "<group>"; };
+		53218EB222BA935200E6559E /* CSHomeBackgroundModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeBackgroundModel.m; sourceTree = "<group>"; };
 		53352E9F22A95A7800F42147 /* CSHomeMoreLessonListDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeMoreLessonListDetailController.h; sourceTree = "<group>"; };
 		53352EA022A95A7800F42147 /* CSHomeMoreLessonListDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeMoreLessonListDetailController.m; sourceTree = "<group>"; };
 		53352EA222A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeMoreLessonDetailFlowLayout.h; sourceTree = "<group>"; };
@@ -610,6 +613,8 @@
 				53AC31D222A41DAC00CA2D12 /* CSHomeItemsCellModel.m */,
 				53AC31D422A41DD100CA2D12 /* CSHomeItemSingleCellModel.h */,
 				53AC31D522A41DD100CA2D12 /* CSHomeItemSingleCellModel.m */,
+				53218EB122BA935200E6559E /* CSHomeBackgroundModel.h */,
+				53218EB222BA935200E6559E /* CSHomeBackgroundModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1096,6 +1101,7 @@
 				531985AB22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m in Sources */,
 				53390FCB22AF7E500033A3CE /* CSHomeChinesePlaceDetailCell.m in Sources */,
 				53F0F11C229EE129000F93ED /* ViewController.m in Sources */,
+				53218EB322BA935200E6559E /* CSHomeBackgroundModel.m in Sources */,
 				53352EC222ACC86D00F42147 /* CSGameCell.m in Sources */,
 				53EB07E422AEAA33003E626A /* UIView+ViewController.m in Sources */,
 				53AC31AE22A3CCDF00CA2D12 /* CSBaseView.m in Sources */,
