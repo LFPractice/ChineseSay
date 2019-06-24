@@ -11,6 +11,7 @@
 #import "CSHomeTitleCellModel.h"
 #import "CSHomeItemsCellModel.h"
 #import "CSHomeItemSingleCellModel.h"
+#import "CSHomeBannerModel.h"
 static CSHomeDataSource *homeSigle = nil;
 @interface CSHomeDataSource()
 @property (nonatomic, strong) NSMutableArray *arr_chineseSpeedUp;//中文速成
@@ -129,8 +130,7 @@ static CSHomeDataSource *homeSigle = nil;
     [self.arr_essay addObject:titleModel];
     
     CSHomeItemSingleCellModel *model = [[CSHomeItemSingleCellModel alloc]init];
-    model.cellName = @"CSItemSigleCell";
-    model.title = @"How to use the Alipay ?";
+    model.cellName = @"CSHomeCenterBannerCell";
     model.cellHeight = 120;
     [self.arr_essay addObject:model];
 }
@@ -217,6 +217,9 @@ static CSHomeDataSource *homeSigle = nil;
     for (CSHomeBackgroundModel *model in arr_background) {
         [self.dic_background setObject:model forKey:model.key];
     }
+    
+    self.arr_topBanner = [[NSMutableArray alloc]initWithArray:[CSHomeBannerModel mj_objectArrayWithKeyValuesArray:result[@"topBanner"]]];
+    self.arr_centerBanner = [[NSMutableArray alloc]initWithArray:[CSHomeBannerModel mj_objectArrayWithKeyValuesArray:result[@"centerBanner"]]];
 }
 #pragma mark - lazy load
 - (NSMutableArray *)dataSource{

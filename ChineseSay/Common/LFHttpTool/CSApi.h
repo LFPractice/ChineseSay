@@ -9,5 +9,5 @@
 #ifndef CSApi_h
 #define CSApi_h
 
-
+#define BaseUrl @"http://118.190.38.207:3201"
 #endif /* CSApi_h */

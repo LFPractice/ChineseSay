@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CSHomeMoreLessonListDetailItemModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSHomeMoreLessonDetailCollectionViewCell : UICollectionViewCell
-
+- (void)loadData:(CSHomeMoreLessonListDetailItemModel *)model
+       indexPath:(NSIndexPath *)indexPath;
 @end
 
 NS_ASSUME_NONNULL_END

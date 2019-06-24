@@ -10,6 +10,7 @@ target 'ChineseSay' do
   pod 'Masonry'
   pod 'SDWebImage'
   pod 'MJExtension'
+  pod 'SDCycleScrollView','~> 1.61'
   target 'ChineseSayTests' do
     inherit! :search_paths
     # Pods for testing

@@ -15,6 +15,9 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     return self;
 }
+- (void)createUI{
+    
+}
 - (void)loadCellWithData:(id)model cellPath:(NSIndexPath *)path{
     
 }

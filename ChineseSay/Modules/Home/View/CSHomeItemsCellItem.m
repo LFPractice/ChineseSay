@@ -32,6 +32,11 @@
     
     CSHomeBackgroundModel *backgroundModel = [CSHomeDataSource shareInstance].dic_background[model.key_backgroundModel];
     [self.img_bg sd_setImageWithURL:[NSURL URLWithString:backgroundModel.imageUrl]];
+    
+    if(backgroundModel.key.length){
+        self.model.pageModel.exparam = @{@"type":backgroundModel.key};
+    }
+
 }
 - (void)layoutSubviews{
     [self.img_bg mas_makeConstraints:^(MASConstraintMaker *make) {

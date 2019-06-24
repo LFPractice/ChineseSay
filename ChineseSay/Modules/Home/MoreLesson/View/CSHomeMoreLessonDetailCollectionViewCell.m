@@ -22,6 +22,13 @@
     }
     return self;
 }
+- (void)loadData:(CSHomeMoreLessonListDetailItemModel *)model indexPath:(NSIndexPath *)indexPath{
+    [self.img_head sd_setImageWithURL:[NSURL URLWithString:model.image]];
+    self.label_title.text = model.title;
+    self.label_englishTitle.text = model.subTitle;
+    self.label_content.text = model.content;
+    
+}
 - (void)layoutSubviews{
     [super layoutSubviews];
     

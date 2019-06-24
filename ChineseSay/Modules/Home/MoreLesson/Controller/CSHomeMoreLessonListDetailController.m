@@ -11,6 +11,7 @@
 #import "CSHomeMoreLessonDetailCollectionViewCell.h"
 @interface CSHomeMoreLessonListDetailController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) NSMutableArray *dataSource;
 @end
 
 @implementation CSHomeMoreLessonListDetailController
@@ -27,6 +28,16 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_controllerBg"]];
     [self.navigationController.navigationBar setColor:[UIColor clearColor]];
     [self.view addSubview:self.collectionView];
+    
+    [self loadData];
+}
+- (void)loadData{
+    [LFHttpTool home_getDataForCultureDetailListParams:self.pageModel.exparam Success:^(id responseObject) {
+        self.dataSource = [[NSMutableArray alloc]initWithArray:[CSHomeMoreLessonListDetailItemModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]]];
+        [self.collectionView reloadData];
+    } failure:^(NSError *error) {
+        
+    }];
 }
 #pragma mark - delegate
 #pragma mark ------ UICollectionViewDataSource
@@ -34,10 +45,11 @@
     return 1;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 6;
+    return self.dataSource.count;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CSHomeMoreLessonDetailCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CSHomeMoreLessonDetailCollectionViewCell" forIndexPath:indexPath];
+    [cell loadData:self.dataSource[indexPath.row] indexPath:indexPath];
     return cell;
 }
 #pragma mark ------ UICollectionViewDelegate

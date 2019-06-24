@@ -11,6 +11,7 @@
 #import "CSHomeTitleCell.h"
 #import "CSHomeItemsCell.h"
 #import "CSItemSigleCell.h"
+#import "CSHomeCenterBannerCell.h"
 #import "CSHomeCellModel.h"
 #import "CSHomeHeaderView.h"
 @interface CSHomeController ()<UITableViewDelegate,UITableViewDataSource>
@@ -78,13 +79,14 @@
     __weak typeof(self)weakSelf = self;
     [[CSHomeDataSource shareInstance] setRefreshData:^{
         [weakSelf.tableView reloadData];
+        [weakSelf.headerView reloadData];
     }];
 }
 
 #pragma mark -- lazy load
 - (CSBaseTableView *)tableView{
     if(!_tableView){
-        _tableView = [[CSBaseTableView alloc]initWithFrame:CGRectMake(0, 0,kScreenWidth, kScreenHeight - 49 - kSystemBottomHeight) style:UITableViewStylePlain];
+        _tableView = [[CSBaseTableView alloc]initWithFrame:CGRectMake(0, -kSystemStatusHeight,kScreenWidth, kScreenHeight - 49 - kSystemBottomHeight) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource  = self;
         _tableView.tableHeaderView = self.headerView;
@@ -95,6 +97,7 @@
         [_tableView registerClass:[CSHomeTitleCell class] forCellReuseIdentifier:@"CSHomeTitleCell"];
         [_tableView registerClass:[CSHomeItemsCell class] forCellReuseIdentifier:@"CSHomeItemsCell"];
         [_tableView registerClass:[CSItemSigleCell class] forCellReuseIdentifier:@"CSItemSigleCell"];
+        [_tableView registerClass:[CSHomeCenterBannerCell class] forCellReuseIdentifier:@"CSHomeCenterBannerCell"];
     }
     return _tableView;
 }

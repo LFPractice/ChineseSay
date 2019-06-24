@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)shareInstance;
 @property (nonatomic, strong) NSMutableArray *dataSource;
 @property (nonatomic, strong) NSMutableDictionary *dic_background;
+@property (nonatomic, strong) NSMutableArray * arr_topBanner;
+@property (nonatomic, strong) NSMutableArray * arr_centerBanner;
 @property (nonatomic, copy) void(^refreshData)();
 
 - (void)loadDataForHome;

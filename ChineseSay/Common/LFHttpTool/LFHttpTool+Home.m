@@ -9,8 +9,16 @@
 #import "LFHttpTool+Home.h"
 
 @implementation LFHttpTool (Home)
-+ (void)home_getDataForHomePageSuccess:(LFRequestSuccessBlock)success failure:(LFRequestFailureBlock)failure{
-    [LFHttpTool getData:@"http://118.190.38.207:3201/api/home/index" parameters:nil success:^(id responseObject) {
++ (void)home_getDataForHomePageSuccess:(LFRequestSuccessBlock)success
+                               failure:(LFRequestFailureBlock)failure{
+    [LFHttpTool getData:[NSString stringWithFormat:@"%@/api/home/index",BaseUrl] parameters:nil success:^(id responseObject) {
+        success(responseObject);
+    } faliure:^(NSError *error) {
+        failure(error);
+    }];
+}
++ (void)home_getDataForCultureDetailListParams:(NSDictionary *)params Success:(LFRequestSuccessBlock)success failure:(LFRequestFailureBlock)failure{
+    [LFHttpTool getData:[NSString stringWithFormat:@"%@/api/home/detail",BaseUrl] parameters:params success:^(id responseObject) {
         success(responseObject);
     } faliure:^(NSError *error) {
         failure(error);

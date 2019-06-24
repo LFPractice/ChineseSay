@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSBaseCell : UITableViewCell
+- (void)createUI;
 - (void)loadCellWithData:(id)model cellPath:(NSIndexPath *)path;
 @end
 

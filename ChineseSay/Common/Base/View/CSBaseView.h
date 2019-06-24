@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSBaseView : UIView
-
+- (void)createUI;
 @end
 
 NS_ASSUME_NONNULL_END

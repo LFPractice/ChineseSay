@@ -14,7 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *请求首页数据
  */
-+ (void)home_getDataForHomePageSuccess:(LFRequestSuccessBlock)success failure:(LFRequestFailureBlock)failure;
++ (void)home_getDataForHomePageSuccess:(LFRequestSuccessBlock)success
+                               failure:(LFRequestFailureBlock)failure;
+/*
+ *请求文化详情列表数据
+ */
++ (void)home_getDataForCultureDetailListParams:(NSDictionary *)params
+                                       Success:(LFRequestSuccessBlock)success
+                                       failure:(LFRequestFailureBlock)failure;
 @end
 
 NS_ASSUME_NONNULL_END
