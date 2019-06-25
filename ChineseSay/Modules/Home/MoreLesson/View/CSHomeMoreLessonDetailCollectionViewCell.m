@@ -13,8 +13,25 @@
 @property (nonatomic, strong) UILabel *label_englishTitle;
 @property (nonatomic, strong) UIButton *btn_play;
 @property (nonatomic, strong) UILabel *label_content;
+@property (nonatomic, strong) CSHomeMoreLessonListDetailItemModel *model;
 @end
 @implementation CSHomeMoreLessonDetailCollectionViewCell
+
+#pragma mark - target-action
+- (void)playClick:(UIButton *)btn{
+    btn.selected = !btn.selected;
+    if(btn.selected){
+//        [QMUITips showWithText:@"数据请求中……"];
+        [QMUITips showLoadingInView:self.contentView];
+        [CSPlayer sharedInstance].readyToPlayBlock = ^{
+            [QMUITips hideAllTipsInView:self.contentView];
+        };
+        [[CSPlayer sharedInstance]playWithUrlStr:self.model.audio];
+    }else{
+        [[CSPlayer sharedInstance]stop];
+    }
+    
+}
 #pragma mark - assist method
 - (instancetype)initWithFrame:(CGRect)frame{
     if(self = [super initWithFrame:frame]){
@@ -23,6 +40,7 @@
     return self;
 }
 - (void)loadData:(CSHomeMoreLessonListDetailItemModel *)model indexPath:(NSIndexPath *)indexPath{
+    self.model = model;
     [self.img_head sd_setImageWithURL:[NSURL URLWithString:model.image]];
     self.label_title.text = model.title;
     self.label_englishTitle.text = model.subTitle;
@@ -102,7 +120,10 @@
 - (UIButton *)btn_play{
     if(!_btn_play){
         _btn_play = [UIButton buttonWithType:UIButtonTypeCustom];
-        _btn_play.backgroundColor =[UIColor lightGrayColor];
+//        _btn_play.backgroundColor =[UIColor lightGrayColor];
+        [_btn_play setImage:[UIImage imageNamed:@"home_cultureDetail_playSound"] forState:UIControlStateNormal];
+        [_btn_play addTarget:self action:@selector(playClick:) forControlEvents:UIControlEventTouchUpInside];
+        _btn_play.selected = NO;
     }
     return _btn_play;
 }

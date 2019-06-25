@@ -24,4 +24,11 @@
         failure(error);
     }];
 }
++ (void)home_getDataForLevelListParam:(NSDictionary *)params Success:(LFRequestSuccessBlock)success Failure:(LFRequestFailureBlock)failure{
+    [LFHttpTool getData:[NSString stringWithFormat:@"%@/api/commonly_used_chinese/level",BaseUrl] parameters:params success:^(id responseObject) {
+        success(responseObject);
+    } faliure:^(NSError *error) {
+        failure(error);
+    }] ;
+}
 @end

@@ -12,16 +12,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LFHttpTool (Home)
 /**
- *请求首页数据
+ * 请求首页数据
  */
 + (void)home_getDataForHomePageSuccess:(LFRequestSuccessBlock)success
                                failure:(LFRequestFailureBlock)failure;
-/*
- *请求文化详情列表数据
+/**
+ * 请求文化详情列表数据
  */
 + (void)home_getDataForCultureDetailListParams:(NSDictionary *)params
                                        Success:(LFRequestSuccessBlock)success
                                        failure:(LFRequestFailureBlock)failure;
+/**
+ * 请求Level列表数据
+ */
++ (void)home_getDataForLevelListParam:(NSDictionary *)params
+                              Success:(LFRequestSuccessBlock)success
+                              Failure:(LFRequestFailureBlock)failure;
 @end
 
 NS_ASSUME_NONNULL_END
