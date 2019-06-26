@@ -12,6 +12,7 @@
 @interface CSHomeCommonChineseLessonListController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong)UITableView *tableView;
 @property (nonatomic, strong)CSHomeLessonListHeader *headerView;
+@property (nonatomic, strong) NSMutableArray *dataSource;
 @end
 
 @implementation CSHomeCommonChineseLessonListController
@@ -26,19 +27,33 @@
 }
 #pragma mark - private
 - (void)createUI{
-
     [self.view addSubview:self.tableView];
+    [self loadData];
 }
-
+- (void)loadData{
+    [LFHttpTool home_getDataForLessonListParam:@{@"levelId":self.level}
+                                       Success:^(id responseObject) {
+                                           [self dealWithData:responseObject[@"data"][@"list"]];
+    }
+                                       Failure:^(NSError *error) {
+        
+    }];
+}
+- (void)dealWithData:(NSArray *)array{
+    [self.dataSource addObjectsFromArray:[CSHomeLessonModel mj_objectArrayWithKeyValuesArray:array]];
+    
+    [self.tableView reloadData];
+}
 #pragma mark - delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 6;
+    return self.dataSource.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
+    return 110;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CSHomeCommonChineseLessonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CSHomeCommonChineseLessonCell"];
+    [cell loadCellWithData:self.dataSource[indexPath.row] cellPath:indexPath];
     return cell;
 }
 #pragma mark - lazy load
@@ -59,5 +74,11 @@
         _headerView = [[CSHomeLessonListHeader alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 246)];
     }
     return _headerView;
+}
+- (NSMutableArray *)dataSource{
+    if(!_dataSource){
+        _dataSource = [[NSMutableArray alloc]init];
+    }
+    return _dataSource;
 }
 @end

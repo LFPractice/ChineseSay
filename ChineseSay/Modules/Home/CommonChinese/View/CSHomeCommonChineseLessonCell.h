@@ -7,11 +7,11 @@
 //
 
 #import "CSBaseCell.h"
-
+#import "CSHomeLessonModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSHomeCommonChineseLessonCell : CSBaseCell
-
+@property(nonatomic, strong)CSHomeLessonModel *model;
 @end
 
 NS_ASSUME_NONNULL_END

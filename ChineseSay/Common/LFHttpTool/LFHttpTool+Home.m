@@ -31,4 +31,11 @@
         failure(error);
     }] ;
 }
++ (void)home_getDataForLessonListParam:(NSDictionary *)params Success:(LFRequestSuccessBlock)success Failure:(LFRequestFailureBlock)failure{
+    [LFHttpTool getData:[NSString stringWithFormat:@"%@/api/commonly_used_chinese/lesson",BaseUrl] parameters:params success:^(id responseObject) {
+        success(responseObject);
+    } faliure:^(NSError *error) {
+        failure(error);
+    }];
+}
 @end

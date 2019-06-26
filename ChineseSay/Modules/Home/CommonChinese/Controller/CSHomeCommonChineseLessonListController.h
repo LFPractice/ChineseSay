@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSHomeCommonChineseLessonListController : CSBaseController
-
+@property (nonatomic, strong) NSString *level;
 @end
 
 NS_ASSUME_NONNULL_END

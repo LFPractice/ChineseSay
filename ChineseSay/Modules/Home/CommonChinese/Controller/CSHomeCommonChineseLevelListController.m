@@ -38,7 +38,9 @@
 }
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    CSHomeLevelModel *model = self.dataSource[indexPath.row];
     CSHomeCommonChineseLessonListController *lessonListVC = [[CSHomeCommonChineseLessonListController alloc]init];
+    lessonListVC.level = model.level;
     [self.navigationController pushViewController:lessonListVC animated:YES];
 }
 
