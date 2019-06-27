@@ -34,6 +34,7 @@
 #import "CSPlayer.h"
 #import "LFHttpTool.h"
 #import "LFHttpTool+Home.h"
+#import "LFHttpTool+Game.h"
 #import "CSHomeDataSource.h"
 
 #endif /* PrefixHeader_pch */

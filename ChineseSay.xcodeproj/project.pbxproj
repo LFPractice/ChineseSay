@@ -17,6 +17,13 @@
 		531985AB22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531985AA22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m */; };
 		531985AE22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 531985AD22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m */; };
 		53218EB322BA935200E6559E /* CSHomeBackgroundModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53218EB222BA935200E6559E /* CSHomeBackgroundModel.m */; };
+		5331179C22C43D1B00F8C94C /* CSGameQuestionListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5331179B22C43D1B00F8C94C /* CSGameQuestionListController.m */; };
+		5331179F22C440FF00F8C94C /* CSGameQuestionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5331179E22C440FF00F8C94C /* CSGameQuestionCollectionViewCell.m */; };
+		533117A222C4416D00F8C94C /* CSGameQuetionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 533117A122C4416D00F8C94C /* CSGameQuetionModel.m */; };
+		533117A522C441BF00F8C94C /* CSGameQuestionCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 533117A422C441BF00F8C94C /* CSGameQuestionCollectionViewFlowLayout.m */; };
+		533117A822C4438100F8C94C /* LFHttpTool+Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 533117A722C4438100F8C94C /* LFHttpTool+Game.m */; };
+		533117AB22C4492C00F8C94C /* CSGameQuestionItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 533117AA22C4492C00F8C94C /* CSGameQuestionItemCell.m */; };
+		533117AE22C44AB000F8C94C /* CSGameQuestionItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 533117AD22C44AB000F8C94C /* CSGameQuestionItemModel.m */; };
 		53352EA122A95A7800F42147 /* CSHomeMoreLessonListDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352EA022A95A7800F42147 /* CSHomeMoreLessonListDetailController.m */; };
 		53352EA422A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352EA322A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m */; };
 		53352EA722A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352EA622A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m */; };
@@ -138,6 +145,20 @@
 		531985AD22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeCommonChineseLevelCell.m; sourceTree = "<group>"; };
 		53218EB122BA935200E6559E /* CSHomeBackgroundModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeBackgroundModel.h; sourceTree = "<group>"; };
 		53218EB222BA935200E6559E /* CSHomeBackgroundModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeBackgroundModel.m; sourceTree = "<group>"; };
+		5331179A22C43D1B00F8C94C /* CSGameQuestionListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameQuestionListController.h; sourceTree = "<group>"; };
+		5331179B22C43D1B00F8C94C /* CSGameQuestionListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameQuestionListController.m; sourceTree = "<group>"; };
+		5331179D22C440FF00F8C94C /* CSGameQuestionCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameQuestionCollectionViewCell.h; sourceTree = "<group>"; };
+		5331179E22C440FF00F8C94C /* CSGameQuestionCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameQuestionCollectionViewCell.m; sourceTree = "<group>"; };
+		533117A022C4416D00F8C94C /* CSGameQuetionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameQuetionModel.h; sourceTree = "<group>"; };
+		533117A122C4416D00F8C94C /* CSGameQuetionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameQuetionModel.m; sourceTree = "<group>"; };
+		533117A322C441BF00F8C94C /* CSGameQuestionCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameQuestionCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		533117A422C441BF00F8C94C /* CSGameQuestionCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameQuestionCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		533117A622C4438100F8C94C /* LFHttpTool+Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LFHttpTool+Game.h"; sourceTree = "<group>"; };
+		533117A722C4438100F8C94C /* LFHttpTool+Game.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LFHttpTool+Game.m"; sourceTree = "<group>"; };
+		533117A922C4492C00F8C94C /* CSGameQuestionItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameQuestionItemCell.h; sourceTree = "<group>"; };
+		533117AA22C4492C00F8C94C /* CSGameQuestionItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameQuestionItemCell.m; sourceTree = "<group>"; };
+		533117AC22C44AB000F8C94C /* CSGameQuestionItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameQuestionItemModel.h; sourceTree = "<group>"; };
+		533117AD22C44AB000F8C94C /* CSGameQuestionItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameQuestionItemModel.m; sourceTree = "<group>"; };
 		53352E9F22A95A7800F42147 /* CSHomeMoreLessonListDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeMoreLessonListDetailController.h; sourceTree = "<group>"; };
 		53352EA022A95A7800F42147 /* CSHomeMoreLessonListDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeMoreLessonListDetailController.m; sourceTree = "<group>"; };
 		53352EA222A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeMoreLessonDetailFlowLayout.h; sourceTree = "<group>"; };
@@ -535,6 +556,8 @@
 			children = (
 				53352EB722ACB93700F42147 /* CSGameController.h */,
 				53352EB822ACB93700F42147 /* CSGameController.m */,
+				5331179A22C43D1B00F8C94C /* CSGameQuestionListController.h */,
+				5331179B22C43D1B00F8C94C /* CSGameQuestionListController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -544,6 +567,10 @@
 			children = (
 				53352EC322ACC88900F42147 /* CSGameModel.h */,
 				53352EC422ACC88900F42147 /* CSGameModel.m */,
+				533117A022C4416D00F8C94C /* CSGameQuetionModel.h */,
+				533117A122C4416D00F8C94C /* CSGameQuetionModel.m */,
+				533117AC22C44AB000F8C94C /* CSGameQuestionItemModel.h */,
+				533117AD22C44AB000F8C94C /* CSGameQuestionItemModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -553,6 +580,12 @@
 			children = (
 				53352EC022ACC86D00F42147 /* CSGameCell.h */,
 				53352EC122ACC86D00F42147 /* CSGameCell.m */,
+				533117A322C441BF00F8C94C /* CSGameQuestionCollectionViewFlowLayout.h */,
+				533117A422C441BF00F8C94C /* CSGameQuestionCollectionViewFlowLayout.m */,
+				5331179D22C440FF00F8C94C /* CSGameQuestionCollectionViewCell.h */,
+				5331179E22C440FF00F8C94C /* CSGameQuestionCollectionViewCell.m */,
+				533117A922C4492C00F8C94C /* CSGameQuestionItemCell.h */,
+				533117AA22C4492C00F8C94C /* CSGameQuestionItemCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -610,6 +643,8 @@
 				539CADD022B9364700C25A25 /* LFHttpTool.m */,
 				539CADD622B9372500C25A25 /* LFHttpTool+Home.h */,
 				539CADD722B9372500C25A25 /* LFHttpTool+Home.m */,
+				533117A622C4438100F8C94C /* LFHttpTool+Game.h */,
+				533117A722C4438100F8C94C /* LFHttpTool+Game.m */,
 				539CADD122B9364700C25A25 /* LFHttpTool+Test.h */,
 				539CADCF22B9364700C25A25 /* LFHttpTool+Test.m */,
 			);
@@ -1159,6 +1194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5331179C22C43D1B00F8C94C /* CSGameQuestionListController.m in Sources */,
 				53C2B30522C124CD00C2F017 /* CSHomeBannerModel.m in Sources */,
 				531985A522B2A63E00351C66 /* CSHomeCommonChineseLevelListController.m in Sources */,
 				53AC31B722A3CD3900CA2D12 /* CSHomeController.m in Sources */,
@@ -1189,6 +1225,7 @@
 				53AC31B422A3CD1000CA2D12 /* CSBaseTableView.m in Sources */,
 				530D021622A6D0650044CCB7 /* CSHomeMoreLessonListController.m in Sources */,
 				5336A8AE22A8148E00C661DE /* CSHomeMoreLessonListCell.m in Sources */,
+				533117A222C4416D00F8C94C /* CSGameQuetionModel.m in Sources */,
 				53E856DD22B149D30057E528 /* UINavigationBar+Add.m in Sources */,
 				53AC31D022A41CC100CA2D12 /* CSHomeTitleCellModel.m in Sources */,
 				53F0F112229EE06D000F93ED /* LFTabBar.m in Sources */,
@@ -1202,6 +1239,7 @@
 				53F0F110229EE06D000F93ED /* LFTabBarConfig.m in Sources */,
 				53C2B31922C26D9000C2F017 /* CSHomeCommonChineseLessonCell.m in Sources */,
 				53F0F10F229EE06D000F93ED /* LFNavigationController.m in Sources */,
+				5331179F22C440FF00F8C94C /* CSGameQuestionCollectionViewCell.m in Sources */,
 				539CADD422B9364700C25A25 /* LFHttpTool.m in Sources */,
 				53352EAE22ACB53900F42147 /* CSHomeAppsController.m in Sources */,
 				53AC31AB22A3CCC400CA2D12 /* CSBaseModel.m in Sources */,
@@ -1210,14 +1248,18 @@
 				53352ED022AD243C00F42147 /* CSHomeAppListCell.m in Sources */,
 				53390FC222AF73430033A3CE /* CSHomeMapDetailModel.m in Sources */,
 				53C2B31F22C2F8EB00C2F017 /* CSHomeLessonModel.m in Sources */,
+				533117AB22C4492C00F8C94C /* CSGameQuestionItemCell.m in Sources */,
+				533117A522C441BF00F8C94C /* CSGameQuestionCollectionViewFlowLayout.m in Sources */,
 				53390FC822AF7E300033A3CE /* CSHomeChinesePlaceDetailFlowLayout.m in Sources */,
 				53AC31A822A3CCAC00CA2D12 /* CSBaseController.m in Sources */,
 				53DF891422B548140087CFD1 /* CSMineHeaderView.m in Sources */,
 				53390FB922AF686F0033A3CE /* CSHomeChineseMapDetailController.m in Sources */,
 				53AC31CD22A3F04600CA2D12 /* CSItemSigleCell.m in Sources */,
+				533117A822C4438100F8C94C /* LFHttpTool+Game.m in Sources */,
 				53EB07F222AEB7BE003E626A /* CSHomeTravelController.m in Sources */,
 				531985AE22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m in Sources */,
 				53C2B31C22C26EE200C2F017 /* CSHomeLessonListHeader.m in Sources */,
+				533117AE22C44AB000F8C94C /* CSGameQuestionItemModel.m in Sources */,
 				53DF890B22B542790087CFD1 /* CSMineDetailController.m in Sources */,
 				53390FBF22AF6D4B0033A3CE /* CSHomeChineseMapDetailCell.m in Sources */,
 				53F0F111229EE06D000F93ED /* LFTabBarItem.m in Sources */,

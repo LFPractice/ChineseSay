@@ -9,6 +9,7 @@
 #import "CSGameController.h"
 #import "CSGameModel.h"
 #import "CSGameCell.h"
+#import "CSGameQuestionListController.h"
 
 @interface CSGameController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UILabel *label_title;
@@ -43,6 +44,13 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 120;
 }
+#pragma mark ------UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    CSGameQuestionListController *listVC = [[CSGameQuestionListController alloc]init];
+    [self.navigationController pushViewController:listVC animated:YES];
+}
+
+
 #pragma mark - private
 - (void)createUI{
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_controllerBg"]];
@@ -75,7 +83,7 @@
 - (NSMutableArray *)dataSource{
     if(!_dataSource){
         CSGameModel *model1 = [[CSGameModel alloc]init];
-        model1.title = @"游戏";
+        model1.title = @"选择填空";
         model1.bgColor = 0xF57F7F;
         CSPageTypeModel *pageModel1 = [[CSPageTypeModel alloc]init];
         pageModel1.action = CS_Page_Type_Action;
@@ -95,7 +103,7 @@
         pageModel3.action = CS_Page_Type_Action;
         model3.pageModel = pageModel3;
         
-        _dataSource = @[model1,model2,model3].mutableCopy;
+        _dataSource = @[model1].mutableCopy;
     }
     return _dataSource;
 }

@@ -28,6 +28,7 @@
 #pragma mark - private
 - (void)createUI{
     [self.view addSubview:self.tableView];
+    self.headerView.level = self.level;
     [self loadData];
 }
 - (void)loadData{

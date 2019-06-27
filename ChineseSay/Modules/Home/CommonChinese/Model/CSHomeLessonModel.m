@@ -10,12 +10,8 @@
 
 @implementation CSHomeLessonModel
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
++ (NSDictionary *)mj_replacedKeyFromPropertyName{
+    return @{@"lessonDescription":@"description"
+             };
 }
-*/
-
 @end

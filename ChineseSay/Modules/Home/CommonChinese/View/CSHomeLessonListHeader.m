@@ -23,6 +23,10 @@
     }
     return self;
 }
+- (void)setLevel:(NSString *)level{
+    _level = level;
+    self.labelLevel.text = level;
+}
 - (void)layoutSubviews{
     [self.imgBg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.mas_equalTo(0);
