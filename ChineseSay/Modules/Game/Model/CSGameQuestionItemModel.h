@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSNumber *id;
 @property (nonatomic, assign) BOOL isCorrect;
 @property (nonatomic, strong) NSString *option;
+@property (nonatomic, assign) BOOL isSelect;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -25,7 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    [[CSPlayer sharedInstance]playWithUrlStr:@"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"];
     [self createUI];
 }
 - (void)viewWillAppear:(BOOL)animated{

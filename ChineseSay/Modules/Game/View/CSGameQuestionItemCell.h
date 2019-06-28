@@ -7,10 +7,12 @@
 //
 
 #import "CSBaseCell.h"
+#import "CSGameQuetionModel.h"
 #import "CSGameQuestionItemModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSGameQuestionItemCell : CSBaseCell
+@property (nonatomic, strong) CSGameQuetionModel *questionModel;
 - (void)loadData:(CSGameQuestionItemModel *)model IndexPath:(NSIndexPath *)indexPath;
 @end
 

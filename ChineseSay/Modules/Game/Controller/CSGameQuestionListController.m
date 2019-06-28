@@ -27,7 +27,7 @@
     return 1;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 6;//self.dataSource.count;
+    return self.dataSource.count;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CSGameQuestionCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CSGameQuestionCollectionViewCell" forIndexPath:indexPath];
@@ -38,7 +38,7 @@
 
 #pragma mark - private
 - (void)createUI{
-    self.view.backgroundColor = [UIColor blueColor];
+//    self.view.backgroundColor = [UIColor blueColor];
     [self.view addSubview:self.collectionView];
     [self loadData];
 }

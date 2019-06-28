@@ -73,6 +73,8 @@
 		53C2B31922C26D9000C2F017 /* CSHomeCommonChineseLessonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C2B31822C26D9000C2F017 /* CSHomeCommonChineseLessonCell.m */; };
 		53C2B31C22C26EE200C2F017 /* CSHomeLessonListHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C2B31B22C26EE200C2F017 /* CSHomeLessonListHeader.m */; };
 		53C2B31F22C2F8EB00C2F017 /* CSHomeLessonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C2B31E22C2F8EB00C2F017 /* CSHomeLessonModel.m */; };
+		53CC8DE722C510F7008D9887 /* CSGameQuestionTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CC8DE622C510F7008D9887 /* CSGameQuestionTitleCell.m */; };
+		53CC8DEA22C5930C008D9887 /* CSQuestionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CC8DE922C5930C008D9887 /* CSQuestionFooterView.m */; };
 		53DF890B22B542790087CFD1 /* CSMineDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DF890A22B542790087CFD1 /* CSMineDetailController.m */; };
 		53DF890E22B545D90087CFD1 /* CSMineItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DF890D22B545D90087CFD1 /* CSMineItemCell.m */; };
 		53DF891122B545F80087CFD1 /* CSMineActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DF891022B545F80087CFD1 /* CSMineActivityCell.m */; };
@@ -260,6 +262,10 @@
 		53C2B31B22C26EE200C2F017 /* CSHomeLessonListHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeLessonListHeader.m; sourceTree = "<group>"; };
 		53C2B31D22C2F8EB00C2F017 /* CSHomeLessonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeLessonModel.h; sourceTree = "<group>"; };
 		53C2B31E22C2F8EB00C2F017 /* CSHomeLessonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeLessonModel.m; sourceTree = "<group>"; };
+		53CC8DE522C510F7008D9887 /* CSGameQuestionTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameQuestionTitleCell.h; sourceTree = "<group>"; };
+		53CC8DE622C510F7008D9887 /* CSGameQuestionTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameQuestionTitleCell.m; sourceTree = "<group>"; };
+		53CC8DE822C5930C008D9887 /* CSQuestionFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSQuestionFooterView.h; sourceTree = "<group>"; };
+		53CC8DE922C5930C008D9887 /* CSQuestionFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSQuestionFooterView.m; sourceTree = "<group>"; };
 		53DF890922B542790087CFD1 /* CSMineDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineDetailController.h; sourceTree = "<group>"; };
 		53DF890A22B542790087CFD1 /* CSMineDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineDetailController.m; sourceTree = "<group>"; };
 		53DF890C22B545D90087CFD1 /* CSMineItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineItemCell.h; sourceTree = "<group>"; };
@@ -584,8 +590,12 @@
 				533117A422C441BF00F8C94C /* CSGameQuestionCollectionViewFlowLayout.m */,
 				5331179D22C440FF00F8C94C /* CSGameQuestionCollectionViewCell.h */,
 				5331179E22C440FF00F8C94C /* CSGameQuestionCollectionViewCell.m */,
+				53CC8DE522C510F7008D9887 /* CSGameQuestionTitleCell.h */,
+				53CC8DE622C510F7008D9887 /* CSGameQuestionTitleCell.m */,
 				533117A922C4492C00F8C94C /* CSGameQuestionItemCell.h */,
 				533117AA22C4492C00F8C94C /* CSGameQuestionItemCell.m */,
+				53CC8DE822C5930C008D9887 /* CSQuestionFooterView.h */,
+				53CC8DE922C5930C008D9887 /* CSQuestionFooterView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1204,12 +1214,14 @@
 				53F0F0FC229ED9FB000F93ED /* AppDelegate.m in Sources */,
 				53EB07F522AEBB5B003E626A /* CSHomeTravelSentencesController.m in Sources */,
 				53DF891122B545F80087CFD1 /* CSMineActivityCell.m in Sources */,
+				53CC8DEA22C5930C008D9887 /* CSQuestionFooterView.m in Sources */,
 				53390FBC22AF6CF60033A3CE /* CSHomeChineseMapDetailFlowLayout.m in Sources */,
 				53352ED622AD5AFC00F42147 /* UIImage+Add.m in Sources */,
 				53352EC522ACC88900F42147 /* CSGameModel.m in Sources */,
 				53352EA422A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m in Sources */,
 				53AC31D622A41DD100CA2D12 /* CSHomeItemSingleCellModel.m in Sources */,
 				53352EA722A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m in Sources */,
+				53CC8DE722C510F7008D9887 /* CSGameQuestionTitleCell.m in Sources */,
 				53352EC822AD14B500F42147 /* CSHomeAppListController.m in Sources */,
 				53F0F0FB229ED9FB000F93ED /* AppDelegate+Config.m in Sources */,
 				531985AB22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m in Sources */,

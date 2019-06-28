@@ -11,9 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSGameQuetionModel : NSObject
-@property (nonatomic, strong) NSArray *answers;
+@property (nonatomic, strong) NSMutableArray *answers;
 @property (nonatomic, copy) NSNumber *id;
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, assign)  BOOL isShowAnwser;
 @end
 
 NS_ASSUME_NONNULL_END
