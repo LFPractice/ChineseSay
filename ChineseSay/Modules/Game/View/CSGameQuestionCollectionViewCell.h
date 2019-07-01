@@ -12,6 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSGameQuestionCollectionViewCell : UICollectionViewCell
+@property (nonatomic ,copy)  void(^nextQuestionBlock)();
 - (void)loadData:(CSGameQuetionModel *)model
        indexPath:(NSIndexPath *)indexPath;
 @end

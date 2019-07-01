@@ -34,6 +34,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)home_getDataForLessonListParam:(NSDictionary *)params
                               Success:(LFRequestSuccessBlock)success
                               Failure:(LFRequestFailureBlock)failure;
+/**
+ * 请求App列表数据
+ */
++ (void)home_getDataForAppListParam:(NSDictionary *)params
+                               Success:(LFRequestSuccessBlock)success
+                               Failure:(LFRequestFailureBlock)failure;
 @end
 
 NS_ASSUME_NONNULL_END

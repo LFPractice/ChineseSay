@@ -37,11 +37,6 @@
     return 50;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    if(section == 0){
-//        return 1;
-//    }else{
-//        return 4;
-//    }
     return [(NSArray *)self.dataSource[section] count];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{

@@ -23,6 +23,12 @@
     }
     return self;
 }
+- (void)loadCellWithData:(CSHomeAppModel *)model cellPath:(NSIndexPath *)path{
+    [self.img_header sd_setImageWithURL:[NSURL URLWithString:model.image]];
+    self.label_name.text = model.name;
+    self.label_content.text = model.lessonDescription;
+    self.label_help.text = model.howTo;
+}
 - (void)layoutSubviews{
     [self.img_header mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(10);
@@ -59,7 +65,7 @@
 -(UIImageView *)img_header{
     if(!_img_header){
         _img_header =[[UIImageView alloc]init];
-        _img_header.image = [UIImage imageNamed:@"Tmp_home_appListCellHead"];
+//        _img_header.image = [UIImage imageNamed:@"Tmp_home_appListCellHead"];
     }
     return _img_header;
 }

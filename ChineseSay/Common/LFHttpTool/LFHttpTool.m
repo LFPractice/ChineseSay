@@ -69,6 +69,7 @@
         }];
     }
     if(methodType == LFRequsetMethodTypePOST){
+        /*
         return  [manager POST:urlString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -76,6 +77,29 @@
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             failure(error);
         }];
+         */
+        
+        NSError *error;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:parameters options:0 error:&error];
+//        NSString *jsonString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer]requestWithMethod:@"POST" URLString:urlString parameters:nil error:nil];
+        request.timeoutInterval = 30;
+        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [request setValue:@"application/json" forHTTPHeaderField:@"accept"];
+        [request setHTTPBody:jsonData];
+        NSURLSessionDataTask *task =  [manager dataTaskWithRequest:request uploadProgress:^(NSProgress * _Nonnull uploadProgress) {
+            
+        } downloadProgress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+            if(!error){
+                success(responseObject);
+            }else{
+                failure(error);
+            }
+        }];
+        [task resume];
+        return task;
     }
     NSURLSessionDataTask *task = [[NSURLSessionDataTask alloc]init];
     return task;

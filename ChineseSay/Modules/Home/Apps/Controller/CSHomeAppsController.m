@@ -62,6 +62,7 @@
 - (CSHomeAppListController *)listVC_buy{
     if(!_listVC_buy){
         _listVC_buy = [[CSHomeAppListController alloc]init];
+        _listVC_buy.catorgary = @(0);
 //        _listVC_buy.view.frame = CGRectMake(0, kSystemStatusHeight + kSystemNavigationBarHeight + 50, kScreenWidth, kScreenHeight - 50 - kSystemStatusHeight + kSystemNavigationBarHeight);
     }
     return _listVC_buy;
@@ -69,6 +70,7 @@
 - (CSHomeAppListController *)listVC_function{
     if(!_listVC_function){
         _listVC_function = [[CSHomeAppListController alloc]init];
+        _listVC_function.catorgary = @(1);
 //        _listVC_function.view.frame = CGRectMake(0, 134, kScreenWidth, kScreenHeight - 134);
     }
     return _listVC_function;
@@ -76,6 +78,7 @@
 - (CSHomeAppListController *)listVC_amusement{
     if(!_listVC_amusement){
         _listVC_amusement = [[CSHomeAppListController alloc]init];
+        _listVC_amusement.catorgary = @(2);
 //        _listVC_amusement.view.frame = CGRectMake(0, 134, kScreenWidth, kScreenHeight - 134);
     }
     return _listVC_amusement;

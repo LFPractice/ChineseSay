@@ -101,7 +101,9 @@
                 }
                 case CSQuestionActionNext:
                 {
-                    
+                    if(weakSelf.nextQuestionBlock){
+                        weakSelf.nextQuestionBlock();
+                    }
                     break;
                 }
 

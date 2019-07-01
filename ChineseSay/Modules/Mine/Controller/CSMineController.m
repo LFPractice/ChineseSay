@@ -8,8 +8,10 @@
 
 #import "CSMineController.h"
 #import "CSMineDetailController.h"
+#import "CSLoginController.h"
 @interface CSMineController ()
 @property (nonatomic, strong) CSMineDetailController *detailVC;
+@property (nonatomic, strong) CSLoginController *logingVC;
 @end
 
 @implementation CSMineController
@@ -18,9 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self createUI];
 }
 - (void)viewWillAppear:(BOOL)animated{
+    [self createUI];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 - (void)viewWillDisappear:(BOOL)animated{
@@ -29,7 +31,13 @@
 
 #pragma mark - private
 - (void)createUI{
-    [self.view addSubview:self.detailVC.view];
+    if([CSUserInfoTool isLogin]){
+        [self.logingVC.view removeFromSuperview];
+        [self.view addSubview:self.detailVC.view];
+    }else{
+        [self.detailVC.view removeFromSuperview];
+        [self.view addSubview:self.logingVC.view];
+    }
 }
 
 #pragma mark - lazy load
@@ -38,5 +46,16 @@
         _detailVC = [[CSMineDetailController alloc]init];
     }
     return  _detailVC;
+}
+- (CSLoginController *)logingVC{
+    if(!_logingVC){
+        _logingVC = [[CSLoginController alloc]init];
+        
+        __weak typeof(self)weakSelf = self;
+        _logingVC.loginSuccess = ^{
+            [weakSelf createUI];
+        };
+    }
+    return _logingVC;
 }
 @end

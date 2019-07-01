@@ -24,4 +24,6 @@
 #define kSystemBottomHeight  (kCurrentDeviceIsFullScreen ? 34.0  : 0.0)//iphone x底部需要预留34高度
 #define kSystemTabBarHeight  (kCurrentDeviceIsFullScreen ? 83.0f : 49.0f)//tabbar高度
 #define kXStatusBarIncrease  (kCurrentDeviceIsFullScreen ? 24.f  : 0)//x多出
+
+#define CSUserDefaults [NSUserDefaults standardUserDefaults]
 #endif /* Const_h */

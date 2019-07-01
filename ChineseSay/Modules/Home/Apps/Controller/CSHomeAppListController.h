@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSHomeAppListController : CSBaseController
-
+@property (nonatomic, strong) NSNumber *catorgary; //类别
 @end
 
 NS_ASSUME_NONNULL_END

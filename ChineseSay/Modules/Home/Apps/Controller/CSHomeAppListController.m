@@ -10,6 +10,7 @@
 #import "CSHomeAppListCell.h"
 @interface CSHomeAppListController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *dataSource;
 @end
 
 @implementation CSHomeAppListController
@@ -40,19 +41,37 @@
 #pragma mark - delegate
 #pragma mark ------ UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 30;
+    return self.dataSource.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 130;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [tableView dequeueReusableCellWithIdentifier:@"CSHomeAppListCell"];
+    CSHomeAppListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CSHomeAppListCell"];
+    [cell loadCellWithData:self.dataSource[indexPath.row] cellPath:indexPath];
+    return cell;
 }
 #pragma mark ------ UITableViewDelegate
 
 #pragma mark - private
 - (void)createUI{
     [self.view addSubview:self.tableView];
+    [self loadData];
+}
+- (void)loadData{
+    NSDictionary *param = @{@"category":self.catorgary};
+    [LFHttpTool home_getDataForAppListParam:param Success:^(id responseObject) {
+        NSNumber *code = responseObject[@"code"];
+        if(code.intValue == 200){
+            [self dealWithData:responseObject[@"data"][@"list"]];
+        }
+        [self.tableView reloadData];
+    } Failure:^(NSError *error) {
+        
+    }];
+}
+- (void)dealWithData:(NSArray *)array{
+    [self.dataSource addObjectsFromArray:[CSHomeAppModel mj_objectArrayWithKeyValuesArray:array]];
 }
 #pragma mark - lazy load
 - (UITableView *)tableView{
@@ -65,5 +84,11 @@
         _tableView.separatorColor = [UIColor clearColor];
     }
     return _tableView;
+}
+- (NSMutableArray *)dataSource{
+    if(!_dataSource){
+        _dataSource = [[NSMutableArray alloc]init];
+    }
+    return _dataSource;
 }
 @end

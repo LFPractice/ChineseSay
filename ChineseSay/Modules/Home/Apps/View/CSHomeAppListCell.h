@@ -7,7 +7,7 @@
 //
 
 #import "CSBaseCell.h"
-
+#import "CSHomeAppModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSHomeAppListCell : CSBaseCell

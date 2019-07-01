@@ -100,6 +100,12 @@
 		53F0F11E229EE129000F93ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F0F118229EE129000F93ED /* Main.storyboard */; };
 		53F0F11F229EE129000F93ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F0F11A229EE129000F93ED /* main.m */; };
 		53F0F121229EE18D000F93ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F0F120229EE18D000F93ED /* Assets.xcassets */; };
+		53FEBFF722C8BEE8003825E5 /* CSHomeAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FEBFF622C8BEE8003825E5 /* CSHomeAppModel.m */; };
+		53FEBFFA22C8C41B003825E5 /* CSUserInfoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FEBFF922C8C41B003825E5 /* CSUserInfoTool.m */; };
+		53FEC00222C8DA1C003825E5 /* CSLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FEC00122C8DA1C003825E5 /* CSLoginController.m */; };
+		53FEC00522C8FEE9003825E5 /* LFHttpTool+Mine.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FEC00422C8FEE9003825E5 /* LFHttpTool+Mine.m */; };
+		53FEC00822C98A78003825E5 /* UIButton+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FEC00722C98A78003825E5 /* UIButton+Add.m */; };
+		53FEC00B22C98BBA003825E5 /* CSRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FEC00A22C98BBA003825E5 /* CSRegisterController.m */; };
 		AD8310061EEF97FC934178B0 /* libPods-ChineseSayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 722711BC22AA731455504621 /* libPods-ChineseSayTests.a */; };
 		D12726E9A71B500ECDC8A0DD /* libPods-ChineseSay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6E5D34A3B080210B24D97C /* libPods-ChineseSay.a */; };
 /* End PBXBuildFile section */
@@ -313,6 +319,19 @@
 		53F0F11A229EE129000F93ED /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		53F0F11B229EE129000F93ED /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		53F0F120229EE18D000F93ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		53FEBFF522C8BEE8003825E5 /* CSHomeAppModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeAppModel.h; sourceTree = "<group>"; };
+		53FEBFF622C8BEE8003825E5 /* CSHomeAppModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeAppModel.m; sourceTree = "<group>"; };
+		53FEBFF822C8C41B003825E5 /* CSUserInfoTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSUserInfoTool.h; sourceTree = "<group>"; };
+		53FEBFF922C8C41B003825E5 /* CSUserInfoTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSUserInfoTool.m; sourceTree = "<group>"; };
+		53FEBFFB22C8D93B003825E5 /* UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		53FEC00022C8DA1C003825E5 /* CSLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSLoginController.h; sourceTree = "<group>"; };
+		53FEC00122C8DA1C003825E5 /* CSLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSLoginController.m; sourceTree = "<group>"; };
+		53FEC00322C8FEE9003825E5 /* LFHttpTool+Mine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LFHttpTool+Mine.h"; sourceTree = "<group>"; };
+		53FEC00422C8FEE9003825E5 /* LFHttpTool+Mine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LFHttpTool+Mine.m"; sourceTree = "<group>"; };
+		53FEC00622C98A78003825E5 /* UIButton+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Add.h"; sourceTree = "<group>"; };
+		53FEC00722C98A78003825E5 /* UIButton+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Add.m"; sourceTree = "<group>"; };
+		53FEC00922C98BBA003825E5 /* CSRegisterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSRegisterController.h; sourceTree = "<group>"; };
+		53FEC00A22C98BBA003825E5 /* CSRegisterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSRegisterController.m; sourceTree = "<group>"; };
 		6235DB69A24076FD10D4E742 /* libPods-ChineseSayUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChineseSayUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66770EFC23CCC974BFC9FB6B /* Pods-ChineseSay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChineseSay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChineseSay/Pods-ChineseSay.debug.xcconfig"; sourceTree = "<group>"; };
 		722711BC22AA731455504621 /* libPods-ChineseSayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChineseSayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -532,6 +551,8 @@
 		53352EAA22ACB50900F42147 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				53FEBFF522C8BEE8003825E5 /* CSHomeAppModel.h */,
+				53FEBFF622C8BEE8003825E5 /* CSHomeAppModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -626,6 +647,8 @@
 			children = (
 				53DF891822B568FB0087CFD1 /* CSMineItemModel.h */,
 				53DF891922B568FB0087CFD1 /* CSMineItemModel.m */,
+				53FEBFF822C8C41B003825E5 /* CSUserInfoTool.h */,
+				53FEBFF922C8C41B003825E5 /* CSUserInfoTool.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -655,6 +678,8 @@
 				539CADD722B9372500C25A25 /* LFHttpTool+Home.m */,
 				533117A622C4438100F8C94C /* LFHttpTool+Game.h */,
 				533117A722C4438100F8C94C /* LFHttpTool+Game.m */,
+				53FEC00322C8FEE9003825E5 /* LFHttpTool+Mine.h */,
+				53FEC00422C8FEE9003825E5 /* LFHttpTool+Mine.m */,
 				539CADD122B9364700C25A25 /* LFHttpTool+Test.h */,
 				539CADCF22B9364700C25A25 /* LFHttpTool+Test.m */,
 			);
@@ -772,6 +797,8 @@
 				53AC31DC22A42C9200CA2D12 /* UIColor+Add.m */,
 				53352ED422AD5AFC00F42147 /* UIImage+Add.h */,
 				53352ED522AD5AFC00F42147 /* UIImage+Add.m */,
+				53FEC00622C98A78003825E5 /* UIButton+Add.h */,
+				53FEC00722C98A78003825E5 /* UIButton+Add.m */,
 				53E856DC22B149D30057E528 /* UINavigationBar+Add.h */,
 				53E856DB22B149D30057E528 /* UINavigationBar+Add.m */,
 			);
@@ -869,6 +896,7 @@
 				53AC319E22A3CB4F00CA2D12 /* Home */,
 				53352EAF22ACB91300F42147 /* Game */,
 				53352EB322ACB91E00F42147 /* Mine */,
+				53FEBFFC22C8DA01003825E5 /* Login */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -884,6 +912,7 @@
 			isa = PBXGroup;
 			children = (
 				53AC31C422A3E2B400CA2D12 /* Const.h */,
+				53FEBFFB22C8D93B003825E5 /* UserInfo.h */,
 			);
 			path = Defines;
 			sourceTree = "<group>";
@@ -954,6 +983,41 @@
 				53F0F115229EE129000F93ED /* ViewController.m */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		53FEBFFC22C8DA01003825E5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				53FEBFFD22C8DA01003825E5 /* Controller */,
+				53FEBFFE22C8DA01003825E5 /* Model */,
+				53FEBFFF22C8DA01003825E5 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		53FEBFFD22C8DA01003825E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				53FEC00022C8DA1C003825E5 /* CSLoginController.h */,
+				53FEC00122C8DA1C003825E5 /* CSLoginController.m */,
+				53FEC00922C98BBA003825E5 /* CSRegisterController.h */,
+				53FEC00A22C98BBA003825E5 /* CSRegisterController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		53FEBFFE22C8DA01003825E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		53FEBFFF22C8DA01003825E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		97DCEBDC8887D66D949C8541 /* Frameworks */ = {
@@ -1204,12 +1268,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53FEC00522C8FEE9003825E5 /* LFHttpTool+Mine.m in Sources */,
 				5331179C22C43D1B00F8C94C /* CSGameQuestionListController.m in Sources */,
 				53C2B30522C124CD00C2F017 /* CSHomeBannerModel.m in Sources */,
 				531985A522B2A63E00351C66 /* CSHomeCommonChineseLevelListController.m in Sources */,
 				53AC31B722A3CD3900CA2D12 /* CSHomeController.m in Sources */,
 				53AC31DD22A42C9200CA2D12 /* UIColor+Add.m in Sources */,
 				53DF891722B55C4D0087CFD1 /* CSMineHeaderItemView.m in Sources */,
+				53FEBFFA22C8C41B003825E5 /* CSUserInfoTool.m in Sources */,
 				53C2B31622C2679500C2F017 /* CSHomeLevelModel.m in Sources */,
 				53F0F0FC229ED9FB000F93ED /* AppDelegate.m in Sources */,
 				53EB07F522AEBB5B003E626A /* CSHomeTravelSentencesController.m in Sources */,
@@ -1222,6 +1288,7 @@
 				53AC31D622A41DD100CA2D12 /* CSHomeItemSingleCellModel.m in Sources */,
 				53352EA722A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m in Sources */,
 				53CC8DE722C510F7008D9887 /* CSGameQuestionTitleCell.m in Sources */,
+				53FEC00222C8DA1C003825E5 /* CSLoginController.m in Sources */,
 				53352EC822AD14B500F42147 /* CSHomeAppListController.m in Sources */,
 				53F0F0FB229ED9FB000F93ED /* AppDelegate+Config.m in Sources */,
 				531985AB22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m in Sources */,
@@ -1232,10 +1299,12 @@
 				53EB07E422AEAA33003E626A /* UIView+ViewController.m in Sources */,
 				53AC31AE22A3CCDF00CA2D12 /* CSBaseView.m in Sources */,
 				53352ED322AD2BCA00F42147 /* CSHomeAppListSelectToolView.m in Sources */,
+				53FEC00822C98A78003825E5 /* UIButton+Add.m in Sources */,
 				53AC31CA22A3EFF200CA2D12 /* CSHomeItemsCell.m in Sources */,
 				530D021322A6C3330044CCB7 /* CSPageTransfer.m in Sources */,
 				53AC31B422A3CD1000CA2D12 /* CSBaseTableView.m in Sources */,
 				530D021622A6D0650044CCB7 /* CSHomeMoreLessonListController.m in Sources */,
+				53FEC00B22C98BBA003825E5 /* CSRegisterController.m in Sources */,
 				5336A8AE22A8148E00C661DE /* CSHomeMoreLessonListCell.m in Sources */,
 				533117A222C4416D00F8C94C /* CSGameQuetionModel.m in Sources */,
 				53E856DD22B149D30057E528 /* UINavigationBar+Add.m in Sources */,
@@ -1280,6 +1349,7 @@
 				53AC31C722A3EF9800CA2D12 /* CSHomeTitleCell.m in Sources */,
 				53C2B30F22C1CBFD00C2F017 /* CSPlayer.m in Sources */,
 				53DF891A22B568FB0087CFD1 /* CSMineItemModel.m in Sources */,
+				53FEBFF722C8BEE8003825E5 /* CSHomeAppModel.m in Sources */,
 				53C2B30B22C12ECB00C2F017 /* CSHomeMoreLessonListDetailItemModel.m in Sources */,
 				530D020F22A6C0660044CCB7 /* CSPageTypeModel.m in Sources */,
 				53EB07F822AEBEA0003E626A /* CSHomeChineseMapController.m in Sources */,
