@@ -25,6 +25,10 @@ NS_ASSUME_NONNULL_BEGIN
  *退出登录
  */
 + (void)loginOut;
+/**
+ *用户token
+ */
++ (NSString *)userToken;
 @end
 
 NS_ASSUME_NONNULL_END

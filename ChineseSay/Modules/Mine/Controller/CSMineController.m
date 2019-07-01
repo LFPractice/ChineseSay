@@ -9,6 +9,7 @@
 #import "CSMineController.h"
 #import "CSMineDetailController.h"
 #import "CSLoginController.h"
+#import "CSMineUserInfoDetailController.h"
 @interface CSMineController ()
 @property (nonatomic, strong) CSMineDetailController *detailVC;
 @property (nonatomic, strong) CSLoginController *logingVC;
@@ -23,6 +24,9 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     [self createUI];
+    if([CSUserInfoTool isLogin]){
+        [self.detailVC loadData];
+    }
     [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 - (void)viewWillDisappear:(BOOL)animated{
@@ -44,6 +48,12 @@
 - (CSMineDetailController *)detailVC{
     if(!_detailVC){
         _detailVC = [[CSMineDetailController alloc]init];
+        
+        __weak typeof(self)weakSelf = self;
+        _detailVC.turnToUserInfoDetail = ^{
+            CSMineUserInfoDetailController *vc = [[CSMineUserInfoDetailController alloc]init];
+            [weakSelf.navigationController pushViewController:vc animated:YES];
+        };
     }
     return  _detailVC;
 }

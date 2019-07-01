@@ -29,6 +29,14 @@
     }
     return self;
 }
+- (void)setUserInfoModel:(CSUserInfoModel *)userInfoModel{
+    _userInfoModel = userInfoModel;
+    self.label_name.text = userInfoModel.account;
+    _item_jiFen.label_count.text = userInfoModel.score.stringValue;
+    _item_vipDays.label_count.text = userInfoModel.vipLeft.stringValue;
+    _item_Coupons.label_count.text = userInfoModel.couponCount.stringValue;
+    
+}
 - (void)layoutSubviews{
     [self.img_headerBg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_equalTo(0);
@@ -43,17 +51,17 @@
     
     [self.label_name mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.img_portrait.mas_right).offset(10);
-        make.top.mas_equalTo(84);
+        make.centerY.mas_equalTo(self.img_portrait.mas_centerY).offset(0);
     }];
-    [self.label_userID mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.img_portrait.mas_right).offset(10);
-        make.top.mas_equalTo(self.label_name.mas_bottom).offset(9);
-    }];
+//    [self.label_userID mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.mas_equalTo(self.img_portrait.mas_right).offset(10);
+//        make.top.mas_equalTo(self.label_name.mas_bottom).offset(9);
+//    }];
     
     [self.img_infoNextMark mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(-15);
         make.width.height.mas_equalTo(12);
-        make.centerY.mas_equalTo(self.label_userID.mas_centerY).offset(0);
+        make.centerY.mas_equalTo(self.img_portrait.mas_centerY).offset(0);
     }];
     
     [self.label_userCenter_title mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -64,6 +72,12 @@
     _item_vipDays.frame = CGRectMake(_item_vipDays.width, self.frame.size.height - _item_vipDays.height, _item_vipDays.width, _item_vipDays.height);
     _item_Coupons.frame = CGRectMake(_item_Coupons.width * 2, self.frame.size.height - _item_Coupons.height, _item_Coupons.width, _item_Coupons.height);
 }
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    if(self.turnToUserInfoDetail){
+        self.turnToUserInfoDetail();
+    }
+}
+
 #pragma mark - private
 - (void)createUI{
     self.backgroundColor = [UIColor whiteColor];
@@ -137,6 +151,7 @@
         _item_jiFen.label_count.text = @"235";
         _item_jiFen.label_title.text = @"积分商城";
         _item_jiFen.label_des.text = @"立即签到领积分";
+        _item_jiFen.view_verticalLine.hidden = YES;
     }
     return _item_jiFen;
 }
@@ -146,6 +161,7 @@
         _item_vipDays.frame = CGRectMake(_item_vipDays.width, self.frame.size.height - _item_vipDays.height, _item_vipDays.width, _item_vipDays.height);
         _item_vipDays.label_count.text = @"329";
         _item_vipDays.label_title.text = @"会员剩余天数";
+        _item_vipDays.view_verticalLine.hidden = YES;
         _item_vipDays.label_des.text = @"充值";
     }
     return _item_vipDays;
@@ -156,7 +172,7 @@
         _item_Coupons.frame = CGRectMake(_item_Coupons.width * 2, self.frame.size.height - _item_Coupons.height, _item_Coupons.width, _item_Coupons.height);
         _item_Coupons.label_count.text = @"8";
         _item_Coupons.label_title.text = @"我的优惠券";
-        _item_Coupons.label_des.hidden = YES;
+        _item_Coupons.view_verticalLine.hidden = YES;
         _item_Coupons.view_verticalLine.hidden = YES;
     }
     return _item_Coupons;

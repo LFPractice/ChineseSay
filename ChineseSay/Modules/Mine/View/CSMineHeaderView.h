@@ -7,11 +7,13 @@
 //
 
 #import "CSBaseView.h"
-
+#import "CSUserInfoModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSMineHeaderView : CSBaseView
 @property (nonatomic, assign) BOOL isSHowVerticalLine;
+@property (nonatomic, strong) CSUserInfoModel *userInfoModel;
+@property (nonatomic, copy) void(^turnToUserInfoDetail)();
 @end
 
 NS_ASSUME_NONNULL_END

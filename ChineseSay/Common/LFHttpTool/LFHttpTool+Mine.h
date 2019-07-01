@@ -18,6 +18,18 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)mine_loginWithParam:(NSDictionary *)params
                                  Success:(LFRequestSuccessBlock)success
                                  Failure:(LFRequestFailureBlock)failure;
+/**
+ * 注册
+ */
++ (void)mine_registWithParam:(NSDictionary *)params
+                    Success:(LFRequestSuccessBlock)success
+                    Failure:(LFRequestFailureBlock)failure;
+/**
+ * 获取用户信息
+ */
++ (void)mine_getuserInfoWithParam:(NSDictionary *)params
+                     Success:(LFRequestSuccessBlock)success
+                     Failure:(LFRequestFailureBlock)failure;
 @end
 
 NS_ASSUME_NONNULL_END

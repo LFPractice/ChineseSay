@@ -30,6 +30,32 @@
     [self.vertyCodeButton turnModeForSendVertyCodeWithTimeInterval:15];
 }
 - (void)registerClick{
+    if(self.userAccountTF.text.length == 0||
+       self.passworldTF.text.length == 0||
+       self.vertyCodeTF.text.length == 0){
+        [QMUITips showError:@"请填写完整的信息"];
+        return;
+    }
+    NSDictionary *params = @{@"account":self.userAccountTF.text,
+                             @"code":self.vertyCodeTF.text,
+                             @"password":self.passworldTF.text
+                             };
+    [LFHttpTool mine_registWithParam:params Success:^(id responseObject) {
+        NSNumber *code = responseObject[@"code"];
+        if(code.integerValue == 200){
+            [QMUITips showSucceed:@"注册成功"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self dismissViewControllerAnimated:YES completion:^{
+                    
+                }];
+            });
+        }
+        else{
+            [QMUITips showError:responseObject[@"message"]];
+        }
+    } Failure:^(NSError *error) {
+        
+    }];
 }
 - (void)createUI{
     UIImageView *backGroundImg = [[UIImageView alloc]init];
@@ -126,6 +152,7 @@
         _passworldTF.backgroundColor = [UIColor whiteColor];
         _passworldTF.layer.cornerRadius = 20;
         _passworldTF.layer.masksToBounds = YES;
+        _passworldTF.secureTextEntry = YES;
         _passworldTF.delegate = self;
         
     }

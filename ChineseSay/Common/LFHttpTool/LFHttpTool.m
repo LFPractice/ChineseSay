@@ -60,6 +60,11 @@
     LFHttpTool *manager = [self sharedHttpTool];
     
     if(methodType == LFRequsetMethodTypeGET){
+        [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        if([CSUserInfoTool userToken].length){
+            [manager.requestSerializer setValue:[CSUserInfoTool userToken] forHTTPHeaderField:@"token"];
+        }
         return [manager GET:urlString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

@@ -18,4 +18,20 @@
         failure(error);
     }];
 }
++ (void)mine_registWithParam:(NSDictionary *)params Success:(LFRequestSuccessBlock)success Failure:(LFRequestFailureBlock)failure{
+    [LFHttpTool postData:[NSString stringWithFormat:@"%@/api/signUpWithAccount",BaseUrl] parameters:params success:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
++ (void)mine_getuserInfoWithParam:(NSDictionary *)params
+                          Success:(LFRequestSuccessBlock)success
+                          Failure:(LFRequestFailureBlock)failure{
+    [LFHttpTool getData:[NSString stringWithFormat:@"%@/api/info",BaseUrl] parameters:params success:^(id responseObject) {
+        success(responseObject);
+    } faliure:^(NSError *error) {
+        failure(error);
+    }];
+}
 @end

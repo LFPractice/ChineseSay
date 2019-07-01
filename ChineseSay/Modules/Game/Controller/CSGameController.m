@@ -53,7 +53,9 @@
 
 #pragma mark - private
 - (void)createUI{
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_controllerBg"]];
+    UIImageView *img_bg = [[UIImageView alloc]initWithFrame:self.view.bounds];
+    img_bg.image = [UIImage imageNamed:@"common_controllerBg"];
+    [self.view addSubview:self.img_bg];
     [self.view addSubview:self.label_title];
     [self.view addSubview:self.tableView];
 }

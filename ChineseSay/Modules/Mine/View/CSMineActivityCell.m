@@ -7,6 +7,7 @@
 //
 
 #import "CSMineActivityCell.h"
+#import "CSMineItemModel.h"
 @interface CSMineActivityCell()
 @property (nonatomic, strong) UIImageView *img_bg;
 @end
@@ -18,6 +19,10 @@
         [self createUI];
     }
     return self;
+}
+- (void)loadCellWithData:(id)model cellPath:(NSIndexPath *)path{
+    CSMineActivityModel *itemModel = model;
+    [self.img_bg sd_setImageWithURL:[NSURL URLWithString:itemModel.imageUrl]];
 }
 - (void)layoutSubviews{
     [self.img_bg mas_makeConstraints:^(MASConstraintMaker *make) {

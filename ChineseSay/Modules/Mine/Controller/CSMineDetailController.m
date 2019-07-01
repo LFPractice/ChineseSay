@@ -11,9 +11,12 @@
 #import "CSMineItemCell.h"
 #import "CSMineHeaderView.h"
 #import "CSMineItemModel.h"
+#import "CSUserInfoModel.h"
+#import "CSMineUserInfoDetailController.h"
 @interface CSMineDetailController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) CSMineHeaderView *view_header;
+@property (nonatomic, strong) CSUserInfoModel *userInfoModel;
 @property (nonatomic, strong) NSMutableArray *dataSource;
 @end
 
@@ -24,7 +27,9 @@
     // Do any additional setup after loading the view.
     [self createUI];
 }
-
+- (void)viewWillAppear:(BOOL)animated{
+    [self loadData];
+}
 #pragma mark - delegate
 #pragma mark ------ UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -59,7 +64,42 @@
 - (void)createUI{
     [self.view addSubview:self.tableView];
 }
-
+- (void)loadData{
+    [LFHttpTool mine_getuserInfoWithParam:@{} Success:^(id responseObject) {
+        NSNumber *code = responseObject[@"code"];
+        if(code.integerValue == 200){
+            self.userInfoModel = [CSUserInfoModel mj_objectWithKeyValues:responseObject[@"data"]];
+            self.view_header.userInfoModel = self.userInfoModel;
+            
+            CSMineActivityModel *model_section0 = [[CSMineActivityModel alloc]init];
+            model_section0 = [CSMineActivityModel mj_objectWithKeyValues:self.userInfoModel.banners[0]];
+            model_section0.cellName = @"CSMineActivityCell";
+            NSArray *arr0 = @[model_section0];
+            
+            NSArray *arr1 = @[@{@"title":@"新消息",
+                                @"count":self.userInfoModel.messageCount.stringValue,
+                                @"cellName":@"CSMineItemCell"
+                                },
+                              @{@"title":@"联系我们",
+                                @"count":@"",
+                                @"cellName":@"CSMineItemCell"
+                                },
+                              @{@"title":@"语言设置",
+                                @"count":@"",
+                                @"cellName":@"CSMineItemCell"
+                                },
+                              @{@"title":@"消息提醒设置",
+                                @"count":@"",
+                                @"cellName":@"CSMineItemCell"
+                                },];
+            [self.dataSource replaceObjectAtIndex:0 withObject:arr0];
+            [self.dataSource replaceObjectAtIndex:1 withObject:[CSMineItemModel mj_objectArrayWithKeyValuesArray:arr1]];
+            [self.tableView reloadData];
+        }
+    } Failure:^(NSError *error) {
+        
+    }];
+}
 #pragma mark - lazy load
 - (UITableView *)tableView{
     if(!_tableView){
@@ -79,6 +119,14 @@
     if(!_view_header){
         _view_header = [[CSMineHeaderView alloc]init];
         _view_header.frame = CGRectMake(0, 0, kScreenWidth, 300);
+        __weak typeof(self)weakSelf = self;
+        _view_header.turnToUserInfoDetail = ^{
+            CSMineUserInfoDetailController *vc = [[CSMineUserInfoDetailController alloc]init];
+            [weakSelf.navigationController pushViewController:vc animated:YES];
+            if(weakSelf.turnToUserInfoDetail){
+                weakSelf.turnToUserInfoDetail();
+            }
+        };
     }
     return _view_header;
 }
@@ -86,7 +134,7 @@
     if(!_dataSource){
         _dataSource = [[NSMutableArray alloc]init];
         
-        CSMineItemModel *model_section0 = [[CSMineItemModel alloc]init];
+        CSMineActivityModel *model_section0 = [[CSMineActivityModel alloc]init];
         model_section0.cellName = @"CSMineActivityCell";
         NSArray *arr0 = @[model_section0];
         

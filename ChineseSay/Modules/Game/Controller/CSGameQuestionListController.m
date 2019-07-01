@@ -67,7 +67,6 @@
 }
 - (void)dealWithData:(NSArray *)array{
     [self.dataSource addObjectsFromArray:[CSGameQuetionModel mj_objectArrayWithKeyValuesArray:array]];
-    [self.dataSource addObjectsFromArray:[CSGameQuetionModel mj_objectArrayWithKeyValuesArray:array]];
     [self.collectionView reloadData];
 }
 #pragma mark - lazy load

@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSMineDetailController : CSBaseController
-
+- (void)loadData;
+@property (nonatomic, copy) void(^turnToUserInfoDetail)();
 @end
 
 NS_ASSUME_NONNULL_END

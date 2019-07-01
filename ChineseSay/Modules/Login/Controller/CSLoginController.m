@@ -129,6 +129,7 @@
         _passworldTF.backgroundColor = [UIColor whiteColor];
         _passworldTF.layer.cornerRadius = 20;
         _passworldTF.layer.masksToBounds = YES;
+        _passworldTF.secureTextEntry = YES;
         _passworldTF.delegate = self;
 
     }

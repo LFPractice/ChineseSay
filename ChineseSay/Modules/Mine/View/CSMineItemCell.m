@@ -26,8 +26,10 @@
 - (void)loadCellWithData:(id)model cellPath:(NSIndexPath *)path{
     CSMineItemModel *itemModel = model;
     self.label_title.text = itemModel.title;
-    if([itemModel.count isEqualToString:@""]){
+    if([itemModel.count isEqualToString:@"0"] || itemModel.count.length == 0){
         self.label_count.hidden = YES;
+    }else{
+        self.label_count.text = itemModel.count;
     }
 }
 - (void)layoutSubviews{
@@ -93,7 +95,7 @@
 - (UIView *)view_bottomLine{
     if(!_view_bottomLine){
         _view_bottomLine = [[UIView alloc]init];
-        _view_bottomLine.backgroundColor = [UIColor colorWithHex:0xB7BED1];
+        _view_bottomLine.backgroundColor = [UIColor colorWithHex:0xa8a8a8];
     }
     return _view_bottomLine;
 }
