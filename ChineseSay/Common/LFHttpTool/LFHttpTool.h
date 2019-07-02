@@ -33,4 +33,9 @@ typedef void (^LFRequestFailureBlock)(NSError *error);
                     parameters:(id)parameters
                        success:(LFRequestSuccessBlock)success
                        failure:(LFRequestFailureBlock)failure;
++ (NSURLSessionDataTask *)postDataWithUrl:(NSString *)url
+                         constructingBody:(void (^)(id<AFMultipartFormData>))constructBlock param:(NSDictionary *)param
+                                 progress:(void (^)(NSProgress *))progress
+                                  success:(LFRequestSuccessBlock)success
+                                  failure:(LFRequestFailureBlock)failure;
 @end

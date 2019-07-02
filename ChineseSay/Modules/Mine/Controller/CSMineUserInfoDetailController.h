@@ -7,10 +7,11 @@
 //
 
 #import "CSBaseController.h"
-
+#import "CSUserInfoModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSMineUserInfoDetailController : CSBaseController
+@property (nonatomic, strong) CSUserInfoModel *userInfoModel;
 @end
 
 NS_ASSUME_NONNULL_END

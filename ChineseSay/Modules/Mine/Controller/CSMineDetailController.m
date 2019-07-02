@@ -11,12 +11,11 @@
 #import "CSMineItemCell.h"
 #import "CSMineHeaderView.h"
 #import "CSMineItemModel.h"
-#import "CSUserInfoModel.h"
 #import "CSMineUserInfoDetailController.h"
 @interface CSMineDetailController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) CSMineHeaderView *view_header;
-@property (nonatomic, strong) CSUserInfoModel *userInfoModel;
+
 @property (nonatomic, strong) NSMutableArray *dataSource;
 @end
 

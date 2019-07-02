@@ -36,6 +36,7 @@
     _item_vipDays.label_count.text = userInfoModel.vipLeft.stringValue;
     _item_Coupons.label_count.text = userInfoModel.couponCount.stringValue;
     
+    [self.img_portrait sd_setImageWithURL:[NSURL URLWithString:_userInfoModel.headImage]];
 }
 - (void)layoutSubviews{
     [self.img_headerBg mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -106,6 +107,7 @@
         _img_portrait = [[UIImageView alloc]init];
         _img_portrait.image = [UIImage imageNamed:@""];
         _img_portrait.layer.cornerRadius = 35;
+        _img_portrait.layer.masksToBounds = YES;
         _img_portrait.backgroundColor = [UIColor colorWithHex:0xB7BED1];
     }
     return _img_portrait;

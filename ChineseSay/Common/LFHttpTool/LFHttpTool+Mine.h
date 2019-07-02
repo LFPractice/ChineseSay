@@ -30,6 +30,19 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)mine_getuserInfoWithParam:(NSDictionary *)params
                      Success:(LFRequestSuccessBlock)success
                      Failure:(LFRequestFailureBlock)failure;
+/**
+ * 更新用户信息
+ */
++ (void)mine_updateUserInfoWithParam:(NSDictionary *)params
+                          Success:(LFRequestSuccessBlock)success
+                          Failure:(LFRequestFailureBlock)failure;
+/**
+ * 更新用户头像
+ */
++ (void)mine_updateUserAvatarWithImageData:(NSData *)imageData
+                                   Success:(LFRequestSuccessBlock)success
+                             Failure:(LFRequestFailureBlock)failure;
+
 @end
 
 NS_ASSUME_NONNULL_END

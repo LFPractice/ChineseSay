@@ -34,4 +34,33 @@
         failure(error);
     }];
 }
++ (void)mine_updateUserInfoWithParam:(NSDictionary *)params
+                             Success:(LFRequestSuccessBlock)success
+                             Failure:(LFRequestFailureBlock)failure {
+    [LFHttpTool postData:[NSString stringWithFormat:@"%@/api/update",BaseUrl] parameters:params success:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
++ (void)mine_updateUserAvatarWithImageData:(NSData *)imageData
+                                   Success:(LFRequestSuccessBlock)success
+                                   Failure:(LFRequestFailureBlock)failure{
+
+    [LFHttpTool postDataWithUrl:[NSString stringWithFormat:@"%@/api/file/upload",BaseUrl] constructingBody:^(id<AFMultipartFormData> formdata) {
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        NSString *str = [formatter stringFromDate:[NSDate date]];
+        formatter.dateFormat =@"yyyyMMddHHmmss";
+        NSString *fileName = [NSString stringWithFormat:@"%@.jpg", str];;
+        
+        [formdata appendPartWithFileData:imageData name:@"file" fileName:fileName mimeType:@"image/jpeg"];
+    } param:@{} progress:^(NSProgress * progress) {
+        
+    } success:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
 @end

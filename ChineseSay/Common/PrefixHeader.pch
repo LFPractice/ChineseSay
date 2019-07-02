@@ -34,6 +34,7 @@
 #import "CSApi.h"
 #import "UserInfo.h"
 #import "CSPlayer.h"
+#import "GXPickerImageController.h"
 #import "CSUserInfoTool.h"
 #import "LFHttpTool.h"
 #import "LFHttpTool+Home.h"

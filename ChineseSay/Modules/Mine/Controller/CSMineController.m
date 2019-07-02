@@ -52,6 +52,7 @@
         __weak typeof(self)weakSelf = self;
         _detailVC.turnToUserInfoDetail = ^{
             CSMineUserInfoDetailController *vc = [[CSMineUserInfoDetailController alloc]init];
+            vc.userInfoModel = weakSelf.detailVC.userInfoModel;
             [weakSelf.navigationController pushViewController:vc animated:YES];
         };
     }

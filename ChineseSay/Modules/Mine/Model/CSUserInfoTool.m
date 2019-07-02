@@ -15,6 +15,7 @@
 + (void)loginSuccessWithObject:(id)responseObject{
     [CSUserDefaults setBool:YES forKey:loginStatus];
     [CSUserDefaults setObject:responseObject[@"data"][@"token"] forKey:CSUserToken];
+    [CSUserDefaults synchronize];
 }
 + (void)loginOut{
     [CSUserDefaults removeObjectForKey:loginStatus];

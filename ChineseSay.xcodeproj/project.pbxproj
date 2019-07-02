@@ -47,7 +47,11 @@
 		53390FCB22AF7E500033A3CE /* CSHomeChinesePlaceDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53390FCA22AF7E500033A3CE /* CSHomeChinesePlaceDetailCell.m */; };
 		534EB5AA22CA5DCE00285F6A /* CSUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 534EB5A922CA5DCE00285F6A /* CSUserInfoModel.m */; };
 		534EB5AD22CA663600285F6A /* CSMineActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 534EB5AC22CA663600285F6A /* CSMineActivityModel.m */; };
-		534EB5B022CA6B4000285F6A /* CSMineUserInfoDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 534EB5AF22CA6B4000285F6A /* CSMineUserInfoDetailController.m */; };
+		534EB5B422CADC8900285F6A /* CSMineUserInfoDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 534EB5B222CADC8900285F6A /* CSMineUserInfoDetailController.m */; };
+		534EB5B522CADC8900285F6A /* CSMineUserInfoDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 534EB5B322CADC8900285F6A /* CSMineUserInfoDetailController.xib */; };
+		53562E4222CBA23400A5A12B /* GXPickerImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53562E4022CBA23400A5A12B /* GXPickerImageController.m */; };
+		53562E4922CBA55100A5A12B /* CSMineChangeInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53562E4722CBA55100A5A12B /* CSMineChangeInfoController.m */; };
+		53562E4A22CBA55100A5A12B /* CSMineChangeInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53562E4822CBA55100A5A12B /* CSMineChangeInfoController.xib */; };
 		535B853D22A57AAA000510C4 /* CSHomeItemsCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 535B853C22A57AAA000510C4 /* CSHomeItemsCellItem.m */; };
 		539CADD322B9364700C25A25 /* LFHttpTool+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 539CADCF22B9364700C25A25 /* LFHttpTool+Test.m */; };
 		539CADD422B9364700C25A25 /* LFHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 539CADD022B9364700C25A25 /* LFHttpTool.m */; };
@@ -216,8 +220,14 @@
 		534EB5A922CA5DCE00285F6A /* CSUserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSUserInfoModel.m; sourceTree = "<group>"; };
 		534EB5AB22CA663600285F6A /* CSMineActivityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineActivityModel.h; sourceTree = "<group>"; };
 		534EB5AC22CA663600285F6A /* CSMineActivityModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineActivityModel.m; sourceTree = "<group>"; };
-		534EB5AE22CA6B4000285F6A /* CSMineUserInfoDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineUserInfoDetailController.h; sourceTree = "<group>"; };
-		534EB5AF22CA6B4000285F6A /* CSMineUserInfoDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineUserInfoDetailController.m; sourceTree = "<group>"; };
+		534EB5B122CADC8900285F6A /* CSMineUserInfoDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineUserInfoDetailController.h; sourceTree = "<group>"; };
+		534EB5B222CADC8900285F6A /* CSMineUserInfoDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineUserInfoDetailController.m; sourceTree = "<group>"; };
+		534EB5B322CADC8900285F6A /* CSMineUserInfoDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSMineUserInfoDetailController.xib; sourceTree = "<group>"; };
+		53562E4022CBA23400A5A12B /* GXPickerImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXPickerImageController.m; sourceTree = "<group>"; };
+		53562E4122CBA23400A5A12B /* GXPickerImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXPickerImageController.h; sourceTree = "<group>"; };
+		53562E4622CBA55100A5A12B /* CSMineChangeInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineChangeInfoController.h; sourceTree = "<group>"; };
+		53562E4722CBA55100A5A12B /* CSMineChangeInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineChangeInfoController.m; sourceTree = "<group>"; };
+		53562E4822CBA55100A5A12B /* CSMineChangeInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSMineChangeInfoController.xib; sourceTree = "<group>"; };
 		535B853B22A57AAA000510C4 /* CSHomeItemsCellItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeItemsCellItem.h; sourceTree = "<group>"; };
 		535B853C22A57AAA000510C4 /* CSHomeItemsCellItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeItemsCellItem.m; sourceTree = "<group>"; };
 		539CADCF22B9364700C25A25 /* LFHttpTool+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LFHttpTool+Test.m"; sourceTree = "<group>"; };
@@ -647,8 +657,12 @@
 				53352EBB22ACB95C00F42147 /* CSMineController.m */,
 				53DF890922B542790087CFD1 /* CSMineDetailController.h */,
 				53DF890A22B542790087CFD1 /* CSMineDetailController.m */,
-				534EB5AE22CA6B4000285F6A /* CSMineUserInfoDetailController.h */,
-				534EB5AF22CA6B4000285F6A /* CSMineUserInfoDetailController.m */,
+				534EB5B122CADC8900285F6A /* CSMineUserInfoDetailController.h */,
+				534EB5B222CADC8900285F6A /* CSMineUserInfoDetailController.m */,
+				534EB5B322CADC8900285F6A /* CSMineUserInfoDetailController.xib */,
+				53562E4622CBA55100A5A12B /* CSMineChangeInfoController.h */,
+				53562E4722CBA55100A5A12B /* CSMineChangeInfoController.m */,
+				53562E4822CBA55100A5A12B /* CSMineChangeInfoController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -681,6 +695,15 @@
 				53DF891622B55C4D0087CFD1 /* CSMineHeaderItemView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		53562E3F22CBA23400A5A12B /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				53562E4122CBA23400A5A12B /* GXPickerImageController.h */,
+				53562E4022CBA23400A5A12B /* GXPickerImageController.m */,
+			);
+			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 		539CADCE22B9364700C25A25 /* LFHttpTool */ = {
@@ -943,6 +966,7 @@
 			isa = PBXGroup;
 			children = (
 				53AC31B822A3CE3D00CA2D12 /* PrefixHeader.pch */,
+				53562E3F22CBA23400A5A12B /* ImagePicker */,
 				53C2B30C22C1CBE800C2F017 /* CSPlayer */,
 				539CADCE22B9364700C25A25 /* LFHttpTool */,
 				53EB07DC22AEAA33003E626A /* NinaPagerView */,
@@ -1165,8 +1189,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				534EB5B522CADC8900285F6A /* CSMineUserInfoDetailController.xib in Resources */,
 				53F0F11E229EE129000F93ED /* Main.storyboard in Resources */,
 				53F0F121229EE18D000F93ED /* Assets.xcassets in Resources */,
+				53562E4A22CBA55100A5A12B /* CSMineChangeInfoController.xib in Resources */,
 				53F0F11D229EE129000F93ED /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1312,6 +1338,7 @@
 				53218EB322BA935200E6559E /* CSHomeBackgroundModel.m in Sources */,
 				53352EC222ACC86D00F42147 /* CSGameCell.m in Sources */,
 				53EB07E422AEAA33003E626A /* UIView+ViewController.m in Sources */,
+				53562E4222CBA23400A5A12B /* GXPickerImageController.m in Sources */,
 				53AC31AE22A3CCDF00CA2D12 /* CSBaseView.m in Sources */,
 				53352ED322AD2BCA00F42147 /* CSHomeAppListSelectToolView.m in Sources */,
 				53FEC00822C98A78003825E5 /* UIButton+Add.m in Sources */,
@@ -1324,6 +1351,7 @@
 				5336A8AE22A8148E00C661DE /* CSHomeMoreLessonListCell.m in Sources */,
 				533117A222C4416D00F8C94C /* CSGameQuetionModel.m in Sources */,
 				53E856DD22B149D30057E528 /* UINavigationBar+Add.m in Sources */,
+				53562E4922CBA55100A5A12B /* CSMineChangeInfoController.m in Sources */,
 				534EB5AA22CA5DCE00285F6A /* CSUserInfoModel.m in Sources */,
 				53AC31D022A41CC100CA2D12 /* CSHomeTitleCellModel.m in Sources */,
 				53F0F112229EE06D000F93ED /* LFTabBar.m in Sources */,
@@ -1339,7 +1367,7 @@
 				53F0F10F229EE06D000F93ED /* LFNavigationController.m in Sources */,
 				5331179F22C440FF00F8C94C /* CSGameQuestionCollectionViewCell.m in Sources */,
 				539CADD422B9364700C25A25 /* LFHttpTool.m in Sources */,
-				534EB5B022CA6B4000285F6A /* CSMineUserInfoDetailController.m in Sources */,
+				534EB5B422CADC8900285F6A /* CSMineUserInfoDetailController.m in Sources */,
 				53352EAE22ACB53900F42147 /* CSHomeAppsController.m in Sources */,
 				53AC31AB22A3CCC400CA2D12 /* CSBaseModel.m in Sources */,
 				53DF890E22B545D90087CFD1 /* CSMineItemCell.m in Sources */,

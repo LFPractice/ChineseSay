@@ -91,7 +91,11 @@
         request.timeoutInterval = 30;
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [request setValue:@"application/json" forHTTPHeaderField:@"accept"];
+        if([CSUserInfoTool userToken].length){
+            [request setValue:[CSUserInfoTool userToken] forHTTPHeaderField:@"token"];
+        }
         [request setHTTPBody:jsonData];
+        
         NSURLSessionDataTask *task =  [manager dataTaskWithRequest:request uploadProgress:^(NSProgress * _Nonnull uploadProgress) {
             
         } downloadProgress:^(NSProgress * _Nonnull downloadProgress) {
@@ -107,6 +111,29 @@
         return task;
     }
     NSURLSessionDataTask *task = [[NSURLSessionDataTask alloc]init];
+    return task;
+}
+
++ (NSURLSessionDataTask *)postDataWithUrl:(NSString *)url
+                         constructingBody:(void (^)(id<AFMultipartFormData>))constructBlock
+                                    param:(NSDictionary *)param
+                                 progress:(void (^)(NSProgress *))progress
+                                  success:(LFRequestSuccessBlock)success
+                                  failure:(LFRequestFailureBlock)failure {
+    LFHttpTool *manager = [self sharedHttpTool];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    if([CSUserInfoTool userToken].length){
+        [manager.requestSerializer setValue:[CSUserInfoTool userToken] forHTTPHeaderField:@"token"];
+    }
+    NSURLSessionDataTask *task = [manager POST:url parameters:param constructingBodyWithBlock:constructBlock progress:^(NSProgress * _Nonnull uploadProgress) {
+        progress(uploadProgress);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(error);
+    }];
+    
     return task;
 }
 @end
