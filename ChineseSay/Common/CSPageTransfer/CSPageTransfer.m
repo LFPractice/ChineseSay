@@ -17,6 +17,7 @@
 #import "CSHomeTravelSentencesController.h"
 #import "CSHomeCommonChineseLevelListController.h"
 #import "CSHomeCommonChineseLessonListController.h"
+#import "CSHomeEssayListController.h"
 
 
 static CSPageTransfer *sharePageTransfer = nil;
@@ -94,6 +95,10 @@ static CSPageTransfer *sharePageTransfer = nil;
         CSHomeCommonChineseLessonListController *vc = [[CSHomeCommonChineseLessonListController alloc]init];
         vc.pageModel = model;
         [[self currentNavigatroller]pushViewController:vc animated:animated];
+    } else if ([model.pageType isEqualToString:CS_Page_Type_Home_EssayList]) {
+        // 必读文章列表
+        CSHomeEssayListController *vc = [[CSHomeEssayListController alloc]init];
+        [[self currentNavigatroller] pushViewController:vc animated:YES];
     }
 }
 - (LFNavigationController *)currentNavigatroller{

@@ -24,4 +24,5 @@
 #define CS_Page_Type_Home_Apps             @"CS_Page_Type_Home_Apps"//首页->常用APP
 #define CS_Page_Type_Home_CommonChineseLevelList  @"CS_Page_Type_Home_CommonChineseLevelList" // 常用中文课程 （章）
 #define CS_Page_Type_Home_CommonChineseLessonList  @"CS_Page_Type_Home_CommonChineseLessonList" // 常用中文课程 (节)
+#define CS_Page_Type_Home_EssayList      @"CS_Page_Type_Home_EssayList" // 必读文章列表
 #endif /* CSPageTransferDefine_h */

@@ -8,6 +8,7 @@
 
 #import "CSHomeAppListController.h"
 #import "CSHomeAppListCell.h"
+#import "CSHomeEssayDetailController.h"
 @interface CSHomeAppListController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
@@ -52,7 +53,10 @@
     return cell;
 }
 #pragma mark ------ UITableViewDelegate
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CSHomeEssayDetailController *VC = [[CSHomeEssayDetailController alloc]init];
+    [self.navigationController pushViewController:VC animated:YES];
+}
 #pragma mark - private
 - (void)createUI{
     [self.view addSubview:self.tableView];

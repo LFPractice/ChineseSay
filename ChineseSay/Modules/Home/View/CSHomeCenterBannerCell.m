@@ -32,7 +32,10 @@
 #pragma mark - delegate
 #pragma mark ------ SDCycleScrollViewDelegate
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
-    
+    CSPageTypeModel *model = [[CSPageTypeModel alloc]init];
+    model.pageType = CS_Page_Type_Home_EssayList;
+    model.action = CS_Page_Type_Action;
+    [[CSPageTransfer shareInstance]dispatchTransFerActionWithPageModel:model];
 }
 
 #pragma mark - private
@@ -46,6 +49,7 @@
         _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:self.bounds delegate:self placeholderImage:nil];
         _cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
         _cycleScrollView.currentPageDotColor = [UIColor whiteColor];
+        _cycleScrollView.delegate = self;
     }
     return _cycleScrollView;
 }
