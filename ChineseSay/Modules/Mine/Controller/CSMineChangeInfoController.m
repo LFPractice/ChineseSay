@@ -25,7 +25,12 @@
     
     self.contentTF.placeholder = self.placeHolder;
 }
-
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    [self.contentTF mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo((self.navigationController.navigationBar.translucent?(kSystemNavigationBarHeight + kSystemStatusHeight + 10):10));
+    }];
+}
 - (IBAction)commiteClick:(UIButton *)sender {
     if(self.contentTF.text.length == 0){
         [QMUITips showError:self.placeHolder];

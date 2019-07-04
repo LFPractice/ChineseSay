@@ -20,6 +20,11 @@
     }
     return self;
 }
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if(self.itemBlock) {
+        self.itemBlock(self.tag);
+    }
+}
 - (void)layoutSubviews{
 //    CGFloat scale = kScreenWidth / 375.0;
     [self.label_count mas_makeConstraints:^(MASConstraintMaker *make) {

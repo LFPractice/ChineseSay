@@ -120,10 +120,13 @@
         _view_header.frame = CGRectMake(0, 0, kScreenWidth, 300);
         __weak typeof(self)weakSelf = self;
         _view_header.turnToUserInfoDetail = ^{
-            CSMineUserInfoDetailController *vc = [[CSMineUserInfoDetailController alloc]init];
-            [weakSelf.navigationController pushViewController:vc animated:YES];
             if(weakSelf.turnToUserInfoDetail){
                 weakSelf.turnToUserInfoDetail();
+            }
+        };
+        _view_header.selectItemBlock = ^(NSInteger tag) {
+            if(weakSelf.selectItemBlock) {
+                weakSelf.selectItemBlock(tag);
             }
         };
     }

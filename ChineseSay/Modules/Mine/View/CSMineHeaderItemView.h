@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSMineHeaderItemView : CSBaseView
+@property (nonatomic, copy) void(^itemBlock)(NSInteger tag);
 @property (nonatomic, assign) NSInteger width;
 @property (nonatomic, assign) NSInteger height;
 @property (nonatomic, strong) UILabel *label_count;

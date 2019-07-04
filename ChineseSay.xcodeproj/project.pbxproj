@@ -17,6 +17,8 @@
 		531985AB22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531985AA22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m */; };
 		531985AE22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 531985AD22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m */; };
 		53218EB322BA935200E6559E /* CSHomeBackgroundModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53218EB222BA935200E6559E /* CSHomeBackgroundModel.m */; };
+		5329145322CD7F0200A3E61E /* CSMineJiFenShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5329145122CD7F0200A3E61E /* CSMineJiFenShopController.m */; };
+		5329145422CD7F0200A3E61E /* CSMineJiFenShopController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5329145222CD7F0200A3E61E /* CSMineJiFenShopController.xib */; };
 		5331179C22C43D1B00F8C94C /* CSGameQuestionListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5331179B22C43D1B00F8C94C /* CSGameQuestionListController.m */; };
 		5331179F22C440FF00F8C94C /* CSGameQuestionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5331179E22C440FF00F8C94C /* CSGameQuestionCollectionViewCell.m */; };
 		533117A222C4416D00F8C94C /* CSGameQuetionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 533117A122C4416D00F8C94C /* CSGameQuetionModel.m */; };
@@ -164,6 +166,9 @@
 		531985AD22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeCommonChineseLevelCell.m; sourceTree = "<group>"; };
 		53218EB122BA935200E6559E /* CSHomeBackgroundModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeBackgroundModel.h; sourceTree = "<group>"; };
 		53218EB222BA935200E6559E /* CSHomeBackgroundModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeBackgroundModel.m; sourceTree = "<group>"; };
+		5329145022CD7F0200A3E61E /* CSMineJiFenShopController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineJiFenShopController.h; sourceTree = "<group>"; };
+		5329145122CD7F0200A3E61E /* CSMineJiFenShopController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineJiFenShopController.m; sourceTree = "<group>"; };
+		5329145222CD7F0200A3E61E /* CSMineJiFenShopController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSMineJiFenShopController.xib; sourceTree = "<group>"; };
 		5331179A22C43D1B00F8C94C /* CSGameQuestionListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameQuestionListController.h; sourceTree = "<group>"; };
 		5331179B22C43D1B00F8C94C /* CSGameQuestionListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameQuestionListController.m; sourceTree = "<group>"; };
 		5331179D22C440FF00F8C94C /* CSGameQuestionCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameQuestionCollectionViewCell.h; sourceTree = "<group>"; };
@@ -674,6 +679,9 @@
 				53562E4622CBA55100A5A12B /* CSMineChangeInfoController.h */,
 				53562E4722CBA55100A5A12B /* CSMineChangeInfoController.m */,
 				53562E4822CBA55100A5A12B /* CSMineChangeInfoController.xib */,
+				5329145022CD7F0200A3E61E /* CSMineJiFenShopController.h */,
+				5329145122CD7F0200A3E61E /* CSMineJiFenShopController.m */,
+				5329145222CD7F0200A3E61E /* CSMineJiFenShopController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1240,6 +1248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				534EB5B522CADC8900285F6A /* CSMineUserInfoDetailController.xib in Resources */,
+				5329145422CD7F0200A3E61E /* CSMineJiFenShopController.xib in Resources */,
 				53F0F11E229EE129000F93ED /* Main.storyboard in Resources */,
 				53F0F121229EE18D000F93ED /* Assets.xcassets in Resources */,
 				53562E4A22CBA55100A5A12B /* CSMineChangeInfoController.xib in Resources */,
@@ -1401,6 +1410,7 @@
 				530D021622A6D0650044CCB7 /* CSHomeMoreLessonListController.m in Sources */,
 				53FEC00B22C98BBA003825E5 /* CSRegisterController.m in Sources */,
 				5336A8AE22A8148E00C661DE /* CSHomeMoreLessonListCell.m in Sources */,
+				5329145322CD7F0200A3E61E /* CSMineJiFenShopController.m in Sources */,
 				533117A222C4416D00F8C94C /* CSGameQuetionModel.m in Sources */,
 				53E856DD22B149D30057E528 /* UINavigationBar+Add.m in Sources */,
 				53562E4922CBA55100A5A12B /* CSMineChangeInfoController.m in Sources */,

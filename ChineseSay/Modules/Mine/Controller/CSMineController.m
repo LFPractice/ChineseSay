@@ -10,6 +10,7 @@
 #import "CSMineDetailController.h"
 #import "CSLoginController.h"
 #import "CSMineUserInfoDetailController.h"
+#import "CSMineJiFenShopController.h"
 @interface CSMineController ()
 @property (nonatomic, strong) CSMineDetailController *detailVC;
 @property (nonatomic, strong) CSLoginController *logingVC;
@@ -54,6 +55,12 @@
             CSMineUserInfoDetailController *vc = [[CSMineUserInfoDetailController alloc]init];
             vc.userInfoModel = weakSelf.detailVC.userInfoModel;
             [weakSelf.navigationController pushViewController:vc animated:YES];
+        };
+        _detailVC.selectItemBlock = ^(NSInteger tag) {
+            if(tag == 0) {
+                CSMineJiFenShopController *shopVC = [[CSMineJiFenShopController alloc]init];
+                [weakSelf.navigationController pushViewController:shopVC animated:YES];
+            }
         };
     }
     return  _detailVC;

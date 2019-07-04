@@ -22,6 +22,11 @@
 @implementation CSMineHeaderView
 
 #pragma mark - assist method
+- (void)goToDetailClick{
+    if(self.turnToUserInfoDetail){
+        self.turnToUserInfoDetail();
+    }
+}
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if(self){
@@ -73,11 +78,6 @@
     _item_vipDays.frame = CGRectMake(_item_vipDays.width, self.frame.size.height - _item_vipDays.height, _item_vipDays.width, _item_vipDays.height);
     _item_Coupons.frame = CGRectMake(_item_Coupons.width * 2, self.frame.size.height - _item_Coupons.height, _item_Coupons.width, _item_Coupons.height);
 }
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    if(self.turnToUserInfoDetail){
-        self.turnToUserInfoDetail();
-    }
-}
 
 #pragma mark - private
 - (void)createUI{
@@ -99,6 +99,10 @@
     if(!_img_headerBg){
         _img_headerBg = [[UIImageView alloc]init];
         _img_headerBg.image = [UIImage imageNamed:@"mine_headerBg"];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(goToDetailClick)];
+        [_img_headerBg addGestureRecognizer:tap];
+        _img_headerBg.userInteractionEnabled = YES;
+        
     }
     return _img_headerBg;
 }
@@ -154,6 +158,14 @@
         _item_jiFen.label_title.text = @"积分商城";
         _item_jiFen.label_des.text = @"立即签到领积分";
         _item_jiFen.view_verticalLine.hidden = YES;
+        _item_jiFen.tag = 0;
+        
+        __weak typeof(self)weakSelf = self;
+        _item_jiFen.itemBlock = ^(NSInteger tag) {
+            if(weakSelf.selectItemBlock) {
+                weakSelf.selectItemBlock(tag);
+            }
+        };
     }
     return _item_jiFen;
 }
@@ -165,6 +177,14 @@
         _item_vipDays.label_title.text = @"会员剩余天数";
         _item_vipDays.view_verticalLine.hidden = YES;
         _item_vipDays.label_des.text = @"充值";
+        _item_vipDays.tag = 1;
+        
+        __weak typeof(self)weakSelf = self;
+        _item_vipDays.itemBlock = ^(NSInteger tag) {
+            if(weakSelf.selectItemBlock) {
+                weakSelf.selectItemBlock(tag);
+            }
+        };
     }
     return _item_vipDays;
 }
@@ -176,6 +196,15 @@
         _item_Coupons.label_title.text = @"我的优惠券";
         _item_Coupons.view_verticalLine.hidden = YES;
         _item_Coupons.view_verticalLine.hidden = YES;
+        _item_Coupons.tag = 2;
+        
+        __weak typeof(self)weakSelf = self;
+        _item_Coupons.itemBlock = ^(NSInteger tag) {
+            if(weakSelf.selectItemBlock) {
+                weakSelf.selectItemBlock(tag);
+            }
+        };
+        
     }
     return _item_Coupons;
 }

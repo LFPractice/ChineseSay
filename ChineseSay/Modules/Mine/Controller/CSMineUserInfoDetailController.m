@@ -10,6 +10,7 @@
 #import "CSMineChangeInfoController.h"
 
 @interface CSMineUserInfoDetailController ()
+@property (weak, nonatomic) IBOutlet UIView *avaterView;
 @property (weak, nonatomic) IBOutlet UIButton *btn_logOut;
 @property (weak, nonatomic) IBOutlet UIImageView *avaterImg;
 @property (weak, nonatomic) IBOutlet UILabel *nickNameLabel;
@@ -35,8 +36,17 @@
     self.avaterImg.layer.masksToBounds = YES;
     [self updateInfo];
 }
+
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setColor:[UIColor whiteColor]];
     [self loadData];
+}
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    [self.avaterView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo((self.navigationController.navigationBar.translucent?(kSystemNavigationBarHeight + kSystemStatusHeight):0));
+    }];
 }
 - (IBAction)btnTouXiangClick:(UIButton *)sender {
     GXPickerImageController*pickerVC=[[GXPickerImageController alloc]init];

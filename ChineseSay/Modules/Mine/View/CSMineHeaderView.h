@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSMineHeaderView : CSBaseView
+@property (nonatomic, copy) void(^selectItemBlock)(NSInteger tag);
 @property (nonatomic, assign) BOOL isSHowVerticalLine;
 @property (nonatomic, strong) CSUserInfoModel *userInfoModel;
 @property (nonatomic, copy) void(^turnToUserInfoDetail)();
