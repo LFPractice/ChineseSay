@@ -37,10 +37,14 @@ static CSHomeDataSource *homeSigle = nil;
 - (void)loadDataForHome{
     [LFHttpTool home_getDataForHomePageSuccess:^(id responseObject) {
         NSLog(@"%@",responseObject);
-        [self dealWithData:responseObject[@"data"]];
-        if(self.refreshData){
-            self.refreshData();
+        NSNumber *code = responseObject[@"code"];
+        if(code.integerValue == 200) {
+            [self dealWithData:responseObject[@"data"]];
+            if(self.refreshData){
+                self.refreshData();
+            }
         }
+        
     } failure:^(NSError *error) {
         
     }];

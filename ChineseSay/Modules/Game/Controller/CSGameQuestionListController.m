@@ -60,7 +60,10 @@
 }
 - (void)loadData{
     [LFHttpTool game_getDataForQuestionListParam:@{} Success:^(id responseObject) {
-        [self dealWithData:responseObject[@"data"][@"list"]];
+        NSNumber *code = responseObject[@"code"];
+        if(code.integerValue == 200) {
+            [self dealWithData:responseObject[@"data"][@"list"]];
+        }
     } Failure:^(NSError *error) {
         
     }];

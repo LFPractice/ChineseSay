@@ -59,6 +59,9 @@
 		53562E5622CC2CF800A5A12B /* CSHomeEssayItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53562E5422CC2CF800A5A12B /* CSHomeEssayItemCell.xib */; };
 		53562E5922CC312800A5A12B /* CSHomeEssayDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53562E5822CC312800A5A12B /* CSHomeEssayDetailController.m */; };
 		535B853D22A57AAA000510C4 /* CSHomeItemsCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 535B853C22A57AAA000510C4 /* CSHomeItemsCellItem.m */; };
+		537A257222CE4D0D00611DBE /* CSMineJiFenShopItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 537A257122CE4D0D00611DBE /* CSMineJiFenShopItemView.m */; };
+		537A257422CE4D2000611DBE /* CSMineJiFenShopItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 537A257322CE4D2000611DBE /* CSMineJiFenShopItemView.xib */; };
+		537A257722CED61200611DBE /* CSMineJiFenShopItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 537A257622CED61200611DBE /* CSMineJiFenShopItemModel.m */; };
 		539CADD322B9364700C25A25 /* LFHttpTool+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 539CADCF22B9364700C25A25 /* LFHttpTool+Test.m */; };
 		539CADD422B9364700C25A25 /* LFHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 539CADD022B9364700C25A25 /* LFHttpTool.m */; };
 		539CADD822B9372500C25A25 /* LFHttpTool+Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 539CADD722B9372500C25A25 /* LFHttpTool+Home.m */; };
@@ -246,6 +249,11 @@
 		53562E5822CC312800A5A12B /* CSHomeEssayDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeEssayDetailController.m; sourceTree = "<group>"; };
 		535B853B22A57AAA000510C4 /* CSHomeItemsCellItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeItemsCellItem.h; sourceTree = "<group>"; };
 		535B853C22A57AAA000510C4 /* CSHomeItemsCellItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeItemsCellItem.m; sourceTree = "<group>"; };
+		537A257022CE4D0D00611DBE /* CSMineJiFenShopItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineJiFenShopItemView.h; sourceTree = "<group>"; };
+		537A257122CE4D0D00611DBE /* CSMineJiFenShopItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineJiFenShopItemView.m; sourceTree = "<group>"; };
+		537A257322CE4D2000611DBE /* CSMineJiFenShopItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSMineJiFenShopItemView.xib; sourceTree = "<group>"; };
+		537A257522CED61200611DBE /* CSMineJiFenShopItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineJiFenShopItemModel.h; sourceTree = "<group>"; };
+		537A257622CED61200611DBE /* CSMineJiFenShopItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineJiFenShopItemModel.m; sourceTree = "<group>"; };
 		539CADCF22B9364700C25A25 /* LFHttpTool+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LFHttpTool+Test.m"; sourceTree = "<group>"; };
 		539CADD022B9364700C25A25 /* LFHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHttpTool.m; sourceTree = "<group>"; };
 		539CADD122B9364700C25A25 /* LFHttpTool+Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LFHttpTool+Test.h"; sourceTree = "<group>"; };
@@ -697,6 +705,8 @@
 				53FEBFF922C8C41B003825E5 /* CSUserInfoTool.m */,
 				534EB5A822CA5DCE00285F6A /* CSUserInfoModel.h */,
 				534EB5A922CA5DCE00285F6A /* CSUserInfoModel.m */,
+				537A257522CED61200611DBE /* CSMineJiFenShopItemModel.h */,
+				537A257622CED61200611DBE /* CSMineJiFenShopItemModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -712,6 +722,9 @@
 				53DF891322B548140087CFD1 /* CSMineHeaderView.m */,
 				53DF891522B55C4D0087CFD1 /* CSMineHeaderItemView.h */,
 				53DF891622B55C4D0087CFD1 /* CSMineHeaderItemView.m */,
+				537A257022CE4D0D00611DBE /* CSMineJiFenShopItemView.h */,
+				537A257122CE4D0D00611DBE /* CSMineJiFenShopItemView.m */,
+				537A257322CE4D2000611DBE /* CSMineJiFenShopItemView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1250,6 +1263,7 @@
 				534EB5B522CADC8900285F6A /* CSMineUserInfoDetailController.xib in Resources */,
 				5329145422CD7F0200A3E61E /* CSMineJiFenShopController.xib in Resources */,
 				53F0F11E229EE129000F93ED /* Main.storyboard in Resources */,
+				537A257422CE4D2000611DBE /* CSMineJiFenShopItemView.xib in Resources */,
 				53F0F121229EE18D000F93ED /* Assets.xcassets in Resources */,
 				53562E4A22CBA55100A5A12B /* CSMineChangeInfoController.xib in Resources */,
 				53F0F11D229EE129000F93ED /* LaunchScreen.storyboard in Resources */,
@@ -1380,6 +1394,7 @@
 				53C2B31622C2679500C2F017 /* CSHomeLevelModel.m in Sources */,
 				53F0F0FC229ED9FB000F93ED /* AppDelegate.m in Sources */,
 				53EB07F522AEBB5B003E626A /* CSHomeTravelSentencesController.m in Sources */,
+				537A257222CE4D0D00611DBE /* CSMineJiFenShopItemView.m in Sources */,
 				53DF891122B545F80087CFD1 /* CSMineActivityCell.m in Sources */,
 				53CC8DEA22C5930C008D9887 /* CSQuestionFooterView.m in Sources */,
 				53390FBC22AF6CF60033A3CE /* CSHomeChineseMapDetailFlowLayout.m in Sources */,
@@ -1466,6 +1481,7 @@
 				53352EBF22ACBEB100F42147 /* CSHomeHeaderView.m in Sources */,
 				53AC31C322A3D51D00CA2D12 /* CSHomeCellModel.m in Sources */,
 				53352EB922ACB93700F42147 /* CSGameController.m in Sources */,
+				537A257722CED61200611DBE /* CSMineJiFenShopItemModel.m in Sources */,
 				53352EBC22ACB95C00F42147 /* CSMineController.m in Sources */,
 				53F0F11F229EE129000F93ED /* main.m in Sources */,
 				53AC31B122A3CCFD00CA2D12 /* CSBaseCell.m in Sources */,
