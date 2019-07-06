@@ -27,7 +27,7 @@
     [self.img_header sd_setImageWithURL:[NSURL URLWithString:model.image]];
     self.label_name.text = model.name;
     self.label_content.text = model.lessonDescription;
-    self.label_help.text = model.howTo;
+    self.label_help.text = [NSString stringWithFormat:@" %@",model.howTo];
 }
 - (void)layoutSubviews{
     [self.img_header mas_makeConstraints:^(MASConstraintMaker *make) {

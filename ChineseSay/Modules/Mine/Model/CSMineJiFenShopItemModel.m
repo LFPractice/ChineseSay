@@ -9,5 +9,8 @@
 #import "CSMineJiFenShopItemModel.h"
 
 @implementation CSMineJiFenShopItemModel
-
++ (NSDictionary *)mj_replacedKeyFromPropertyName{
+    return @{@"jiFen":@"cost"
+             };
+}
 @end

@@ -46,7 +46,7 @@
         _btn_submit = [UIButton buttonWithType:UIButtonTypeCustom];
         [_btn_submit setTitle:@"Submit" forState:UIControlStateNormal];
         [_btn_submit setTitle:@"Next" forState:UIControlStateSelected];
-        [_btn_submit setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0x76D653]] forState:UIControlStateNormal];
+        [_btn_submit setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0x6EB161]] forState:UIControlStateNormal];
         [_btn_submit setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0x6C80A8]] forState:UIControlStateSelected];
         [_btn_submit addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
         _btn_submit.layer.cornerRadius = 5;

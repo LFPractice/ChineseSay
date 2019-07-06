@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CSMineJiFenShopItemModel : NSObject
 @property (nonatomic, strong) NSString *titleName;
 @property (nonatomic, strong) NSString *jiFen;
+@property (nonatomic, strong) NSNumber *category;
+@property (nonatomic, copy) NSNumber *id;
+@property (nonatomic, strong) NSString *name;
 @end
 
 NS_ASSUME_NONNULL_END

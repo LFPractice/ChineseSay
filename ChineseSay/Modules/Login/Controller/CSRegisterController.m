@@ -189,4 +189,8 @@
     }
     return _vertyCodeButton;
 }
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 @end

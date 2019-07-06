@@ -67,12 +67,21 @@
 }
 
 - (void)loadData:(CSGameQuestionItemModel *)model IndexPath:(NSIndexPath *)indexPath{
+    self.indexPath = indexPath;
     self.model = model;
     self.label_content.text = [NSString stringWithFormat:@"%@.%@",model.option,model.content];
     if(model.isCorrect){
         self.img_mark.image = [UIImage imageNamed:@"game_question_right"];
     }else{
         self.img_mark.image = [UIImage imageNamed:@"game_question_wrong"];
+    }
+    if(model.isSelect ){
+        self.view_bg.backgroundColor = [UIColor colorWithHex:0xFDDC97];
+    }else {
+        self.view_bg.layer.cornerRadius = 10;
+        self.view_bg.layer.borderWidth = 1;
+        self.view_bg.layer.borderColor = [UIColor colorWithHex:0x333333].CGColor;
+        self.view_bg.backgroundColor = [UIColor whiteColor];
     }
     if(self.questionModel.isShowAnwser){
         if(model.isSelect || model.isCorrect){
@@ -82,18 +91,31 @@
         self.img_mark.hidden = YES;
     }
 }
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-//    self.model.isSelect = selected;
-    if(selected){
-        self.view_bg.backgroundColor = [UIColor greenColor];
-    }else{
+- (void)setIsSelected:(BOOL)isSelected {
+    if(isSelected){
+        self.view_bg.backgroundColor = [UIColor colorWithHex:0xFDDC97];
+    }else {
         self.view_bg.layer.cornerRadius = 10;
         self.view_bg.layer.borderWidth = 1;
         self.view_bg.layer.borderColor = [UIColor colorWithHex:0x333333].CGColor;
         self.view_bg.backgroundColor = [UIColor whiteColor];
     }
 }
-
+/*
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+//    self.model.isSelect = selected;
+    
+    if(selected){
+        self.view_bg.backgroundColor = [UIColor colorWithHex:0xFDDC97];
+    }else if(![self.indexPath isEqual:self.selectedIndexPath]){
+        self.view_bg.layer.cornerRadius = 10;
+        self.view_bg.layer.borderWidth = 1;
+        self.view_bg.layer.borderColor = [UIColor colorWithHex:0x333333].CGColor;
+        self.view_bg.backgroundColor = [UIColor whiteColor];
+    }else {
+        self.view_bg.backgroundColor = [UIColor colorWithHex:0xFDDC97];
+    }
+}
+*/
 @end

@@ -155,4 +155,8 @@
     }
     return _registButton;
 }
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 @end

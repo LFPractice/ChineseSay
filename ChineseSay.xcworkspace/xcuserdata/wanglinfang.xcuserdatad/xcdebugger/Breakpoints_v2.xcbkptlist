@@ -35,5 +35,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChineseSay/Modules/Home/Travel/View/CSHomeChinesePlaceDetailCell.m"
+            timestampString = "584106952.135872"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-layoutSubviews"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CSHomeChinesePlaceDetailCell layoutSubviews]"
+                  moduleName = "ChineseSay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wanglinfang/SourceTree/%E6%88%91%E7%9A%84%E6%A1%88%E4%BE%8B/iOS/ChineseSay/ChineseSay/Modules/Home/Travel/View/CSHomeChinesePlaceDetailCell.m"
+                  timestampString = "584106952.26182"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__46-[CSHomeChinesePlaceDetailCell layoutSubviews]_block_invoke"
+                  moduleName = "ChineseSay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wanglinfang/SourceTree/%E6%88%91%E7%9A%84%E6%A1%88%E4%BE%8B/iOS/ChineseSay/ChineseSay/Modules/Home/Travel/View/CSHomeChinesePlaceDetailCell.m"
+                  timestampString = "584106952.263599"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

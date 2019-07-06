@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIView *view_navigationBar;
 @property (nonatomic, strong) CSPageTypeModel *pageModel;
 @property (nonatomic, strong) UIImageView *img_bg;
+- (void)createUI;
 @end
 
 NS_ASSUME_NONNULL_END

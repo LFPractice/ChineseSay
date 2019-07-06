@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CSGameQuestionItemCell : CSBaseCell
 @property (nonatomic, strong) CSGameQuetionModel *questionModel;
+@property (nonatomic, strong) NSIndexPath *indexPath;
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
+@property (nonatomic, assign) BOOL isSelected;
 - (void)loadData:(CSGameQuestionItemModel *)model IndexPath:(NSIndexPath *)indexPath;
 @end
 

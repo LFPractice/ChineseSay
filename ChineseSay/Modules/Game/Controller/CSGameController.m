@@ -109,4 +109,8 @@
     }
     return _dataSource;
 }
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 @end

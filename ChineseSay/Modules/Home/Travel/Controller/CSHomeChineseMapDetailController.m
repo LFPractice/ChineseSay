@@ -26,6 +26,7 @@
 - (void)createUI{
     self.view.backgroundColor = [UIColor colorWithHex:0xF4F5F9];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_controllerBg"]];
+    [self.view addSubview:self.img_bg];
     [self.navigationController.navigationBar setColor:[UIColor clearColor]];
     [self.view addSubview:self.collectionView];
 }
@@ -78,5 +79,9 @@
         }
     }
     return _dataSource;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 @end

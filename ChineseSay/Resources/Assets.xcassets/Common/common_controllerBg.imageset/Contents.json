@@ -6,12 +6,12 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "common_controllerBg@2x.png",
+      "filename" : "common_controllerBg.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "common_controllerBg@3x.png",
+      "filename" : "common_controllerBg-1.jpg",
       "scale" : "3x"
     }
   ],

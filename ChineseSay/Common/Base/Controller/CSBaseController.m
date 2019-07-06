@@ -22,8 +22,11 @@
 //    [self.view addSubview:self.view_navigationBar];
     // Do any additional setup after loading the view.
 }
-- (void)viewDidLayoutSubviews{
+- (void)createUI {
     
+}
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
 }
 - (void)setPageModel:(CSPageTypeModel *)pageModel{
     _pageModel = pageModel;
@@ -43,5 +46,9 @@
         _img_bg.image =[UIImage imageNamed:@"common_controllerBg"];
     }
     return _img_bg;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleDefault;
 }
 @end

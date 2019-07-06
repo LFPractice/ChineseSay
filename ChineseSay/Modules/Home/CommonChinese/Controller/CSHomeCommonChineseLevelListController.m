@@ -29,7 +29,7 @@
     return self.dataSource.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 110;
+    return 180;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CSHomeCommonChineseLevelCell2 *cell = [tableView dequeueReusableCellWithIdentifier:@"CSHomeCommonChineseLevelCell2"];

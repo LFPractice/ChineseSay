@@ -8,6 +8,10 @@
 
 #import "CSMineJiFenShopController.h"
 #import "CSMineJiFenShopItemView.h"
+#import "CSMineGetJiFenController.h"
+#import "CSMineChineseNameController.h"
+#import "CSChieseGiftController.h"
+#import "CSMineJiFenShopModel.h"
 @interface CSMineJiFenShopController ()
 @property (weak, nonatomic) IBOutlet UIImageView *headerBgImg;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -20,10 +24,11 @@
 @property (strong, nonatomic) CSMineJiFenShopItemView *chineseGiftItem;
 @property (strong, nonatomic) CSMineJiFenShopItemView *vipWeekItem;
 
-@property (strong,nonatomic) CSMineJiFenShopItemModel *vipDayModel;
-@property (strong,nonatomic) CSMineJiFenShopItemModel *chineseNameModel;
-@property (strong,nonatomic) CSMineJiFenShopItemModel *chineseGiftModel;
-@property (strong,nonatomic) CSMineJiFenShopItemModel *vipWeekModel;
+@property (strong, nonatomic) CSMineJiFenShopItemModel *vipDayModel;
+@property (strong, nonatomic) CSMineJiFenShopItemModel *chineseNameModel;
+@property (strong, nonatomic) CSMineJiFenShopItemModel *chineseGiftModel;
+@property (strong, nonatomic) CSMineJiFenShopItemModel *vipWeekModel;
+@property (strong, nonatomic) CSMineJiFenShopModel *infoModel;
 @end
 
 @implementation CSMineJiFenShopController
@@ -40,13 +45,48 @@
     [self.view addSubview:self.chineseGiftItem];
     [self.view addSubview:self.vipWeekItem];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(getJiFenClick)];
+    [self.getScoreLabel addGestureRecognizer:tap];
+    self.getScoreLabel.userInteractionEnabled = YES;
+    
     [self loadData];
 }
+- (void)getJiFenClick {
+    CSMineGetJiFenController *getVC = [[CSMineGetJiFenController alloc]init];
+    [self.navigationController pushViewController:getVC animated:YES];
+}
+
+
 - (void)loadData {
-    self.vipDayItem.model = self.vipDayModel;
-    self.chineseNameItem.model = self.chineseNameModel;
-    self.chineseGiftItem.model = self.chineseGiftModel;
-    self.vipWeekItem.model = self.vipWeekModel;
+    
+    [LFHttpTool mine_getuserShopInfoWithParam:@{} Success:^(id responseObject) {
+        NSNumber *code = responseObject[@"code"];
+        if(code.integerValue == 200) {
+            self.infoModel = [CSMineJiFenShopModel mj_objectWithKeyValues:responseObject[@"data"]];
+            self.infoModel.list = [CSMineJiFenShopItemModel mj_objectArrayWithKeyValuesArray:self.infoModel.list];
+            
+            NSArray *tmpArr = @[self.vipDayModel,self.chineseNameModel,self.chineseGiftModel,self.vipWeekModel];
+            for(int i=0;i < self.infoModel.list.count; i++) {
+                CSMineJiFenShopItemModel *itemModel = tmpArr[i];
+                CSMineJiFenShopItemModel *model = self.infoModel.list[i];
+                
+                itemModel.jiFen = model.jiFen;
+                itemModel.category = model.category;
+                itemModel.name = model.name;
+                itemModel.id = model.id;
+            }
+            
+            self.vipDayItem.model = self.vipDayModel;
+            self.chineseNameItem.model = self.chineseNameModel;
+            self.chineseGiftItem.model = self.chineseGiftModel;
+            self.vipWeekItem.model = self.vipWeekModel;
+        }
+    } Failure:^(NSError *error) {
+        
+    }];
+    
+    
+    
 }
 - (void)viewWillLayoutSubviews{
     [self.headerBgImg mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -109,6 +149,9 @@
         _vipDayModel = [[CSMineJiFenShopItemModel alloc]init];
         _vipDayModel.titleName = @"一天免费会员体验";
         _vipDayModel.jiFen = @"200";
+        _vipDayItem.actionBlock = ^(NSInteger index) {
+          [QMUITips showSucceed:@"领取成功"];
+        };
     }
     return _vipDayModel;
 }
@@ -117,6 +160,11 @@
         _chineseNameModel = [[CSMineJiFenShopItemModel alloc]init];
         _chineseNameModel.titleName = @"免费定制中文名";
         _chineseNameModel.jiFen = @"1000";
+        __weak typeof(self)weakSelf = self;
+        _chineseNameItem.actionBlock = ^(NSInteger index) {
+            CSMineChineseNameController *chineseNameVC = [[CSMineChineseNameController alloc]init];
+            [weakSelf.navigationController pushViewController:chineseNameVC animated:YES];
+        };
     }
     return _chineseNameModel;
 }
@@ -125,6 +173,12 @@
         _chineseGiftModel = [[CSMineJiFenShopItemModel alloc]init];
         _chineseGiftModel.titleName = @"随机中国特色小礼物";
         _chineseGiftModel.jiFen = @"2000";
+        
+        __weak typeof(self)weakSelf = self;
+        _chineseGiftItem.actionBlock = ^(NSInteger index) {
+            CSChieseGiftController *giftVC = [[CSChieseGiftController alloc]init];
+            [weakSelf.navigationController pushViewController:giftVC animated:YES];
+        };
     }
     return _chineseGiftModel;
 }
@@ -133,7 +187,15 @@
         _vipWeekModel = [[CSMineJiFenShopItemModel alloc]init];
         _vipWeekModel.titleName = @"一天免费会员体验";
         _vipWeekModel.jiFen = @"200";
+        _vipWeekItem.actionBlock = ^(NSInteger index) {
+            [QMUITips showSucceed:@"领取成功"];
+        };
     }
     return _vipWeekModel;
+}
+
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 @end

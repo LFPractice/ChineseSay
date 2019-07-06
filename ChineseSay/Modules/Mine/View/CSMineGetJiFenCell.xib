@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="47" id="KGk-i7-Jjw" customClass="CSMineGetJiFenCell">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="47"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="355" height="46.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_jiFenShop_get" translatesAutoresizingMaskIntoConstraints="NO" id="vaD-Od-0TU">
+                        <rect key="frame" x="16" y="16" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Vh1-9U-AVp"/>
+                            <constraint firstAttribute="width" constant="15" id="YAC-x3-txh"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iu-b9-Uj4">
+                        <rect key="frame" x="289" y="13.5" width="50" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="hA9-3L-tG9"/>
+                            <constraint firstAttribute="width" constant="50" id="q8g-Nl-nmB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <color key="textColor" red="0.98039215686274506" green="0.70588235294117641" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已领取" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnR-n3-bef">
+                        <rect key="frame" x="289" y="13.5" width="50" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="GLR-bT-fU1"/>
+                            <constraint firstAttribute="height" constant="20" id="rHQ-9Y-rot"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当日签到" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfc-mi-spM">
+                        <rect key="frame" x="36" y="15" width="248" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9iu-b9-Uj4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8DY-lp-RsC"/>
+                    <constraint firstItem="vaD-Od-0TU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="E7z-Jr-wf1"/>
+                    <constraint firstItem="xnR-n3-bef" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Epe-oj-2kS"/>
+                    <constraint firstItem="yfc-mi-spM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Rez-te-mjl"/>
+                    <constraint firstItem="yfc-mi-spM" firstAttribute="leading" secondItem="vaD-Od-0TU" secondAttribute="trailing" constant="5" id="aI2-lQ-92E"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="xnR-n3-bef" secondAttribute="trailing" id="ina-Z8-1Fn"/>
+                    <constraint firstItem="9iu-b9-Uj4" firstAttribute="leading" secondItem="yfc-mi-spM" secondAttribute="trailing" constant="5" id="oft-xT-J1J"/>
+                    <constraint firstItem="vaD-Od-0TU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="xyv-h2-IDN"/>
+                    <constraint firstItem="9iu-b9-Uj4" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="yaL-Rm-hgl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <point key="canvasLocation" x="165.59999999999999" y="132.68365817091455"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="mine_jiFenShop_get" width="15" height="15"/>
+    </resources>
+</document>

@@ -42,7 +42,25 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)mine_updateUserAvatarWithImageData:(NSData *)imageData
                                    Success:(LFRequestSuccessBlock)success
                              Failure:(LFRequestFailureBlock)failure;
+/**
+ * 获取用户积分商城相关信息
+ */
++ (void)mine_getuserShopInfoWithParam:(NSDictionary *)params
+                          Success:(LFRequestSuccessBlock)success
+                          Failure:(LFRequestFailureBlock)failure;
+/**
+ * 定制中文名字
+ */
++ (void)mine_designChinesesNameWithParam:(NSDictionary *)params
+                             Success:(LFRequestSuccessBlock)success
+                             Failure:(LFRequestFailureBlock)failure;
 
+/**
+ * 领取小礼物
+ */
++ (void)mine_chineseGiftWithParam:(NSDictionary *)params
+                                 Success:(LFRequestSuccessBlock)success
+                                 Failure:(LFRequestFailureBlock)failure;
 @end
 
 NS_ASSUME_NONNULL_END

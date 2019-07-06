@@ -17,6 +17,7 @@
 		531985AB22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531985AA22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m */; };
 		531985AE22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 531985AD22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m */; };
 		53218EB322BA935200E6559E /* CSHomeBackgroundModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53218EB222BA935200E6559E /* CSHomeBackgroundModel.m */; };
+		5322335822D0B42000D18390 /* CSMineJiFenShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5322335722D0B42000D18390 /* CSMineJiFenShopModel.m */; };
 		5329145322CD7F0200A3E61E /* CSMineJiFenShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5329145122CD7F0200A3E61E /* CSMineJiFenShopController.m */; };
 		5329145422CD7F0200A3E61E /* CSMineJiFenShopController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5329145222CD7F0200A3E61E /* CSMineJiFenShopController.xib */; };
 		5331179C22C43D1B00F8C94C /* CSGameQuestionListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5331179B22C43D1B00F8C94C /* CSGameQuestionListController.m */; };
@@ -26,6 +27,19 @@
 		533117A822C4438100F8C94C /* LFHttpTool+Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 533117A722C4438100F8C94C /* LFHttpTool+Game.m */; };
 		533117AB22C4492C00F8C94C /* CSGameQuestionItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 533117AA22C4492C00F8C94C /* CSGameQuestionItemCell.m */; };
 		533117AE22C44AB000F8C94C /* CSGameQuestionItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 533117AD22C44AB000F8C94C /* CSGameQuestionItemModel.m */; };
+		53352CB622CF8FBA007F6502 /* CSMineGetJiFenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352CB522CF8FBA007F6502 /* CSMineGetJiFenController.m */; };
+		53352CBD22CF9170007F6502 /* CSMineGetJiFenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352CBB22CF9170007F6502 /* CSMineGetJiFenCell.m */; };
+		53352CBE22CF9170007F6502 /* CSMineGetJiFenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53352CBC22CF9170007F6502 /* CSMineGetJiFenCell.xib */; };
+		53352CC122CF9BBE007F6502 /* CSMineGetJiFenHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352CC022CF9BBE007F6502 /* CSMineGetJiFenHeader.m */; };
+		53352CC422CFA771007F6502 /* CSMineGetRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352CC322CFA771007F6502 /* CSMineGetRecordController.m */; };
+		53352CC822CFA898007F6502 /* CSMineGetRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352CC622CFA898007F6502 /* CSMineGetRecordCell.m */; };
+		53352CC922CFA898007F6502 /* CSMineGetRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53352CC722CFA898007F6502 /* CSMineGetRecordCell.xib */; };
+		53352CCD22CFAECB007F6502 /* CSMineChineseNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352CCB22CFAECB007F6502 /* CSMineChineseNameController.m */; };
+		53352CCE22CFAECB007F6502 /* CSMineChineseNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53352CCC22CFAECB007F6502 /* CSMineChineseNameController.xib */; };
+		53352CD222CFB9DE007F6502 /* CSChieseGiftController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352CD022CFB9DE007F6502 /* CSChieseGiftController.m */; };
+		53352CD322CFB9DE007F6502 /* CSChieseGiftController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53352CD122CFB9DE007F6502 /* CSChieseGiftController.xib */; };
+		53352CDC22D0A3D6007F6502 /* CSMineGetGiftOrNameSuccessController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352CDA22D0A3D6007F6502 /* CSMineGetGiftOrNameSuccessController.m */; };
+		53352CDD22D0A3D6007F6502 /* CSMineGetGiftOrNameSuccessController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53352CDB22D0A3D6007F6502 /* CSMineGetGiftOrNameSuccessController.xib */; };
 		53352EA122A95A7800F42147 /* CSHomeMoreLessonListDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352EA022A95A7800F42147 /* CSHomeMoreLessonListDetailController.m */; };
 		53352EA422A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352EA322A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.m */; };
 		53352EA722A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53352EA622A95EC100F42147 /* CSHomeMoreLessonDetailCollectionViewCell.m */; };
@@ -169,6 +183,8 @@
 		531985AD22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeCommonChineseLevelCell.m; sourceTree = "<group>"; };
 		53218EB122BA935200E6559E /* CSHomeBackgroundModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeBackgroundModel.h; sourceTree = "<group>"; };
 		53218EB222BA935200E6559E /* CSHomeBackgroundModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeBackgroundModel.m; sourceTree = "<group>"; };
+		5322335622D0B42000D18390 /* CSMineJiFenShopModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineJiFenShopModel.h; sourceTree = "<group>"; };
+		5322335722D0B42000D18390 /* CSMineJiFenShopModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineJiFenShopModel.m; sourceTree = "<group>"; };
 		5329145022CD7F0200A3E61E /* CSMineJiFenShopController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineJiFenShopController.h; sourceTree = "<group>"; };
 		5329145122CD7F0200A3E61E /* CSMineJiFenShopController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineJiFenShopController.m; sourceTree = "<group>"; };
 		5329145222CD7F0200A3E61E /* CSMineJiFenShopController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSMineJiFenShopController.xib; sourceTree = "<group>"; };
@@ -186,6 +202,27 @@
 		533117AA22C4492C00F8C94C /* CSGameQuestionItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameQuestionItemCell.m; sourceTree = "<group>"; };
 		533117AC22C44AB000F8C94C /* CSGameQuestionItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameQuestionItemModel.h; sourceTree = "<group>"; };
 		533117AD22C44AB000F8C94C /* CSGameQuestionItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameQuestionItemModel.m; sourceTree = "<group>"; };
+		53352CB422CF8FBA007F6502 /* CSMineGetJiFenController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineGetJiFenController.h; sourceTree = "<group>"; };
+		53352CB522CF8FBA007F6502 /* CSMineGetJiFenController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineGetJiFenController.m; sourceTree = "<group>"; };
+		53352CBA22CF9170007F6502 /* CSMineGetJiFenCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineGetJiFenCell.h; sourceTree = "<group>"; };
+		53352CBB22CF9170007F6502 /* CSMineGetJiFenCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineGetJiFenCell.m; sourceTree = "<group>"; };
+		53352CBC22CF9170007F6502 /* CSMineGetJiFenCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSMineGetJiFenCell.xib; sourceTree = "<group>"; };
+		53352CBF22CF9BBE007F6502 /* CSMineGetJiFenHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineGetJiFenHeader.h; sourceTree = "<group>"; };
+		53352CC022CF9BBE007F6502 /* CSMineGetJiFenHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineGetJiFenHeader.m; sourceTree = "<group>"; };
+		53352CC222CFA771007F6502 /* CSMineGetRecordController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineGetRecordController.h; sourceTree = "<group>"; };
+		53352CC322CFA771007F6502 /* CSMineGetRecordController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineGetRecordController.m; sourceTree = "<group>"; };
+		53352CC522CFA898007F6502 /* CSMineGetRecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineGetRecordCell.h; sourceTree = "<group>"; };
+		53352CC622CFA898007F6502 /* CSMineGetRecordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineGetRecordCell.m; sourceTree = "<group>"; };
+		53352CC722CFA898007F6502 /* CSMineGetRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSMineGetRecordCell.xib; sourceTree = "<group>"; };
+		53352CCA22CFAECB007F6502 /* CSMineChineseNameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineChineseNameController.h; sourceTree = "<group>"; };
+		53352CCB22CFAECB007F6502 /* CSMineChineseNameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineChineseNameController.m; sourceTree = "<group>"; };
+		53352CCC22CFAECB007F6502 /* CSMineChineseNameController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSMineChineseNameController.xib; sourceTree = "<group>"; };
+		53352CCF22CFB9DE007F6502 /* CSChieseGiftController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSChieseGiftController.h; sourceTree = "<group>"; };
+		53352CD022CFB9DE007F6502 /* CSChieseGiftController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSChieseGiftController.m; sourceTree = "<group>"; };
+		53352CD122CFB9DE007F6502 /* CSChieseGiftController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSChieseGiftController.xib; sourceTree = "<group>"; };
+		53352CD922D0A3D6007F6502 /* CSMineGetGiftOrNameSuccessController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineGetGiftOrNameSuccessController.h; sourceTree = "<group>"; };
+		53352CDA22D0A3D6007F6502 /* CSMineGetGiftOrNameSuccessController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineGetGiftOrNameSuccessController.m; sourceTree = "<group>"; };
+		53352CDB22D0A3D6007F6502 /* CSMineGetGiftOrNameSuccessController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSMineGetGiftOrNameSuccessController.xib; sourceTree = "<group>"; };
 		53352E9F22A95A7800F42147 /* CSHomeMoreLessonListDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeMoreLessonListDetailController.h; sourceTree = "<group>"; };
 		53352EA022A95A7800F42147 /* CSHomeMoreLessonListDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeMoreLessonListDetailController.m; sourceTree = "<group>"; };
 		53352EA222A95E9000F42147 /* CSHomeMoreLessonDetailFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeMoreLessonDetailFlowLayout.h; sourceTree = "<group>"; };
@@ -690,6 +727,19 @@
 				5329145022CD7F0200A3E61E /* CSMineJiFenShopController.h */,
 				5329145122CD7F0200A3E61E /* CSMineJiFenShopController.m */,
 				5329145222CD7F0200A3E61E /* CSMineJiFenShopController.xib */,
+				53352CB422CF8FBA007F6502 /* CSMineGetJiFenController.h */,
+				53352CB522CF8FBA007F6502 /* CSMineGetJiFenController.m */,
+				53352CC222CFA771007F6502 /* CSMineGetRecordController.h */,
+				53352CC322CFA771007F6502 /* CSMineGetRecordController.m */,
+				53352CCA22CFAECB007F6502 /* CSMineChineseNameController.h */,
+				53352CCB22CFAECB007F6502 /* CSMineChineseNameController.m */,
+				53352CCC22CFAECB007F6502 /* CSMineChineseNameController.xib */,
+				53352CCF22CFB9DE007F6502 /* CSChieseGiftController.h */,
+				53352CD022CFB9DE007F6502 /* CSChieseGiftController.m */,
+				53352CD122CFB9DE007F6502 /* CSChieseGiftController.xib */,
+				53352CD922D0A3D6007F6502 /* CSMineGetGiftOrNameSuccessController.h */,
+				53352CDA22D0A3D6007F6502 /* CSMineGetGiftOrNameSuccessController.m */,
+				53352CDB22D0A3D6007F6502 /* CSMineGetGiftOrNameSuccessController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -707,6 +757,8 @@
 				534EB5A922CA5DCE00285F6A /* CSUserInfoModel.m */,
 				537A257522CED61200611DBE /* CSMineJiFenShopItemModel.h */,
 				537A257622CED61200611DBE /* CSMineJiFenShopItemModel.m */,
+				5322335622D0B42000D18390 /* CSMineJiFenShopModel.h */,
+				5322335722D0B42000D18390 /* CSMineJiFenShopModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -725,6 +777,14 @@
 				537A257022CE4D0D00611DBE /* CSMineJiFenShopItemView.h */,
 				537A257122CE4D0D00611DBE /* CSMineJiFenShopItemView.m */,
 				537A257322CE4D2000611DBE /* CSMineJiFenShopItemView.xib */,
+				53352CBA22CF9170007F6502 /* CSMineGetJiFenCell.h */,
+				53352CBB22CF9170007F6502 /* CSMineGetJiFenCell.m */,
+				53352CBC22CF9170007F6502 /* CSMineGetJiFenCell.xib */,
+				53352CBF22CF9BBE007F6502 /* CSMineGetJiFenHeader.h */,
+				53352CC022CF9BBE007F6502 /* CSMineGetJiFenHeader.m */,
+				53352CC522CFA898007F6502 /* CSMineGetRecordCell.h */,
+				53352CC622CFA898007F6502 /* CSMineGetRecordCell.m */,
+				53352CC722CFA898007F6502 /* CSMineGetRecordCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1260,13 +1320,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53352CDD22D0A3D6007F6502 /* CSMineGetGiftOrNameSuccessController.xib in Resources */,
+				53352CD322CFB9DE007F6502 /* CSChieseGiftController.xib in Resources */,
 				534EB5B522CADC8900285F6A /* CSMineUserInfoDetailController.xib in Resources */,
+				53352CCE22CFAECB007F6502 /* CSMineChineseNameController.xib in Resources */,
 				5329145422CD7F0200A3E61E /* CSMineJiFenShopController.xib in Resources */,
+				53352CBE22CF9170007F6502 /* CSMineGetJiFenCell.xib in Resources */,
 				53F0F11E229EE129000F93ED /* Main.storyboard in Resources */,
 				537A257422CE4D2000611DBE /* CSMineJiFenShopItemView.xib in Resources */,
 				53F0F121229EE18D000F93ED /* Assets.xcassets in Resources */,
 				53562E4A22CBA55100A5A12B /* CSMineChangeInfoController.xib in Resources */,
 				53F0F11D229EE129000F93ED /* LaunchScreen.storyboard in Resources */,
+				53352CC922CFA898007F6502 /* CSMineGetRecordCell.xib in Resources */,
 				53562E5622CC2CF800A5A12B /* CSHomeEssayItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1383,9 +1448,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53352CC422CFA771007F6502 /* CSMineGetRecordController.m in Sources */,
 				53FEC00522C8FEE9003825E5 /* LFHttpTool+Mine.m in Sources */,
 				5331179C22C43D1B00F8C94C /* CSGameQuestionListController.m in Sources */,
 				53C2B30522C124CD00C2F017 /* CSHomeBannerModel.m in Sources */,
+				53352CB622CF8FBA007F6502 /* CSMineGetJiFenController.m in Sources */,
 				531985A522B2A63E00351C66 /* CSHomeCommonChineseLevelListController.m in Sources */,
 				53AC31B722A3CD3900CA2D12 /* CSHomeController.m in Sources */,
 				53AC31DD22A42C9200CA2D12 /* UIColor+Add.m in Sources */,
@@ -1410,6 +1477,7 @@
 				53F0F0FB229ED9FB000F93ED /* AppDelegate+Config.m in Sources */,
 				531985AB22B2A6DA00351C66 /* CSHomeCommonChineseLessonListController.m in Sources */,
 				53390FCB22AF7E500033A3CE /* CSHomeChinesePlaceDetailCell.m in Sources */,
+				53352CCD22CFAECB007F6502 /* CSMineChineseNameController.m in Sources */,
 				53F0F11C229EE129000F93ED /* ViewController.m in Sources */,
 				53218EB322BA935200E6559E /* CSHomeBackgroundModel.m in Sources */,
 				53352EC222ACC86D00F42147 /* CSGameCell.m in Sources */,
@@ -1430,12 +1498,14 @@
 				53E856DD22B149D30057E528 /* UINavigationBar+Add.m in Sources */,
 				53562E4922CBA55100A5A12B /* CSMineChangeInfoController.m in Sources */,
 				534EB5AA22CA5DCE00285F6A /* CSUserInfoModel.m in Sources */,
+				53352CD222CFB9DE007F6502 /* CSChieseGiftController.m in Sources */,
 				53AC31D022A41CC100CA2D12 /* CSHomeTitleCellModel.m in Sources */,
 				53F0F112229EE06D000F93ED /* LFTabBar.m in Sources */,
 				53C2B30822C1297900C2F017 /* CSHomeCenterBannerCell.m in Sources */,
 				53562E5922CC312800A5A12B /* CSHomeEssayDetailController.m in Sources */,
 				53EB07E622AEAA33003E626A /* NinaBaseView.m in Sources */,
 				53EB07E522AEAA33003E626A /* NinaPagerView.m in Sources */,
+				53352CDC22D0A3D6007F6502 /* CSMineGetGiftOrNameSuccessController.m in Sources */,
 				539CADD822B9372500C25A25 /* LFHttpTool+Home.m in Sources */,
 				53352EA122A95A7800F42147 /* CSHomeMoreLessonListDetailController.m in Sources */,
 				53AC31D322A41DAC00CA2D12 /* CSHomeItemsCellModel.m in Sources */,
@@ -1446,15 +1516,18 @@
 				5331179F22C440FF00F8C94C /* CSGameQuestionCollectionViewCell.m in Sources */,
 				539CADD422B9364700C25A25 /* LFHttpTool.m in Sources */,
 				534EB5B422CADC8900285F6A /* CSMineUserInfoDetailController.m in Sources */,
+				53352CBD22CF9170007F6502 /* CSMineGetJiFenCell.m in Sources */,
 				53352EAE22ACB53900F42147 /* CSHomeAppsController.m in Sources */,
 				53AC31AB22A3CCC400CA2D12 /* CSBaseModel.m in Sources */,
 				53DF890E22B545D90087CFD1 /* CSMineItemCell.m in Sources */,
 				53C2B31322C22A4D00C2F017 /* CSHomeCommonChineseLevelCell2.m in Sources */,
 				53352ED022AD243C00F42147 /* CSHomeAppListCell.m in Sources */,
+				53352CC822CFA898007F6502 /* CSMineGetRecordCell.m in Sources */,
 				53390FC222AF73430033A3CE /* CSHomeMapDetailModel.m in Sources */,
 				53C2B31F22C2F8EB00C2F017 /* CSHomeLessonModel.m in Sources */,
 				533117AB22C4492C00F8C94C /* CSGameQuestionItemCell.m in Sources */,
 				533117A522C441BF00F8C94C /* CSGameQuestionCollectionViewFlowLayout.m in Sources */,
+				53352CC122CF9BBE007F6502 /* CSMineGetJiFenHeader.m in Sources */,
 				53390FC822AF7E300033A3CE /* CSHomeChinesePlaceDetailFlowLayout.m in Sources */,
 				53AC31A822A3CCAC00CA2D12 /* CSBaseController.m in Sources */,
 				53DF891422B548140087CFD1 /* CSMineHeaderView.m in Sources */,
@@ -1487,6 +1560,7 @@
 				53AC31B122A3CCFD00CA2D12 /* CSBaseCell.m in Sources */,
 				535B853D22A57AAA000510C4 /* CSHomeItemsCellItem.m in Sources */,
 				53F0F113229EE06D000F93ED /* LFTabBarController.m in Sources */,
+				5322335822D0B42000D18390 /* CSMineJiFenShopModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

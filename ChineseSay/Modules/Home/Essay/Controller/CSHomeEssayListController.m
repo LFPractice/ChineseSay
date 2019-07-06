@@ -66,7 +66,7 @@
         titleView.backgroundColor = [UIColor clearColor];
         _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth - 100, 30)];
         _searchBar.placeholder = @"search";
-        _searchBar.layer.cornerRadius = 15;
+//        _searchBar.layer.cornerRadius = 15;
         _searchBar.layer.masksToBounds = YES;
         _searchBar.backgroundImage = [UIImage imageWithColor:[UIColor clearColor]];
         _searchBar.delegate = self;

@@ -76,4 +76,8 @@
     }
     return _logingVC;
 }
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 @end

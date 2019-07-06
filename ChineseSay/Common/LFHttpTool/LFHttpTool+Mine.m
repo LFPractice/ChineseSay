@@ -63,4 +63,30 @@
     }];
     
 }
++ (void)mine_getuserShopInfoWithParam:(NSDictionary *)params Success:(LFRequestSuccessBlock)success Failure:(LFRequestFailureBlock)failure {
+    
+    [LFHttpTool getData:[NSString stringWithFormat:@"%@/api/shop/list",BaseUrl] parameters:params success:^(id responseObject) {
+        success(responseObject);
+    } faliure:^(NSError *error) {
+        failure(error);
+    }];
+}
++ (void)mine_designChinesesNameWithParam:(NSDictionary *)params
+                                 Success:(LFRequestSuccessBlock)success
+                                 Failure:(LFRequestFailureBlock)failure {
+    [LFHttpTool postData:[NSString stringWithFormat:@"%@/api/getChineseName",BaseUrl] parameters:params success:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
++ (void)mine_chineseGiftWithParam:(NSDictionary *)params
+                          Success:(LFRequestSuccessBlock)success
+                          Failure:(LFRequestFailureBlock)failure {
+    [LFHttpTool postData:[NSString stringWithFormat:@"%@/api/getGift",BaseUrl] parameters:params success:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
 @end

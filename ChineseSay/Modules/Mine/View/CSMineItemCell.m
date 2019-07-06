@@ -95,7 +95,7 @@
 - (UIView *)view_bottomLine{
     if(!_view_bottomLine){
         _view_bottomLine = [[UIView alloc]init];
-        _view_bottomLine.backgroundColor = [UIColor colorWithHex:0xa8a8a8];
+        _view_bottomLine.backgroundColor = [UIColor colorWithHex:0xe0e0e0];
     }
     return _view_bottomLine;
 }

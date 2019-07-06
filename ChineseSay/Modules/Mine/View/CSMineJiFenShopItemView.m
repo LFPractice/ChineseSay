@@ -35,6 +35,13 @@
     [self addSubview:self.titleLabel];
     [self addSubview:self.getButton];
     [self addSubview:self.jiFenLabel];
+    
+    self.getButton.userInteractionEnabled = NO;
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if(self.actionBlock) {
+        self.actionBlock(0);
+    }
 }
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -43,7 +50,7 @@
         make.centerX.mas_equalTo(0);
     }];
     [self.getButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleLabel.mas_bottom).offset(10);
+        make.top.mas_equalTo(self.titleLabel.mas_bottom).offset(8);
         make.centerX.mas_equalTo(0);
     }];
     [self.jiFenLabel mas_makeConstraints:^(MASConstraintMaker *make) {

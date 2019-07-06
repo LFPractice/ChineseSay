@@ -53,7 +53,7 @@
 - (UILabel *)labelTitle{
     if(!_labelTitle){
         _labelTitle = [[UILabel alloc]init];
-        _labelTitle.font = [UIFont boldSystemFontOfSize:17];
+        _labelTitle.font = [UIFont boldSystemFontOfSize:34];
         _labelTitle.textColor = [UIColor whiteColor];
         _labelTitle.text = @"Level 1";
     }

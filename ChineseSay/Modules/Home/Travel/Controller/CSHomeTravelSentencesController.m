@@ -50,6 +50,7 @@
 #pragma mark - private
 - (void)createUI{
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_controllerBg"]];
+    [self.view addSubview:self.img_bg];
     [self.navigationController.navigationBar setColor:[UIColor clearColor]];
     [self.view addSubview:self.label_title];
     [self.view addSubview:self.tableView];
@@ -81,19 +82,19 @@
     if(!_dataSource){
         CSGameModel *model1 = [[CSGameModel alloc]init];
         model1.title = @"Frequently use Sentences during Travel";
-        model1.bgColor = 0x3BB2BC;
+        model1.bgColor = 0x6C80A8;
         CSPageTypeModel *pageModel1 = [[CSPageTypeModel alloc]init];
         pageModel1.action = CS_Page_Type_Action;
-        pageModel1.pageType = CS_Page_Type_Home_ChineseMap;
+        pageModel1.pageType = CS_Page_type_Home_ChineseMapDetail;
         pageModel1.title = @"中国地图";
         model1.pageModel = pageModel1;
         
         CSGameModel *model2 = [[CSGameModel alloc]init];
         model2.title = @"Famous Travel Destination";
-        model2.bgColor = 0xFAB416;
+        model2.bgColor = 0x6C80A8;
         CSPageTypeModel *pageModel2 = [[CSPageTypeModel alloc]init];
         pageModel2.action = CS_Page_Type_Action;
-        pageModel2.pageType = CS_Page_Type_Home_ChineseMap;
+        pageModel2.pageType = CS_Page_type_Home_ChineseMapDetail;
         pageModel2.title = @"中国地图";
         model2.pageModel = pageModel2;
         
@@ -102,6 +103,8 @@
     }
     return _dataSource;
 }
-
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 
 @end

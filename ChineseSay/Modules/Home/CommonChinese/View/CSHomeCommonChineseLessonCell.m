@@ -30,7 +30,8 @@
     [self.imgCenterLine mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(0);
         make.width.mas_equalTo(16);
-        make.top.bottom.mas_equalTo(0);
+        make.top.mas_equalTo(-5);
+        make.bottom.mas_equalTo(5);
     }];
 }
 - (void)loadCellWithData:(id)model cellPath:(NSIndexPath *)path{

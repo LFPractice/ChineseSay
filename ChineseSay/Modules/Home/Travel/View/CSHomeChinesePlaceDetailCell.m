@@ -18,6 +18,7 @@
 @property (nonatomic, strong) UILabel *label_foodTitle;
 @property (nonatomic, strong) UILabel *label_foodDes;
 
+@property (nonatomic, strong) UIScrollView *scrollView;
 @end
 #pragma mark - assist method
 @implementation CSHomeChinesePlaceDetailCell
@@ -28,9 +29,19 @@
     return self;
 }
 - (void)layoutSubviews{
+    CGFloat itemWidth = self.frame.size.width;
+    CGFloat itemHeight = self.frame.size.height;
+    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.with.top.bottom.mas_equalTo(0);
+        make.width.mas_equalTo(itemWidth);
+//        make.height.mas_equalTo(itemHeight);
+    }];
+    
     [self.label_placeName mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.mas_equalTo(15);
+        make.right.mas_equalTo(-15);
         make.height.mas_equalTo(40);
+        make.width.mas_equalTo(self.frame.size.width - 30);
     }];
     [self.label_placeEnglishName mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(15);
@@ -69,6 +80,7 @@
         make.left.mas_equalTo(15);
         make.right.mas_equalTo(-15);
         make.top.mas_equalTo(self.label_foodTitle.mas_bottom).offset(20);
+        make.bottom.mas_equalTo(-20);
     }];
 }
 
@@ -78,18 +90,29 @@
     self.contentView.layer.cornerRadius = 10;
     self.contentView.backgroundColor = [UIColor whiteColor];
     
-    [self.contentView addSubview:self.label_placeName];
-    [self.contentView addSubview:self.label_placeEnglishName];
-    [self.contentView addSubview:self.label_placeDes];
-    [self.contentView addSubview:self.img_content];
-    [self.contentView addSubview:self.label_foodPinyin];
-    [self.contentView addSubview:self.label_foodName];
-    [self.contentView addSubview:self.btn_play];
-    [self.contentView addSubview:self.label_foodTitle];
-    [self.contentView addSubview:self.label_foodDes];
+    [self.contentView addSubview:self.scrollView];
+    
+    [self.scrollView addSubview:self.label_placeName];
+    [self.scrollView addSubview:self.label_placeEnglishName];
+    [self.scrollView addSubview:self.label_placeDes];
+    [self.scrollView addSubview:self.img_content];
+    [self.scrollView addSubview:self.label_foodPinyin];
+    [self.scrollView addSubview:self.label_foodName];
+    [self.scrollView addSubview:self.btn_play];
+    [self.scrollView addSubview:self.label_foodTitle];
+    [self.scrollView addSubview:self.label_foodDes];
 
 }
 #pragma mark - lazy load
+
+- (UIScrollView *)scrollView {
+    if(!_scrollView){
+        _scrollView = [[UIScrollView alloc]initWithFrame:self.bounds];
+        _scrollView.showsVerticalScrollIndicator = NO;
+    }
+    return _scrollView;
+}
+
 - (UILabel *)label_placeName{
     if(!_label_placeName){
         _label_placeName = [[UILabel alloc]init];
@@ -162,14 +185,15 @@
         _label_foodDes.font = [UIFont fontWithName:@"ArialMT" size:15];
         _label_foodDes.textColor = [UIColor colorWithHex:0x555555];
         _label_foodDes.numberOfLines = 0;
-        _label_foodDes.text = @"Classical poem is the cream that spread from Chinese thousands of years culture, is supporting body of Chinese ethnic spirit.However.";
+        _label_foodDes.text = @"Classical poem is the cream that spread from Chinese thousands of years culture, is supporting body of Chinese ethnic spirit.However.Classical poem is the cream that spread from Chinese thousands of years culture, is supporting body of Chinese ethnic spirit.However.Classical poem is the cream that spread from Chinese thousands of years culture, is supporting body of Chinese ethnic spirit.However.Classical poem is the cream that spread from Chinese thousands of years culture, is supporting body of Chinese ethnic spirit.However.Classical poem is the cream that spread from Chinese thousands of years culture, is supporting body of Chinese ethnic spirit.However.Classical poem is the cream that spread from Chinese thousands of years culture, is supporting body of Chinese ethnic spirit.However.Classical poem is the cream that spread from Chinese thousands of years culture, is supporting body of Chinese ethnic spirit.However.";
     }
     return _label_foodDes;
 }
 - (UIButton *)btn_play{
     if(!_btn_play){
         _btn_play = [UIButton buttonWithType:UIButtonTypeCustom];
-        _btn_play.backgroundColor =[UIColor lightGrayColor];
+//        _btn_play.backgroundColor =[UIColor lightGrayColor];
+        [_btn_play setImage:[UIImage imageNamed:@"home_cultureDetail_playSound"] forState:UIControlStateNormal];
     }
     return _btn_play;
 }

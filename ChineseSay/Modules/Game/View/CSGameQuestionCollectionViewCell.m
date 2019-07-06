@@ -16,6 +16,9 @@
 @property (nonatomic, strong) CSQuestionFooterView *footerView;
 @end
 @implementation CSGameQuestionCollectionViewCell
+{
+    NSIndexPath *selectedIndexPtah;
+}
 #pragma mark - assist method
 - (instancetype)initWithFrame:(CGRect)frame{
     if(self = [super initWithFrame:frame]){
@@ -65,6 +68,12 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 1){
+        if (self.questionModel.isShowAnwser) {
+            return;
+        }
+        selectedIndexPtah = indexPath;
+        CSGameQuestionItemCell *itemCell = [tableView cellForRowAtIndexPath:indexPath];
+        itemCell.selectedIndexPath = indexPath;
         tableView.tableFooterView = self.footerView;
         for (__strong CSGameQuestionItemModel *model in self.questionModel.answers) {
             model.isSelect = NO;
@@ -72,8 +81,18 @@
         }
         CSGameQuestionItemModel *itemModel = self.questionModel.answers[indexPath.row];
         itemModel.isSelect = YES;
+        [itemCell loadData:itemModel IndexPath:indexPath];
+//        self.questionModel.isShowAnwser = YES;
+        [tableView reloadData];
         
-        self.questionModel.isShowAnwser = YES;
+        NSArray *cells = [tableView visibleCells];
+        for (int i = 0; i < cells.count; i++) {
+            CSGameQuestionItemCell *cell = cells[i];
+            if([cell isKindOfClass:[CSGameQuestionItemCell class]]){
+                cell.isSelected = NO;
+            }
+        }
+        itemCell.isSelected = YES;
     }
 }
 #pragma mark - lazy load
@@ -96,6 +115,7 @@
             switch (action) {
                 case CSQuestionActionSubmit:
                 {
+                    weakSelf.questionModel.isShowAnwser = YES;
                     [weakSelf.tableView reloadData];
                     break;
                 }
