@@ -9,9 +9,11 @@
 #import "CSHomeEssayListController.h"
 #import "CSHomeEssayItemCell.h"
 #import "CSHomeEssayDetailController.h"
+
 @interface CSHomeEssayListController ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UISearchBar *searchBar;
+@property (nonatomic, strong) NSMutableArray *dataSource;
 @end
 
 @implementation CSHomeEssayListController
@@ -26,22 +28,41 @@
     img_bg.image = [UIImage imageNamed:@"common_controllerBg"];
     [self.view addSubview:self.img_bg];
     [self.view addSubview:self.tableView];
+    
+    [self loadData];
 }
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self.navigationController.navigationBar setColor: [UIColor clearColor]];
+    [self setWhiteBackItem];
 }
+- (void)loadData {
+    [LFHttpTool home_getDataForEssayListParam:@{@"query":self.query} Success:^(id responseObject) {
+        NSNumber *code = responseObject[@"code"];
+        if(code.integerValue == 200) {
+            self.dataSource = [[NSMutableArray alloc]initWithArray:[CSHomeEssayListModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]]];
+            [self.tableView reloadData];
+        }
+    } Failure:^(NSError *error) {
+        
+    }];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return self.dataSource.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 187;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CSHomeEssayItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CSHomeEssayItemCell"];
+    cell.model = self.dataSource[indexPath.row];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CSHomeEssayListModel *model = self.dataSource[indexPath.row];
     CSHomeEssayDetailController *vc = [[CSHomeEssayDetailController alloc] init];
+    vc.id = model.id;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -75,5 +96,17 @@
         self.navigationItem.titleView = titleView;
     }
     return _searchBar;
+}
+- (NSString *)query {
+    if(!_query) {
+        _query = [[NSString alloc]init];
+    }
+    return _query;
+}
+- (NSMutableArray *)dataSource {
+    if(!_dataSource){
+        _dataSource = [[NSMutableArray alloc]init];
+    }
+    return _dataSource;
 }
 @end

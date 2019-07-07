@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) CSPageTypeModel *pageModel;
 @property (nonatomic, strong) UIImageView *img_bg;
 - (void)createUI;
+- (void)setBlackBackItem;
+- (void)setWhiteBackItem;
+- (void)setTitle:(NSString *)title Color:(UIColor *)color;
+- (void)backClick;
 @end
 
 NS_ASSUME_NONNULL_END

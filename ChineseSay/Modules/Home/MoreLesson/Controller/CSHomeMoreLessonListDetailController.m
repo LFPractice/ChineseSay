@@ -22,6 +22,10 @@
     // Do any additional setup after loading the view.
     [self createUI];
 }
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setWhiteBackItem];
+}
 #pragma private
 - (void)createUI{
     self.view.backgroundColor = [UIColor colorWithHex:0xF4F5F9];
@@ -30,6 +34,10 @@
     [self.view addSubview:self.collectionView];
     
     [self loadData];
+}
+- (void)setPageModel:(CSPageTypeModel *)pageModel{
+    [super setPageModel:pageModel];
+    [self setTitle:self.pageModel.title Color:[UIColor whiteColor]];
 }
 - (void)loadData{
     [LFHttpTool home_getDataForCultureDetailListParams:self.pageModel.exparam Success:^(id responseObject) {

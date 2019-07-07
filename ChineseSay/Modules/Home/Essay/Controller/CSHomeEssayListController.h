@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSHomeEssayListController : CSBaseController
-
+@property (nonatomic, strong) NSString *query;
 @end
 
 NS_ASSUME_NONNULL_END

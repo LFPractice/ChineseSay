@@ -7,11 +7,11 @@
 //
 
 #import "CSBaseCell.h"
-
+#import "CSMineGetJiFenModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSMineGetJiFenCell : CSBaseCell
-
+@property (nonatomic, strong) CSMineGetJiFenModel *model;
 @end
 
 NS_ASSUME_NONNULL_END

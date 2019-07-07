@@ -28,6 +28,18 @@
     }
     return self;
 }
+- (void)setModel:(CSHomePlaceDetailModel *)model {
+    _model = model;
+    
+    self.label_placeName.text = model.title;
+    self.label_placeEnglishName.text = model.subTitle;
+    self.label_placeDes.text = model.shortDesc;
+    [self.img_content sd_setImageWithURL:[NSURL URLWithString:model.image]];
+    self.label_foodPinyin.text = model.specialPinyin;
+    self.label_foodName.text = model.specialNameZh;
+    self.label_foodTitle.text = model.specialNameEn;
+    self.label_foodDes.text = model.desc;
+}
 - (void)layoutSubviews{
     CGFloat itemWidth = self.frame.size.width;
     CGFloat itemHeight = self.frame.size.height;
@@ -40,13 +52,12 @@
     [self.label_placeName mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.mas_equalTo(15);
         make.right.mas_equalTo(-15);
-        make.height.mas_equalTo(40);
         make.width.mas_equalTo(self.frame.size.width - 30);
     }];
     [self.label_placeEnglishName mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(15);
+        make.right.mas_equalTo(-15);
         make.top.mas_equalTo(self.label_placeName.mas_bottom).offset(5);
-        make.height.mas_equalTo(26);
     }];
     [self.label_placeDes mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(15);
@@ -60,11 +71,13 @@
         make.centerX.mas_equalTo(0);
     }];
     [self.label_foodPinyin mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(0);
+        make.left.mas_equalTo(15);
+        make.right.mas_equalTo(-15);
         make.top.mas_equalTo(self.img_content.mas_bottom).offset(20);
     }];
     [self.label_foodName mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(0);
+        make.left.mas_equalTo(15);
+        make.right.mas_equalTo(-100);
         make.top.mas_equalTo(self.label_foodPinyin.mas_bottom).offset(3);
     }];
     [self.btn_play mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -73,7 +86,8 @@
         make.centerY.mas_equalTo(self.label_foodName.mas_centerY).offset(0);
     }];
     [self.label_foodTitle mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(0);
+        make.left.mas_equalTo(15);
+        make.right.mas_equalTo(-15);
         make.top.mas_equalTo(self.label_foodName.mas_bottom).offset(5);
     }];
     [self.label_foodDes mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -118,6 +132,7 @@
         _label_placeName = [[UILabel alloc]init];
         _label_placeName.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:30];
         _label_placeName.textColor = [UIColor colorWithHex:0x333333];
+        _label_placeName.numberOfLines = 0;
         _label_placeName.text = @"西南地区";
     }
     return _label_placeName;
@@ -128,6 +143,7 @@
         _label_placeEnglishName.font = [UIFont fontWithName:@"Arial-BoldItalicMT" size:25];
         _label_placeEnglishName.textColor = [UIColor colorWithHex:0x333333];
         _label_placeEnglishName.text = @"Southwest China";
+        _label_placeEnglishName.numberOfLines = 0;
     }
     return _label_placeEnglishName;
 }
@@ -156,6 +172,7 @@
         _label_foodPinyin.textColor = [UIColor colorWithHex:0x333333];
         _label_foodPinyin.textAlignment = NSTextAlignmentCenter;
         _label_foodPinyin.text = @"huo  guo";
+        _label_foodPinyin.numberOfLines = 0;
     }
     return _label_foodPinyin;
 }
@@ -166,6 +183,7 @@
         _label_foodName.textColor = [UIColor colorWithHex:0x333333];
         _label_foodName.textAlignment = NSTextAlignmentCenter;
         _label_foodName.text = @"火  锅";
+        _label_foodName.numberOfLines = 0;
     }
     return _label_foodName;
 }
@@ -176,6 +194,7 @@
         _label_foodTitle.textColor = [UIColor colorWithHex:0x333333];
         _label_foodTitle.textAlignment = NSTextAlignmentCenter;
         _label_foodTitle.text = @"Greatwall";
+        _label_foodTitle.numberOfLines = 0;
     }
     return _label_foodTitle;
 }

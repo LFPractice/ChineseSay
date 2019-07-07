@@ -9,9 +9,11 @@
 #import "CSMineGetRecordController.h"
 #import "CSMineGetRecordCell.h"
 #import "CSMineGetJiFenHeader.h"
+#import "CSMineJiFenShopModel.h"
 @interface CSMineGetRecordController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) CSMineGetJiFenHeader *headerView;
+@property (strong, nonatomic) CSMineJiFenShopModel *infoModel;
 @end
 
 @implementation CSMineGetRecordController
@@ -21,8 +23,26 @@
     // Do any additional setup after loading the view.
     [self.view addSubview:self.img_bg];
     [self.view addSubview:self.tableView];
+    [self loadData];
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setColor:[UIColor clearColor]];
+    [self setWhiteBackItem];
 }
 
+
+- (void)loadData {
+    [LFHttpTool mine_getuserShopInfoWithParam:@{} Success:^(id responseObject) {
+        NSNumber *code = responseObject[@"code"];
+        if(code.integerValue == 200) {
+            self.infoModel = [CSMineJiFenShopModel mj_objectWithKeyValues:responseObject[@"data"]];
+            self.headerView.jiFenLabel.text = self.infoModel.userScore;
+        }
+    } Failure:^(NSError *error) {
+        
+    }];
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 6;
 }
@@ -52,6 +72,9 @@
         _headerView = [[CSMineGetJiFenHeader alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 184)];
         _headerView.backgroundColor = [UIColor blueColor];
         _headerView.isShowAction = NO;
+        _headerView.titleLabel.text = @"领取记录";
+        _headerView.actionLabel.text = @"当前积分";
+        _headerView.actionLabel.hidden = NO;
     }
     return _headerView;
 }

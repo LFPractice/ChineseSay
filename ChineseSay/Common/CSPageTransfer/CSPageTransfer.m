@@ -106,9 +106,16 @@ static CSPageTransfer *sharePageTransfer = nil;
     UIViewController * currVC = nil;
     UIWindow *window = [UIApplication sharedApplication].delegate.window;
     UIViewController * Rootvc = window.rootViewController;
-    
+    /*
     if([Rootvc isKindOfClass:[LFTabBarController class]]){
         LFTabBarController * tabVC = (LFTabBarController *)Rootvc;
+        currVC = tabVC;
+        Rootvc = [tabVC.viewControllers objectAtIndex:tabVC.selectedIndex];
+    }
+     */
+    
+    if([Rootvc isKindOfClass:[UITabBarController class]]){
+        UITabBarController * tabVC = (UITabBarController *)Rootvc;
         currVC = tabVC;
         Rootvc = [tabVC.viewControllers objectAtIndex:tabVC.selectedIndex];
     }

@@ -51,6 +51,7 @@
     
     [self loadData];
 }
+
 - (void)getJiFenClick {
     CSMineGetJiFenController *getVC = [[CSMineGetJiFenController alloc]init];
     [self.navigationController pushViewController:getVC animated:YES];
@@ -75,6 +76,8 @@
                 itemModel.name = model.name;
                 itemModel.id = model.id;
             }
+            
+            self.scoreLabel.text = self.infoModel.userScore;
             
             self.vipDayItem.model = self.vipDayModel;
             self.chineseNameItem.model = self.chineseNameModel;
@@ -117,6 +120,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setColor:[UIColor clearColor]];
+    [self setWhiteBackItem];
 }
 
 - (CSMineJiFenShopItemView *)vipDayItem {
@@ -149,7 +153,12 @@
         _vipDayModel = [[CSMineJiFenShopItemModel alloc]init];
         _vipDayModel.titleName = @"一天免费会员体验";
         _vipDayModel.jiFen = @"200";
+        __weak typeof(self)weakSelf = self;
         _vipDayItem.actionBlock = ^(NSInteger index) {
+            if(weakSelf.infoModel.userScore.integerValue < weakSelf.vipDayModel.jiFen.integerValue) {
+                [QMUITips showError:@"积分不足"];
+                return ;
+            }
           [QMUITips showSucceed:@"领取成功"];
         };
     }
@@ -187,7 +196,13 @@
         _vipWeekModel = [[CSMineJiFenShopItemModel alloc]init];
         _vipWeekModel.titleName = @"一天免费会员体验";
         _vipWeekModel.jiFen = @"200";
+        __weak typeof(self)weakSelf = self;
         _vipWeekItem.actionBlock = ^(NSInteger index) {
+            
+            if(weakSelf.infoModel.userScore.integerValue < weakSelf.vipWeekModel.jiFen.integerValue) {
+                [QMUITips showError:@"积分不足"];
+                return ;
+            }
             [QMUITips showSucceed:@"领取成功"];
         };
     }

@@ -40,6 +40,24 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)home_getDataForAppListParam:(NSDictionary *)params
                                Success:(LFRequestSuccessBlock)success
                                Failure:(LFRequestFailureBlock)failure;
+/**
+ * 请求地区详情数据
+ */
++ (void)home_getDataForPlaceDetailParam:(NSDictionary *)params
+                            Success:(LFRequestSuccessBlock)success
+                            Failure:(LFRequestFailureBlock)failure;
+/**
+ * 请求文章列表数据
+ */
++ (void)home_getDataForEssayListParam:(NSDictionary *)params
+                                Success:(LFRequestSuccessBlock)success
+                                Failure:(LFRequestFailureBlock)failure;
+/**
+ * 请求文章详情数据
+ */
++ (void)home_getDataForEssayDetailParam:(NSDictionary *)params
+                              Success:(LFRequestSuccessBlock)success
+                              Failure:(LFRequestFailureBlock)failure;
 @end
 
 NS_ASSUME_NONNULL_END

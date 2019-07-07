@@ -28,6 +28,16 @@
     view_bg = view;
 //    [self.view addSubview:view];
     [self createUI];
+    
+    UIRectCorner corner = UIRectCornerBottomLeft | UIRectCornerBottomRight;
+    
+//    self.tableView.layer.cornerRadius = 10;
+    
+    [self.tableView cs_radiusWithRadius:10 corner:corner];
+    self.tableView.layer.masksToBounds = 10;
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [self setWhiteBackItem];
 }
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
@@ -54,7 +64,9 @@
 }
 #pragma mark ------ UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CSHomeAppModel *mode = self.dataSource[indexPath.row];
     CSHomeEssayDetailController *VC = [[CSHomeEssayDetailController alloc]init];
+    VC.id = mode.id;
     [self.navigationController pushViewController:VC animated:YES];
 }
 #pragma mark - private
@@ -86,6 +98,7 @@
         [_tableView registerClass:[CSHomeAppListCell class] forCellReuseIdentifier:@"CSHomeAppListCell"];
         _tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
         _tableView.separatorColor = [UIColor clearColor];
+        _tableView.backgroundColor = [UIColor colorWithHex:0xffffff alpha:0.6];
     }
     return _tableView;
 }

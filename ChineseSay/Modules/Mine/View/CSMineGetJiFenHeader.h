@@ -13,6 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CSMineGetJiFenHeader : CSBaseView
 @property (nonatomic, copy) void(^actionBlock)(NSInteger tag);
 @property (nonatomic, assign) BOOL isShowAction;
+
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *jiFenLabel;
+@property (nonatomic, strong) UILabel *actionLabel;
 @end
 
 NS_ASSUME_NONNULL_END

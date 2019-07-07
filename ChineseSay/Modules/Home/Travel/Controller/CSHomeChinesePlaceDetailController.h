@@ -7,11 +7,11 @@
 //
 
 #import "CSBaseController.h"
-
+#import "CSHomeMapDetailModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSHomeChinesePlaceDetailController : CSBaseController
-
+@property (nonatomic, strong) CSHomeMapDetailModel *model;
 @end
 
 NS_ASSUME_NONNULL_END

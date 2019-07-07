@@ -26,6 +26,8 @@
 #import "UIImage+Add.h"
 #import "UIButton+Add.h"
 #import "UINavigationBar+Add.h"
+#import "UIView+Add.h"
+
 #import "CSPageTransferDefine.h"
 #import "CSPageTransfer.h"
 #import "NinaPagerView.h"
@@ -41,5 +43,12 @@
 #import "LFHttpTool+Game.h"
 #import "LFHttpTool+Mine.h"
 #import "CSHomeDataSource.h"
+
+
+//#import "QMUITabBarViewController.h"
+//#import "QMUINavigationController.h"
+//#import "QDUIHelper.h"
+//#import "QDThemeManager.h"
+//#import "QDCommonUI.h"
 
 #endif /* PrefixHeader_pch */

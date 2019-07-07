@@ -19,6 +19,7 @@ static NSInteger defaultTag = 100000;
     if(self){
         self.userInteractionEnabled = YES;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(itemClick:)];
+        self.userInteractionEnabled = YES;
         [self addGestureRecognizer:tap];
     }
     

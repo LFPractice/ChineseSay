@@ -60,6 +60,8 @@
             if(tag == 0) {
                 CSMineJiFenShopController *shopVC = [[CSMineJiFenShopController alloc]init];
                 [weakSelf.navigationController pushViewController:shopVC animated:YES];
+            }else {
+                [QMUITips showInfo:@"暂未开放"];
             }
         };
     }

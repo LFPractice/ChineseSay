@@ -33,6 +33,26 @@ static CGFloat lfTabBarHeight = 49.0;
     
     return tabBarController;
 }
+//- (void)viewDidLayoutSubviews {
+//    Class class = NSClassFromString(@"UITabBarButton");
+//    for(UIView *item in self.tabBar.subviews){
+//        if([item isKindOfClass:class]){
+//            [item removeFromSuperview];
+//        }
+//    }
+//    
+//    CGFloat width = CGRectGetWidth(self.customtabBar.frame)/self.customtabBar.lfItems.count;
+//    width = [UIScreen mainScreen].bounds.size.width / self.customtabBar.lfItems.count;
+//    CGFloat height = 49;//CGRectGetHeight(self.frame);
+//    
+//    for(int i =0; i < self.customtabBar.lfItems.count; i++){
+//        LFTabBarItem *item = [self.customtabBar.lfItems objectAtIndex:i];
+//        item.frame = CGRectMake(i * width, 0, width, height);
+//        [item setBackgroundColor:self.customtabBar.itemBackgroundColor];
+//        [self.customtabBar addSubview:item];
+//        item.delegate = self.customtabBar;
+//    }
+//}
 +(instancetype)defaultTabBarController{
     return [LFTabBarController createTabBarController:nil];
 }

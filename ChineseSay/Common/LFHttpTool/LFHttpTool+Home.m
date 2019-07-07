@@ -46,4 +46,28 @@
     }];
 
 }
++ (void)home_getDataForPlaceDetailParam:(NSDictionary *)params Success:(LFRequestSuccessBlock)success Failure:(LFRequestFailureBlock)failure {
+    [LFHttpTool getData:[NSString stringWithFormat:@"%@/api/travel/list",BaseUrl] parameters:params success:^(id responseObject) {
+        success(responseObject);
+    } faliure:^(NSError *error) {
+        failure(error);
+    }];
+}
++ (void)home_getDataForEssayListParam:(NSDictionary *)params
+                              Success:(LFRequestSuccessBlock)success
+                              Failure:(LFRequestFailureBlock)failure {
+    [LFHttpTool getData:[NSString stringWithFormat:@"%@/api/feeds/list",BaseUrl] parameters:params success:^(id responseObject) {
+        success(responseObject);
+    } faliure:^(NSError *error) {
+        failure(error);
+    }];
+}
++ (void)home_getDataForEssayDetailParam:(NSDictionary *)params Success:(LFRequestSuccessBlock)success Failure:(LFRequestFailureBlock)failure {
+    [LFHttpTool getData:[NSString stringWithFormat:@"%@/api/feeds/detail/%@",BaseUrl,params[@"id"]] parameters:@{} success:^(id responseObject) {
+        success(responseObject);
+    } faliure:^(NSError *error) {
+        failure(error);
+    }];
+
+}
 @end

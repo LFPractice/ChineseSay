@@ -35,6 +35,7 @@
 }
 - (void)setupItems{
     CGFloat width = CGRectGetWidth(self.frame)/self.lfItems.count;
+    width = [UIScreen mainScreen].bounds.size.width / self.lfItems.count;
     CGFloat height = 49;//CGRectGetHeight(self.frame);
     
     for(int i =0; i < self.lfItems.count; i++){

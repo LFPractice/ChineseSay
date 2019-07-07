@@ -66,7 +66,7 @@
         _label_title = [[UILabel alloc]initWithFrame:CGRectMake(20, 89, 200, 42)];
         _label_title.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:30];
         _label_title.text = @"游戏";
-        _label_title.textColor = [UIColor blackColor];
+        _label_title.textColor = [UIColor whiteColor];
     }
     return _label_title;
 }

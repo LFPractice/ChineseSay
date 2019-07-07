@@ -24,11 +24,17 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     //    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+    [self setWhiteBackItem];
 }
 - (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
     //    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
-
+- (void)setPageModel:(CSPageTypeModel *)pageModel {
+    [super setPageModel:pageModel];
+    [self setTitle:pageModel.title Color:[UIColor whiteColor]];
+}
 #pragma mark - delegate
 #pragma mark ------ UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -44,6 +50,10 @@
 }
 #pragma mark ------ UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.row == 0){
+        [QMUITips showInfo:@"敬请期待……"];
+        return;
+    }
     [[CSPageTransfer shareInstance]dispatchTransFerActionWithPageModel:((CSBaseModel *)self.dataSource[indexPath.row]).pageModel];
 }
 
@@ -53,16 +63,23 @@
     [self.view addSubview:self.img_bg];
     [self.navigationController.navigationBar setColor:[UIColor clearColor]];
     [self.view addSubview:self.label_title];
+    
+    [self.label_title mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(20);
+        make.right.mas_equalTo(-20);
+        make.top.mas_equalTo(69);
+    }];
     [self.view addSubview:self.tableView];
 }
 
 #pragma mark - lazy load
 - (UILabel *)label_title{
     if(!_label_title){
-        _label_title = [[UILabel alloc]initWithFrame:CGRectMake(20, 89, kScreenWidth - 40, 42)];
+        _label_title = [[UILabel alloc]initWithFrame:CGRectMake(20, 99, kScreenWidth - 40, 80)];
         _label_title.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:30];
+        _label_title.numberOfLines = 0;
         _label_title.text = @"Frequently use Sentences during Travel";
-        _label_title.textColor = [UIColor blackColor];
+        _label_title.textColor = [UIColor whiteColor];
     }
     return _label_title;
 }

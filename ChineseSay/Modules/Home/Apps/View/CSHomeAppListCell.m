@@ -56,6 +56,9 @@
 }
 #pragma mark - private
 - (void)createUI{
+    
+    self.backgroundColor = [UIColor clearColor];
+    self.contentView.backgroundColor =[UIColor clearColor];
     [self.contentView addSubview:self.img_header];
     [self.contentView addSubview:self.label_name];
     [self.contentView addSubview:self.label_content];
@@ -66,6 +69,8 @@
     if(!_img_header){
         _img_header =[[UIImageView alloc]init];
 //        _img_header.image = [UIImage imageNamed:@"Tmp_home_appListCellHead"];
+        _img_header.layer.cornerRadius = 10;
+        _img_header.layer.masksToBounds = YES;
     }
     return _img_header;
 }

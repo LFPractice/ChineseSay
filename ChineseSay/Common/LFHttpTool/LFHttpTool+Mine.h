@@ -61,6 +61,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)mine_chineseGiftWithParam:(NSDictionary *)params
                                  Success:(LFRequestSuccessBlock)success
                                  Failure:(LFRequestFailureBlock)failure;
+/**
+ * 获取领积分相关任务
+ */
++ (void)mine_getShopTaskWithParam:(NSDictionary *)params
+                              Success:(LFRequestSuccessBlock)success
+                              Failure:(LFRequestFailureBlock)failure;
 @end
 
 NS_ASSUME_NONNULL_END

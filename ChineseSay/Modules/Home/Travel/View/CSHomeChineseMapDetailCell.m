@@ -72,7 +72,7 @@
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(goToDetail)];
         [_img_big addGestureRecognizer:tap];
-        _img_big.userInteractionEnabled = YES;
+//        _img_big.userInteractionEnabled = YES;
     }
     return _img_big;
 }

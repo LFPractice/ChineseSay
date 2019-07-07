@@ -9,8 +9,10 @@
 #import "CSHomeChinesePlaceDetailController.h"
 #import "CSHomeChinesePlaceDetailFlowLayout.h"
 #import "CSHomeChinesePlaceDetailCell.h"
+#import "CSHomePlaceDetailModel.h"
 @interface CSHomeChinesePlaceDetailController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) NSMutableArray *dataSouce;
 @end
 
 @implementation CSHomeChinesePlaceDetailController
@@ -20,6 +22,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self createUI];
+    [self loadData];
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setWhiteBackItem];
 }
 #pragma private
 - (void)createUI{
@@ -29,16 +36,28 @@
     [self.navigationController.navigationBar setColor:[UIColor clearColor]];
     [self.view addSubview:self.collectionView];
 }
+- (void)loadData {
+    [LFHttpTool home_getDataForPlaceDetailParam:@{@"type":self.model.type} Success:^(id responseObject) {
+        NSNumber *code = responseObject[@"code"];
+        if(code.integerValue == 200) {
+            self.dataSouce = [[NSMutableArray alloc]initWithArray:[CSHomePlaceDetailModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]]];
+            [self.collectionView reloadData];
+        }
+    } Failure:^(NSError *error) {
+        
+    }];
+}
 #pragma mark - delegate
 #pragma mark ------ UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 6;
+    return self.dataSouce.count;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CSHomeChinesePlaceDetailCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CSHomeChinesePlaceDetailCell" forIndexPath:indexPath];
+    cell.model = self.dataSouce[indexPath.row];
     return cell;
 }
 #pragma mark ------ UICollectionViewDelegate

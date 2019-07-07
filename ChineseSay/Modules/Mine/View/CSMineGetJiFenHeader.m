@@ -9,9 +9,7 @@
 #import "CSMineGetJiFenHeader.h"
 @interface CSMineGetJiFenHeader ()
 @property (nonatomic, strong) UIImageView *bgImg;
-@property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) UILabel *jiFenLabel;
-@property (nonatomic, strong) UILabel *actionLabel;
+
 @property (nonatomic, strong) UIImageView *actionImg;
 @end
 @implementation CSMineGetJiFenHeader
@@ -23,7 +21,7 @@
     return self;
 }
 - (void)actionClick {
-    if(self.actionBlock){
+    if(self.actionBlock && self.isShowAction){
         self.actionBlock(0);
     }
 }

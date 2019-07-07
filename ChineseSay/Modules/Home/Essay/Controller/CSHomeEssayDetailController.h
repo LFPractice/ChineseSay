@@ -7,11 +7,10 @@
 //
 
 #import "CSBaseController.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CSHomeEssayDetailController : CSBaseController
-
+@property (nonatomic, copy) NSNumber *id;
 @end
 
 NS_ASSUME_NONNULL_END

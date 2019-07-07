@@ -16,7 +16,11 @@
     self.contentView.backgroundColor = [UIColor clearColor];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
-
+- (void)setModel:(CSHomeEssayListModel *)model {
+    _model = model;
+    [self.img sd_setImageWithURL:[NSURL URLWithString:model.cover]];
+    self.label_content.text = model.title;
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

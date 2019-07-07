@@ -14,9 +14,13 @@
 @implementation CSAppListSelectBtn
 + (instancetype)buttonWithType:(UIButtonType)buttonType{
     CSAppListSelectBtn *btn = [super buttonWithType:buttonType];
+    UIRectCorner corner = UIRectCornerTopLeft | UIRectCornerTopRight;
+    [btn cs_radiusWithRadius:10 corner:corner];
+    btn.layer.masksToBounds = YES;
     if(btn){
-        [btn setTitleColor:[UIColor colorWithHex:0xFAB416] forState:UIControlStateSelected];
+        [btn setTitleColor:[UIColor colorWithHex:0xffffff] forState:UIControlStateSelected];
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [btn setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xffffff alpha:0.6]] forState:UIControlStateSelected];
     }
     return btn;
 }
@@ -44,6 +48,21 @@
     }
     return self;
 }
+
+- (void)btnClick:(CSAppListSelectBtn *)button {
+    for (CSAppListSelectBtn *btn in self.subviews) {
+        if([btn isKindOfClass:[CSAppListSelectBtn class]]){
+            btn.selected = NO;
+            if(btn.tag == button.tag) {
+                btn.selected = YES;
+            }
+        }
+    }
+    
+    if(self.selectBlock) {
+        self.selectBlock(button.tag);
+    }
+}
 #pragma mark - private
 - (void)createUI{
     self.backgroundColor = [UIColor clearColor];
@@ -60,8 +79,11 @@
         _btn_buy = [CSAppListSelectBtn buttonWithType:UIButtonTypeCustom];
         _btn_buy.frame = CGRectMake(10, 0, (kScreenWidth - 10 - 10 - 10 - 10)/3, 50);
         [_btn_buy setTitle:@"购物类" forState:UIControlStateNormal];
+        _btn_buy.tag = 0;
+        [_btn_buy addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
         [_btn_buy setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xFAB416]] forState:UIControlStateNormal];
-        [_btn_buy setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forState:UIControlStateSelected];
+//        [_btn_buy setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xffffff alpha:0.5]] forState:UIControlStateSelected];
+        
     }
     return _btn_buy;
 }
@@ -70,8 +92,10 @@
         _btn_function = [CSAppListSelectBtn buttonWithType:UIButtonTypeCustom];
         _btn_function.frame = CGRectMake(10 + ((kScreenWidth - 10 - 10 - 10 - 10)/3 + 10), 0, (kScreenWidth - 10 - 10 - 10 - 10)/3, 50);
         [_btn_function setTitle:@"实用类" forState:UIControlStateNormal];
-        [_btn_function setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0x3BB2BC]] forState:UIControlStateNormal];
-        [_btn_function setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forState:UIControlStateSelected];
+        _btn_function.tag = 1;
+        [_btn_function addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [_btn_function setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xFAB416]] forState:UIControlStateNormal];
+//        [_btn_function setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forState:UIControlStateSelected];
     }
     return _btn_function;
 }
@@ -80,8 +104,10 @@
         _btn_amusement = [CSAppListSelectBtn buttonWithType:UIButtonTypeCustom];
         _btn_amusement.frame = CGRectMake(10 + ((kScreenWidth - 10 - 10 - 10 - 10)/3 + 10) * 2, 0, (kScreenWidth - 10 - 10 - 10 - 10)/3, 50);
         [_btn_amusement setTitle:@"娱乐类" forState:UIControlStateNormal];
-        [_btn_amusement setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0x6F6FD6]] forState:UIControlStateNormal];
-        [_btn_amusement setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forState:UIControlStateSelected];
+        _btn_amusement.tag = 2;
+        [_btn_amusement addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [_btn_amusement setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xFAB416]] forState:UIControlStateNormal];
+//        [_btn_amusement setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forState:UIControlStateSelected];
     }
     return _btn_amusement;
 }

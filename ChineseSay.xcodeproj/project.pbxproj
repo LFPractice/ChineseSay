@@ -18,6 +18,9 @@
 		531985AE22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 531985AD22B2A9E900351C66 /* CSHomeCommonChineseLevelCell.m */; };
 		53218EB322BA935200E6559E /* CSHomeBackgroundModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53218EB222BA935200E6559E /* CSHomeBackgroundModel.m */; };
 		5322335822D0B42000D18390 /* CSMineJiFenShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5322335722D0B42000D18390 /* CSMineJiFenShopModel.m */; };
+		5322335B22D0E81200D18390 /* CSHomePlaceDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5322335A22D0E81200D18390 /* CSHomePlaceDetailModel.m */; };
+		5322335E22D0F36C00D18390 /* CSHomeEssayListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5322335D22D0F36C00D18390 /* CSHomeEssayListModel.m */; };
+		5322336122D1009900D18390 /* CSHomeEssayDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5322336022D1009900D18390 /* CSHomeEssayDetailModel.m */; };
 		5329145322CD7F0200A3E61E /* CSMineJiFenShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5329145122CD7F0200A3E61E /* CSMineJiFenShopController.m */; };
 		5329145422CD7F0200A3E61E /* CSMineJiFenShopController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5329145222CD7F0200A3E61E /* CSMineJiFenShopController.xib */; };
 		5331179C22C43D1B00F8C94C /* CSGameQuestionListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5331179B22C43D1B00F8C94C /* CSGameQuestionListController.m */; };
@@ -103,6 +106,8 @@
 		53C2B31922C26D9000C2F017 /* CSHomeCommonChineseLessonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C2B31822C26D9000C2F017 /* CSHomeCommonChineseLessonCell.m */; };
 		53C2B31C22C26EE200C2F017 /* CSHomeLessonListHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C2B31B22C26EE200C2F017 /* CSHomeLessonListHeader.m */; };
 		53C2B31F22C2F8EB00C2F017 /* CSHomeLessonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C2B31E22C2F8EB00C2F017 /* CSHomeLessonModel.m */; };
+		53C459D522D1C8F100D347DD /* UIView+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C459D422D1C8F100D347DD /* UIView+Add.m */; };
+		53C459D822D1D01200D347DD /* CSMineGetJiFenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C459D722D1D01200D347DD /* CSMineGetJiFenModel.m */; };
 		53CC8DE722C510F7008D9887 /* CSGameQuestionTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CC8DE622C510F7008D9887 /* CSGameQuestionTitleCell.m */; };
 		53CC8DEA22C5930C008D9887 /* CSQuestionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CC8DE922C5930C008D9887 /* CSQuestionFooterView.m */; };
 		53DF890B22B542790087CFD1 /* CSMineDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DF890A22B542790087CFD1 /* CSMineDetailController.m */; };
@@ -185,6 +190,12 @@
 		53218EB222BA935200E6559E /* CSHomeBackgroundModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeBackgroundModel.m; sourceTree = "<group>"; };
 		5322335622D0B42000D18390 /* CSMineJiFenShopModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineJiFenShopModel.h; sourceTree = "<group>"; };
 		5322335722D0B42000D18390 /* CSMineJiFenShopModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineJiFenShopModel.m; sourceTree = "<group>"; };
+		5322335922D0E81200D18390 /* CSHomePlaceDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomePlaceDetailModel.h; sourceTree = "<group>"; };
+		5322335A22D0E81200D18390 /* CSHomePlaceDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomePlaceDetailModel.m; sourceTree = "<group>"; };
+		5322335C22D0F36C00D18390 /* CSHomeEssayListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeEssayListModel.h; sourceTree = "<group>"; };
+		5322335D22D0F36C00D18390 /* CSHomeEssayListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeEssayListModel.m; sourceTree = "<group>"; };
+		5322335F22D1009900D18390 /* CSHomeEssayDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeEssayDetailModel.h; sourceTree = "<group>"; };
+		5322336022D1009900D18390 /* CSHomeEssayDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeEssayDetailModel.m; sourceTree = "<group>"; };
 		5329145022CD7F0200A3E61E /* CSMineJiFenShopController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineJiFenShopController.h; sourceTree = "<group>"; };
 		5329145122CD7F0200A3E61E /* CSMineJiFenShopController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineJiFenShopController.m; sourceTree = "<group>"; };
 		5329145222CD7F0200A3E61E /* CSMineJiFenShopController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSMineJiFenShopController.xib; sourceTree = "<group>"; };
@@ -348,6 +359,10 @@
 		53C2B31B22C26EE200C2F017 /* CSHomeLessonListHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeLessonListHeader.m; sourceTree = "<group>"; };
 		53C2B31D22C2F8EB00C2F017 /* CSHomeLessonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSHomeLessonModel.h; sourceTree = "<group>"; };
 		53C2B31E22C2F8EB00C2F017 /* CSHomeLessonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSHomeLessonModel.m; sourceTree = "<group>"; };
+		53C459D322D1C8F100D347DD /* UIView+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Add.h"; sourceTree = "<group>"; };
+		53C459D422D1C8F100D347DD /* UIView+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Add.m"; sourceTree = "<group>"; };
+		53C459D622D1D01200D347DD /* CSMineGetJiFenModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMineGetJiFenModel.h; sourceTree = "<group>"; };
+		53C459D722D1D01200D347DD /* CSMineGetJiFenModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMineGetJiFenModel.m; sourceTree = "<group>"; };
 		53CC8DE522C510F7008D9887 /* CSGameQuestionTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameQuestionTitleCell.h; sourceTree = "<group>"; };
 		53CC8DE622C510F7008D9887 /* CSGameQuestionTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameQuestionTitleCell.m; sourceTree = "<group>"; };
 		53CC8DE822C5930C008D9887 /* CSQuestionFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSQuestionFooterView.h; sourceTree = "<group>"; };
@@ -759,6 +774,8 @@
 				537A257622CED61200611DBE /* CSMineJiFenShopItemModel.m */,
 				5322335622D0B42000D18390 /* CSMineJiFenShopModel.h */,
 				5322335722D0B42000D18390 /* CSMineJiFenShopModel.m */,
+				53C459D622D1D01200D347DD /* CSMineGetJiFenModel.h */,
+				53C459D722D1D01200D347DD /* CSMineGetJiFenModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -822,6 +839,10 @@
 		53562E4D22CC2A5000A5A12B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5322335C22D0F36C00D18390 /* CSHomeEssayListModel.h */,
+				5322335D22D0F36C00D18390 /* CSHomeEssayListModel.m */,
+				5322335F22D1009900D18390 /* CSHomeEssayDetailModel.h */,
+				5322336022D1009900D18390 /* CSHomeEssayDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -970,6 +991,8 @@
 				53FEC00722C98A78003825E5 /* UIButton+Add.m */,
 				53E856DC22B149D30057E528 /* UINavigationBar+Add.h */,
 				53E856DB22B149D30057E528 /* UINavigationBar+Add.m */,
+				53C459D322D1C8F100D347DD /* UIView+Add.h */,
+				53C459D422D1C8F100D347DD /* UIView+Add.m */,
 			);
 			path = Catergory;
 			sourceTree = "<group>";
@@ -1029,6 +1052,8 @@
 			children = (
 				53390FC022AF73430033A3CE /* CSHomeMapDetailModel.h */,
 				53390FC122AF73430033A3CE /* CSHomeMapDetailModel.m */,
+				5322335922D0E81200D18390 /* CSHomePlaceDetailModel.h */,
+				5322335A22D0E81200D18390 /* CSHomePlaceDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1455,6 +1480,7 @@
 				53352CB622CF8FBA007F6502 /* CSMineGetJiFenController.m in Sources */,
 				531985A522B2A63E00351C66 /* CSHomeCommonChineseLevelListController.m in Sources */,
 				53AC31B722A3CD3900CA2D12 /* CSHomeController.m in Sources */,
+				5322335B22D0E81200D18390 /* CSHomePlaceDetailModel.m in Sources */,
 				53AC31DD22A42C9200CA2D12 /* UIColor+Add.m in Sources */,
 				53DF891722B55C4D0087CFD1 /* CSMineHeaderItemView.m in Sources */,
 				53FEBFFA22C8C41B003825E5 /* CSUserInfoTool.m in Sources */,
@@ -1491,6 +1517,7 @@
 				530D021322A6C3330044CCB7 /* CSPageTransfer.m in Sources */,
 				53AC31B422A3CD1000CA2D12 /* CSBaseTableView.m in Sources */,
 				530D021622A6D0650044CCB7 /* CSHomeMoreLessonListController.m in Sources */,
+				5322335E22D0F36C00D18390 /* CSHomeEssayListModel.m in Sources */,
 				53FEC00B22C98BBA003825E5 /* CSRegisterController.m in Sources */,
 				5336A8AE22A8148E00C661DE /* CSHomeMoreLessonListCell.m in Sources */,
 				5329145322CD7F0200A3E61E /* CSMineJiFenShopController.m in Sources */,
@@ -1542,6 +1569,7 @@
 				53DF890B22B542790087CFD1 /* CSMineDetailController.m in Sources */,
 				53390FBF22AF6D4B0033A3CE /* CSHomeChineseMapDetailCell.m in Sources */,
 				53F0F111229EE06D000F93ED /* LFTabBarItem.m in Sources */,
+				53C459D822D1D01200D347DD /* CSMineGetJiFenModel.m in Sources */,
 				53390FC522AF78F60033A3CE /* CSHomeChinesePlaceDetailController.m in Sources */,
 				539CADD322B9364700C25A25 /* LFHttpTool+Test.m in Sources */,
 				53AC31C722A3EF9800CA2D12 /* CSHomeTitleCell.m in Sources */,
@@ -1549,6 +1577,7 @@
 				53DF891A22B568FB0087CFD1 /* CSMineItemModel.m in Sources */,
 				53FEBFF722C8BEE8003825E5 /* CSHomeAppModel.m in Sources */,
 				53C2B30B22C12ECB00C2F017 /* CSHomeMoreLessonListDetailItemModel.m in Sources */,
+				5322336122D1009900D18390 /* CSHomeEssayDetailModel.m in Sources */,
 				530D020F22A6C0660044CCB7 /* CSPageTypeModel.m in Sources */,
 				53EB07F822AEBEA0003E626A /* CSHomeChineseMapController.m in Sources */,
 				53352EBF22ACBEB100F42147 /* CSHomeHeaderView.m in Sources */,
@@ -1557,6 +1586,7 @@
 				537A257722CED61200611DBE /* CSMineJiFenShopItemModel.m in Sources */,
 				53352EBC22ACB95C00F42147 /* CSMineController.m in Sources */,
 				53F0F11F229EE129000F93ED /* main.m in Sources */,
+				53C459D522D1C8F100D347DD /* UIView+Add.m in Sources */,
 				53AC31B122A3CCFD00CA2D12 /* CSBaseCell.m in Sources */,
 				535B853D22A57AAA000510C4 /* CSHomeItemsCellItem.m in Sources */,
 				53F0F113229EE06D000F93ED /* LFTabBarController.m in Sources */,

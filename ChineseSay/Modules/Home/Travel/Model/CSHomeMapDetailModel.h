@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CSHomeMapDetailModel : CSBaseModel
 @property (nonatomic, strong) NSString *img_big;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *type;
 @end
 
 NS_ASSUME_NONNULL_END

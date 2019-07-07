@@ -59,6 +59,9 @@
     [cell loadCellWithData:model cellPath:indexPath];
     return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [QMUITips showInfo:@"暂未开放"];
+}
 #pragma mark - private
 - (void)createUI{
     [self.view addSubview:self.tableView];

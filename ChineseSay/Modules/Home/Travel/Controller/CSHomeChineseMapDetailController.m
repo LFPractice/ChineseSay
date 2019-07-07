@@ -9,6 +9,7 @@
 #import "CSHomeChineseMapDetailController.h"
 #import "CSHomeChineseMapDetailFlowLayout.h"
 #import "CSHomeChineseMapDetailCell.h"
+#import "CSHomeChinesePlaceDetailController.h"
 @interface CSHomeChineseMapDetailController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
@@ -21,6 +22,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self createUI];
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setWhiteBackItem];
+}
+- (void)setPageModel:(CSPageTypeModel *)pageModel {
+    [super setPageModel:pageModel];
+    [self setTitle:pageModel.title Color:[UIColor whiteColor]];
 }
 #pragma private
 - (void)createUI{
@@ -44,6 +53,11 @@
     return cell;
 }
 #pragma mark ------ UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    CSHomeChinesePlaceDetailController *placeDetailVC = [[CSHomeChinesePlaceDetailController alloc]init];
+    placeDetailVC.model = self.dataSource[indexPath.row];
+    [self.navigationController pushViewController:placeDetailVC animated:YES];
+}
 #pragma mark - lazy load
 - (UICollectionView *)collectionView{
     if(!_collectionView){
@@ -65,10 +79,13 @@
         NSArray *arr_imgName = @[@"home_map_dongBei",@"home_map_huaBei",@"home_map_huaDong",@"home_map_huaNan",
                                  @"home_map_huaZhong",@"home_map_taiWan",@"home_map_xiBei",@"home_map_xiNan"];
         NSArray *arr_name = @[@"东北地区",@"华北地区",@"华东地区",@"华南地区",@"华中地区",@"台湾地区",@"西北地区",@"西南地区",];
+        
+        NSArray *arr_type = @[@"0",@"1",@"2",@"4",@"3",@"9",@"6",@"5"];
         for(int i = 0 ;i < arr_imgName.count; i++){
             CSHomeMapDetailModel *model = [[CSHomeMapDetailModel alloc]init];
             model.img_big = arr_imgName[i];
             model.name = arr_name[i];
+            model.type = arr_type[i];
             
             CSPageTypeModel *pageModel = [[CSPageTypeModel alloc]init];
             pageModel.action = CS_Page_Type_Action;

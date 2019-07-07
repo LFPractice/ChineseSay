@@ -58,7 +58,7 @@
 #pragma mark - lazy load
 - (UILabel *)label_title{
     if(!_label_title){
-        _label_title = [[UILabel alloc]initWithFrame:CGRectMake(20, 89, kScreenWidth - 40, 42)];
+        _label_title = [[UILabel alloc]initWithFrame:CGRectMake(20, 99, kScreenWidth - 40, 42)];
         _label_title.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:30];
         _label_title.text = @"Travel in China";
         _label_title.textColor = [UIColor blackColor];

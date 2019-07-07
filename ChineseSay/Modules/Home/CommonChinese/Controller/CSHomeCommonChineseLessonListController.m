@@ -20,10 +20,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self createUI];
+    
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setColor:[UIColor clearColor]];
+    [self setWhiteBackItem];
 }
 #pragma mark - private
 - (void)createUI{

@@ -89,4 +89,13 @@
         failure(error);
     }];
 }
++ (void)mine_getShopTaskWithParam:(NSDictionary *)params
+                          Success:(LFRequestSuccessBlock)success
+                          Failure:(LFRequestFailureBlock)failure {
+    [LFHttpTool getData:[NSString stringWithFormat:@"%@/api/task/list",BaseUrl] parameters:params success:^(id responseObject) {
+        success(responseObject);
+    } faliure:^(NSError *error) {
+        failure(error);
+    }];
+}
 @end
