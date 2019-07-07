@@ -213,8 +213,22 @@
         _btn_play = [UIButton buttonWithType:UIButtonTypeCustom];
 //        _btn_play.backgroundColor =[UIColor lightGrayColor];
         [_btn_play setImage:[UIImage imageNamed:@"home_cultureDetail_playSound"] forState:UIControlStateNormal];
+        
+        [_btn_play addTarget:self action:@selector(playClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _btn_play;
 }
-
+- (void)playClick:(UIButton *)btn {
+    btn.selected = !btn.selected;
+    if(btn.selected){
+        //        [QMUITips showWithText:@"数据请求中……"];
+        [QMUITips showLoadingInView:self.contentView];
+        [CSPlayer sharedInstance].readyToPlayBlock = ^{
+            [QMUITips hideAllTipsInView:self.contentView];
+        };
+        [[CSPlayer sharedInstance]playWithUrlStr:self.model.specialAudio];
+    }else{
+        [[CSPlayer sharedInstance]stop];
+    }
+}
 @end

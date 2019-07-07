@@ -26,11 +26,16 @@
     [super viewWillAppear:animated];
     [self setWhiteBackItem];
 }
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[CSPlayer sharedInstance]stop];
+}
 #pragma private
 - (void)createUI{
     self.view.backgroundColor = [UIColor colorWithHex:0xF4F5F9];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_controllerBg"]];
     [self.navigationController.navigationBar setColor:[UIColor clearColor]];
+    [self.view addSubview:self.img_bg];
     [self.view addSubview:self.collectionView];
     
     [self loadData];

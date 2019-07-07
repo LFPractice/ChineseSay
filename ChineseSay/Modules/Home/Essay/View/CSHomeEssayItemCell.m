@@ -15,6 +15,12 @@
     self.backgroundColor = [UIColor clearColor];
     self.contentView.backgroundColor = [UIColor clearColor];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+//    self.contentView.layer.cornerRadius = 10;
+//    UIRectCorner corner = UIRectCornerAllCorners;
+//    self.layer.cornerRadius = 10;
+//    [self cs_radiusWithRadius:10 corner:corner];
+//    self.layer.masksToBounds = YES;
+//    self.contentView.layer.masksToBounds = YES;
 }
 - (void)setModel:(CSHomeEssayListModel *)model {
     _model = model;

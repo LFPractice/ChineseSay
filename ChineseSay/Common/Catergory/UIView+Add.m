@@ -14,11 +14,15 @@
         self.layer.cornerRadius = radius;
         self.layer.maskedCorners = (CACornerMask)corner;
     } else {
-        UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corner cornerRadii:CGSizeMake(radius, radius)];
-        CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-        maskLayer.frame = self.bounds;
-        maskLayer.path = path.CGPath;
-        self.layer.mask = maskLayer;
+//        UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corner cornerRadii:CGSizeMake(radius, radius)];
+//        CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+//        maskLayer.frame = self.bounds;
+//        maskLayer.path = path.CGPath;
+//        self.layer.mask = maskLayer;
+        
+        
+        self.layer.cornerRadius = radius;
+        self.layer.maskedCorners = (CACornerMask)corner;
     }
 }
 @end

@@ -14,6 +14,7 @@
 @property (nonatomic, strong) UIButton *btn_play;
 @property (nonatomic, strong) UILabel *label_content;
 @property (nonatomic, strong) CSHomeMoreLessonListDetailItemModel *model;
+@property (nonatomic, strong) UIScrollView *scrollView;
 @end
 @implementation CSHomeMoreLessonDetailCollectionViewCell
 
@@ -50,8 +51,17 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     
+    CGFloat itemWidth = self.frame.size.width;
+    CGFloat itemHeight = self.frame.size.height;
+    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.with.top.bottom.mas_equalTo(0);
+        make.width.mas_equalTo(itemWidth);
+        //        make.height.mas_equalTo(itemHeight);
+    }];
+    
     [self.img_head mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_equalTo(0);
+        make.width.mas_equalTo(itemWidth);
         make.height.mas_equalTo(180);
     }];
     [self.label_title mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -74,7 +84,7 @@
         make.left.mas_equalTo(15);
         make.right.mas_equalTo(-15);
         make.top.mas_equalTo(self.label_englishTitle.mas_bottom).offset(30);
-//        make.bottom.mas_equalTo(-21);
+        make.bottom.mas_equalTo(-21);
     }];
 }
 #pragma mark - private
@@ -83,14 +93,23 @@
     self.contentView.layer.cornerRadius = 10;
     self.contentView.backgroundColor = [UIColor whiteColor];
     
-    [self.contentView addSubview:self.img_head];
-    [self.contentView addSubview:self.label_title];
-    [self.contentView addSubview:self.label_englishTitle];
-    [self.contentView addSubview:self.btn_play];
-    [self.contentView addSubview:self.label_content];
+    [self.contentView addSubview:self.scrollView];
+    
+    [self.scrollView addSubview:self.img_head];
+    [self.scrollView addSubview:self.label_title];
+    [self.scrollView addSubview:self.label_englishTitle];
+    [self.scrollView addSubview:self.btn_play];
+    [self.scrollView addSubview:self.label_content];
 }
 
 #pragma mark -- lazy load
+- (UIScrollView *)scrollView {
+    if(!_scrollView){
+        _scrollView = [[UIScrollView alloc]initWithFrame:self.bounds];
+        _scrollView.showsVerticalScrollIndicator = NO;
+    }
+    return _scrollView;
+}
 - (UIImageView *)img_head{
     if(!_img_head){
         _img_head = [[UIImageView alloc]init];
@@ -133,7 +152,7 @@
         _label_content.font = [UIFont systemFontOfSize:15];// [UIFont fontWithName:@"ArialMT" size:15];
         _label_content.textColor = [UIColor colorWithHex:0x555555];
         _label_content.numberOfLines = 0;
-        _label_content.text = @"Classical poem is the cream that spread from Chinese thousands of years culture, is supporting body of Chinese ethnic spirit.However, classic Chinese poetry, as the treasure of Chinese culture as well as a bright pearl in the treasure house of world culture, has been passed down and widely and unceasingly read from generation to generation for thousands of years. China classical poetry, inheriting the soul of the traditional culture. ";
+        _label_content.text = @"Classical poem is the cream that spread from Chinese thousands of years culture, is supporting body of Chinese ethnic spirit.However, classic Chinese poetry, as the treasure of Chinese culture as well as a bright pearl in the treasure house of world culture, has been passed down and widely and unceasingly read from generation to generation for thousands of years.";
     }
     return _label_content;
 }

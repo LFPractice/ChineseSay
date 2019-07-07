@@ -90,7 +90,7 @@
 - (CSAppListSelectBtn *)btn_function{
     if(!_btn_function){
         _btn_function = [CSAppListSelectBtn buttonWithType:UIButtonTypeCustom];
-        _btn_function.frame = CGRectMake(10 + ((kScreenWidth - 10 - 10 - 10 - 10)/3 + 10), 0, (kScreenWidth - 10 - 10 - 10 - 10)/3, 50);
+        _btn_function.frame = CGRectMake(10 + ((kScreenWidth - 10 - 10 - 10 - 10)/3.0 + 10), 0, (kScreenWidth - 10 - 10 - 10 - 10)/3, 50);
         [_btn_function setTitle:@"实用类" forState:UIControlStateNormal];
         _btn_function.tag = 1;
         [_btn_function addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -102,7 +102,7 @@
 - (CSAppListSelectBtn *)btn_amusement{
     if(!_btn_amusement){
         _btn_amusement = [CSAppListSelectBtn buttonWithType:UIButtonTypeCustom];
-        _btn_amusement.frame = CGRectMake(10 + ((kScreenWidth - 10 - 10 - 10 - 10)/3 + 10) * 2, 0, (kScreenWidth - 10 - 10 - 10 - 10)/3, 50);
+        _btn_amusement.frame = CGRectMake(10 + ((kScreenWidth - 10 - 10 - 10 - 10)/3.0 + 10) * 2, 0, (kScreenWidth - 10 - 10 - 10 - 10)/3, 50);
         [_btn_amusement setTitle:@"娱乐类" forState:UIControlStateNormal];
         _btn_amusement.tag = 2;
         [_btn_amusement addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];

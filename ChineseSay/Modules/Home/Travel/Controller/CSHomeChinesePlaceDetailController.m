@@ -28,6 +28,10 @@
     [super viewWillAppear:animated];
     [self setWhiteBackItem];
 }
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[CSPlayer sharedInstance]stop];
+}
 #pragma private
 - (void)createUI{
     self.view.backgroundColor = [UIColor colorWithHex:0xF4F5F9];

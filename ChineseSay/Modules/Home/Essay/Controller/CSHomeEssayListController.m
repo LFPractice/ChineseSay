@@ -59,16 +59,36 @@
     cell.model = self.dataSource[indexPath.row];
     return cell;
 }
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self.searchBar resignFirstResponder];
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     CSHomeEssayListModel *model = self.dataSource[indexPath.row];
     CSHomeEssayDetailController *vc = [[CSHomeEssayDetailController alloc] init];
     vc.id = model.id;
     [self.navigationController pushViewController:vc animated:YES];
 }
+//- sear
 
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+}
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+}
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+    return YES;
+}
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    self.query = searchText;
+    [self loadData];
+    
+}
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 0, kScreenWidth-20, kScreenHeight) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerNib:[UINib nibWithNibName:@"CSHomeEssayItemCell" bundle:nil] forCellReuseIdentifier:@"CSHomeEssayItemCell"];
@@ -91,6 +111,11 @@
         _searchBar.layer.masksToBounds = YES;
         _searchBar.backgroundImage = [UIImage imageWithColor:[UIColor clearColor]];
         _searchBar.delegate = self;
+        
+        
+        UIButton*cancelBtn = [_searchBar valueForKey:@"cancelButton"];
+        
+        cancelBtn.enabled =YES;
         
         [titleView addSubview:_searchBar];
         self.navigationItem.titleView = titleView;

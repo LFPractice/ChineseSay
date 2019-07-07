@@ -71,6 +71,11 @@
     [self csLayoutSubviews];
     
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
 - (void)csLayoutSubviews{
     [self.headImg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo((kSystemStatusHeight + kSystemNavigationBarHeight));
@@ -114,10 +119,12 @@
 - (UITextField *)userAccountTF{
     if(!_userAccountTF){
         _userAccountTF = [[UITextField alloc]init];
-        _userAccountTF.placeholder = @"  Username";
+        _userAccountTF.placeholder = @"Username";
         _userAccountTF.backgroundColor = [UIColor whiteColor];
         _userAccountTF.layer.cornerRadius = 20;
         _userAccountTF.layer.masksToBounds = YES;
+        _userAccountTF.leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 20, 0)];
+        _userAccountTF.leftViewMode = UITextFieldViewModeAlways;
         _userAccountTF.delegate = self;
     }
     return _userAccountTF;
@@ -125,8 +132,10 @@
 - (UITextField *)passworldTF{
     if(!_passworldTF){
         _passworldTF = [[UITextField alloc]init];
-        _passworldTF.placeholder = @"  Passworld";
+        _passworldTF.placeholder = @"Passworld";
         _passworldTF.backgroundColor = [UIColor whiteColor];
+        _passworldTF.leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 20, 0)];
+        _passworldTF.leftViewMode = UITextFieldViewModeAlways;
         _passworldTF.layer.cornerRadius = 20;
         _passworldTF.layer.masksToBounds = YES;
         _passworldTF.secureTextEntry = YES;

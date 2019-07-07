@@ -29,6 +29,11 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:YES animated:animated];
+    __weak typeof(self)weakSelf = self;
+    [[CSHomeDataSource shareInstance] setRefreshData:^{
+        [weakSelf.tableView reloadData];
+        [weakSelf.headerView reloadData];
+    }];
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:NO animated:animated];
@@ -86,11 +91,11 @@
 #pragma mark -- lazy load
 - (CSBaseTableView *)tableView{
     if(!_tableView){
-        _tableView = [[CSBaseTableView alloc]initWithFrame:CGRectMake(0, -kSystemStatusHeight,kScreenWidth, kScreenHeight - 49 - kSystemBottomHeight) style:UITableViewStylePlain];
+        _tableView = [[CSBaseTableView alloc]initWithFrame:CGRectMake(0, -kSystemStatusHeight,kScreenWidth, kScreenHeight - 49 + 20) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource  = self;
         _tableView.tableHeaderView = self.headerView;
-        _tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 20)];
+        _tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth,0)];
         _tableView.separatorColor = [UIColor clearColor];
         _tableView.backgroundColor = [UIColor colorWithHex:0xF4F5F9];
         _tableView.showsVerticalScrollIndicator = NO;

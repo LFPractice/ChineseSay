@@ -103,7 +103,6 @@
 - (UIImageView *)contentImg {
     if(!_contentImg) {
         _contentImg = [[UIImageView alloc]init];
-        _contentImg.backgroundColor = [UIColor blueColor];
     }
     return _contentImg;
 }
@@ -136,5 +135,9 @@
         _desLabel.numberOfLines = 0;
     }
     return _desLabel;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 @end
